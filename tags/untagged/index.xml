@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>untagged on 乔克叔叔</title>
-    <link>https://jokerbai.gitee.io/myblog/tags/untagged/</link>
+    <link>https://qiaokebaba.github.io/tags/untagged/</link>
     <description>Recent content in untagged on 乔克叔叔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 02 Dec 2020 16:43:08 +0800</lastBuildDate><atom:link href="https://jokerbai.gitee.io/myblog/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Dec 2020 16:43:08 +0800</lastBuildDate><atom:link href="https://qiaokebaba.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>https://jokerbai.gitee.io/myblog/posts/my-first-post/</link>
+      <link>https://qiaokebaba.github.io/posts/my-first-post/</link>
       <pubDate>Wed, 02 Dec 2020 16:43:08 +0800</pubDate>
       
-      <guid>https://jokerbai.gitee.io/myblog/posts/my-first-post/</guid>
+      <guid>https://qiaokebaba.github.io/posts/my-first-post/</guid>
       <description>监控是整个运维以及产品整个生命周期最重要的一环，它旨在事前能够及时预警发现故障，事中能够结合监控数据定位问题，事后能够提供数据用于分析问题。</description>
     </item>
     

@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>文章列表 on 乔克叔叔</title>
-		<link>https://jokerbai.gitee.io/myblog/posts/</link>
+		<link>https://qiaokebaba.github.io/posts/</link>
 		<description>Recent content in 文章列表 on 乔克叔叔</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
 		<lastBuildDate>Wed, 02 Dec 2020 16:43:08 +0800</lastBuildDate>
-		<atom:link href="https://jokerbai.gitee.io/myblog/posts/index.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://qiaokebaba.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
 			<title>My First Post</title>
-			<link>https://jokerbai.gitee.io/myblog/posts/my-first-post/</link>
+			<link>https://qiaokebaba.github.io/posts/my-first-post/</link>
 			<pubDate>Wed, 02 Dec 2020 16:43:08 +0800</pubDate>
 			
-			<guid>https://jokerbai.gitee.io/myblog/posts/my-first-post/</guid>
+			<guid>https://qiaokebaba.github.io/posts/my-first-post/</guid>
 			<description>监控是整个运维以及产品整个生命周期最重要的一环，它旨在事前能够及时预警发现故障，事中能够结合监控数据定位问题，事后能够提供数据用于分析问题。</description>
 			<content type="html"><![CDATA[<p>监控是整个运维以及产品整个生命周期最重要的一环，它旨在事前能够及时预警发现故障，事中能够结合监控数据定位问题，事后能够提供数据用于分析问题。</p>
 <h2 id="一监控的目的">一、监控的目的</h2>
@@ -406,10 +406,10 @@ prometheus.io/port: '8081'
 		
 		<item>
 			<title>关于乔克</title>
-			<link>https://jokerbai.gitee.io/myblog/posts/about/</link>
+			<link>https://qiaokebaba.github.io/posts/about/</link>
 			<pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
 			
-			<guid>https://jokerbai.gitee.io/myblog/posts/about/</guid>
+			<guid>https://qiaokebaba.github.io/posts/about/</guid>
 			<description>这是乔克叔叔的个人页面。</description>
 			<content type="html"><![CDATA[<p>这是乔克叔叔的个人页面。</p>
 ]]></content>
