@@ -32,7 +32,7 @@
         <description>备份 备份策略： 每两个小时用命令对etcd进行备份 备份数据保留2天 ETCDCTL_API=3 /opt/etcd/bin/etcdctl snapshot save /root/backup/etcd_$(date &amp;quot;+%Y%m%d%H%M%S&amp;quot;).db 恢复 （1）、停止kube-apiserver，确保不会再写入数据</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        
+        <media:content url="http://qiaokebaba.github.ioimages/kubernetes/etcd.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

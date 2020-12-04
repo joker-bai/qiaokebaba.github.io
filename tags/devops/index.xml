@@ -32,7 +32,7 @@
         <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        
+        <media:content url="http://qiaokebaba.github.ioimages/devops/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

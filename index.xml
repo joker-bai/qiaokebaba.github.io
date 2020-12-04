@@ -53,7 +53,7 @@
         <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        
+        <media:content url="http://qiaokebaba.github.ioimages/devops/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -97,7 +97,7 @@
         <description>PS: 最近经常有朋友问我有没有用kubeadm搭建高可用集群的文档，说实在的我确实没有，我自己测试的话就用kubeadm单master版，公司用</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        
+        <media:content url="http://qiaokebaba.github.ioimages/kubernetes/kubeadm.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -129,7 +129,7 @@
         <description>备份 备份策略： 每两个小时用命令对etcd进行备份 备份数据保留2天 ETCDCTL_API=3 /opt/etcd/bin/etcdctl snapshot save /root/backup/etcd_$(date &amp;quot;+%Y%m%d%H%M%S&amp;quot;).db 恢复 （1）、停止kube-apiserver，确保不会再写入数据</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        
+        <media:content url="http://qiaokebaba.github.ioimages/kubernetes/etcd.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -153,7 +153,7 @@
         <description>基础规划 1、IP规划 主机名 IP 配置 软件 master-k8s 10.1.10.128 2C4G etcd,apiserver,controller-manager,scheduler node01-k8s 10.1.10.129 2C4G etcd,docker,kubelet,kube-proxy node02-k8s 10.1.10.130 2C4G etcd,docker,kubelet,kube-proxy 2、软件规划 软件名 版本 etcd 3.3.18 docker-ce 19.03.5-3 cfssl 1.2.0 kubernetes 1.16.4 flannel 0.11.0 cni 0.8.3 3、目录规划 目录名 用途 /var/log/kubernetes/ 存储日志 /root/kubernetes/install</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        
+        <media:content url="http://qiaokebaba.github.ioimages/kubernetes/kubernetes.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

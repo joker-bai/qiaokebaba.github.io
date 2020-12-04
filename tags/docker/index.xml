@@ -32,7 +32,7 @@
         <description>基础规划 1、IP规划 主机名 IP 配置 软件 master-k8s 10.1.10.128 2C4G etcd,apiserver,controller-manager,scheduler node01-k8s 10.1.10.129 2C4G etcd,docker,kubelet,kube-proxy node02-k8s 10.1.10.130 2C4G etcd,docker,kubelet,kube-proxy 2、软件规划 软件名 版本 etcd 3.3.18 docker-ce 19.03.5-3 cfssl 1.2.0 kubernetes 1.16.4 flannel 0.11.0 cni 0.8.3 3、目录规划 目录名 用途 /var/log/kubernetes/ 存储日志 /root/kubernetes/install</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        
+        <media:content url="http://qiaokebaba.github.ioimages/kubernetes/kubernetes.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
