@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Jenkins on 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <link>http://qiaokebaba.github.io/tags/jenkins/</link>
+    <description>Recent content in Jenkins on 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
+    <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 04 Dec 2020 15:43:30 +0800</lastBuildDate>
+    
+        <atom:link href="http://qiaokebaba.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>实现Jenkins和Argocd实现CI/CD</title>
+        <link>http://qiaokebaba.github.io/posts/devops-jenkins-argocd/</link>
+        <pubDate>Fri, 04 Dec 2020 15:43:30 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Fri, 04 Dec 2020 15:43:30 +0800</atom:modified>
+        <guid>http://qiaokebaba.github.io/posts/devops-jenkins-argocd/</guid>
+        <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>DevOps</category>
+            
+          
+            
+              <category>Jenkins</category>
+            
+          
+            
+              <category>Argocd</category>
+            
+          
+            
+              <category>CI/CD</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Kubeadm搭建高可用Kubernetes集群 – 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <title>实现Jenkins和Argocd实现CI/CD – 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"http://qiaokebaba.github.io\"");
     
-    var permalink = JSON.parse("\"http://qiaokebaba.github.io/posts/kubeadm-install-kubernetes/\"");
+    var permalink = JSON.parse("\"http://qiaokebaba.github.io/posts/devops-jenkins-argocd/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1323,26 +1323,26 @@
 
 
     
-<meta name="description" content="使用kubeadm搭建高可用kubernetes集群" />
+<meta name="description" content="" />
 
-<meta name="keywords" content="kubernetes,kubeadm">
+<meta name="keywords" content="DevOps,Jenkins,Argocd,CI/CD">
 
 
-<meta name="keywords" content="kubernetes">
+<meta name="keywords" content="DevOps,Jenkins,Argocd,CI/CD">
 
-<meta name="created" content="2020-12-04T14:13:34&#43;0800">
-<meta name="modified" content="2020-12-04T14:13:34&#43;0800">
-<meta property="article:published_time" content="2020-12-04T14:13:34&#43;0800">
+<meta name="created" content="2020-12-04T15:43:30&#43;0800">
+<meta name="modified" content="2020-12-04T15:43:30&#43;0800">
+<meta property="article:published_time" content="2020-12-04T15:43:30&#43;0800">
 
 <meta name="author" content="乔克叔叔">
-<meta property="article:author" content="http://qiaokebaba.github.io/posts/kubeadm-install-kubernetes/@乔克叔叔">
+<meta property="article:author" content="http://qiaokebaba.github.io/posts/devops-jenkins-argocd/@乔克叔叔">
 
 
 <meta property="og:site_name" content="运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生">
-<meta property="og:title" content="Kubeadm搭建高可用Kubernetes集群">
-<meta property="og:url" content="http://qiaokebaba.github.io/posts/kubeadm-install-kubernetes/">
+<meta property="og:title" content="实现Jenkins和Argocd实现CI/CD">
+<meta property="og:url" content="http://qiaokebaba.github.io/posts/devops-jenkins-argocd/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="使用kubeadm搭建高可用kubernetes集群">
+<meta property="og:description" content="">
 
 <meta name="generator" content="Hugo 0.78.1" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1353,7 +1353,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="http://qiaokebaba.github.io/posts/kubeadm-install-kubernetes/">
+<link rel="canonical" href="http://qiaokebaba.github.io/posts/devops-jenkins-argocd/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1379,12 +1379,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Kubeadm搭建高可用Kubernetes集群",
-    "datePublished": "2020-12-04T14:13:34+08:00",
-    "dateModified": "2020-12-04T14:13:34+08:00",
-    "url" : "http://qiaokebaba.github.io/posts/kubeadm-install-kubernetes/",
-    "description": "使用kubeadm搭建高可用kubernetes集群",
-    "keywords": ["kubernetes"],
+    "headline": "实现Jenkins和Argocd实现CI/CD",
+    "datePublished": "2020-12-04T15:43:30+08:00",
+    "dateModified": "2020-12-04T15:43:30+08:00",
+    "url" : "http://qiaokebaba.github.io/posts/devops-jenkins-argocd/",
+    "description": "CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下",
+    "keywords": ["DevOps","Jenkins","Argocd","CI/CD"],
     "author": {
       "@type": "Person",
       "name": "乔克叔叔"
@@ -1703,7 +1703,7 @@
   
   <li  class="is-active" >
     
-      <span>Kubeadm搭建高可用Kubernetes集群</span>
+      <span>实现Jenkins和Argocd实现CI/CD</span>
     
   </li>
   
@@ -1715,14 +1715,14 @@
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">Kubeadm搭建高可用Kubernetes集群</h2>
+    <h2 class="single__title" data-ani="true">实现Jenkins和Argocd实现CI/CD</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Dec 4, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;8&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;10&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;乔克叔叔</span>
   
@@ -1737,61 +1737,23 @@
   🏷️
   
 
-  <li><a href="http://qiaokebaba.github.io/tags/kubernetes/" class="single__tag" title="kubernetes">#kubernetes</a></li>
+  <li><a href="http://qiaokebaba.github.io/tags/devops/" class="single__tag" title="DevOps">#DevOps</a></li>
+
+  <li><a href="http://qiaokebaba.github.io/tags/jenkins/" class="single__tag" title="Jenkins">#Jenkins</a></li>
+
+  <li><a href="http://qiaokebaba.github.io/tags/argocd/" class="single__tag" title="Argocd">#Argocd</a></li>
+
+  <li><a href="http://qiaokebaba.github.io/tags/ci/cd/" class="single__tag" title="CI/CD">#CI/CD</a></li>
 
 </ul>
 
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <p>PS: 最近经常有朋友问我有没有用kubeadm搭建高可用集群的文档，说实在的我确实没有，我自己测试的话就用kubeadm单master版，公司用的话就用二进制搭建的。所以就找了个下班时间搭建测试了一番。希望对大家有帮助！如果觉得有用的话就帮忙点个关注或转发吧，哈哈~</p>
-<h2 id="节点规划信息">节点规划信息</h2>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>IP</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>k8s-master01</td>
-<td>10.1.10.100</td>
-</tr>
-<tr>
-<td>k8s-master02</td>
-<td>10.1.10.101</td>
-</tr>
-<tr>
-<td>k8s-master03</td>
-<td>10.1.10.102</td>
-</tr>
-<tr>
-<td>k8s-node01</td>
-<td>10.1.10.103</td>
-</tr>
-<tr>
-<td>k8s-lb</td>
-<td>10.1.10.200</td>
-</tr>
-</tbody>
-</table>
-<h2 id="基础环境配置">基础环境配置</h2>
-<h3 id="环境信息">环境信息</h3>
-<table>
-<thead>
-<tr>
-<th>系统</th>
-<th>CentOS7.6.1810</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>内核版本</td>
-<td>4.9.220</td>
-</tr>
-</tbody>
-</table>
+      <p>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。</p>
+<p>整体架构如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606463150123-9dc7a684-fd98-4d25-9477-e3ea0cc09176.png" alt="devops.png" /></p>
+<p>涉及的软件以及版本信息如下：</p>
 <table>
 <thead>
 <tr>
@@ -1802,663 +1764,781 @@
 <tbody>
 <tr>
 <td>kubernetes</td>
-<td>1.18.2</td>
+<td>1.17.9</td>
 </tr>
 <tr>
 <td>docker</td>
-<td>19.0.3</td>
+<td>19.03.13</td>
+</tr>
+<tr>
+<td>jenkins</td>
+<td><a href="https://jenkins.io/">2.249.3</a></td>
+</tr>
+<tr>
+<td>argocd</td>
+<td>1.8.0</td>
+</tr>
+<tr>
+<td>gitlab</td>
+<td>社区版11.8.1</td>
+</tr>
+<tr>
+<td>sonarqube</td>
+<td>社区版8.5.1</td>
+</tr>
+<tr>
+<td>traefik</td>
+<td>2.3.3</td>
+</tr>
+<tr>
+<td>代码仓库</td>
+<td>阿里云仓库</td>
 </tr>
 </tbody>
 </table>
-<h3 id="环境初始化">环境初始化</h3>
-<p>（1）、配置主机名，以k8s-master01为例</p>
-<pre><code>hostnamectl set-hostname k8s-master01
-</code></pre><p>（1）、配置主机hosts映射</p>
-<pre><code>10.1.10.100 k8s-master01
-10.1.10.101 k8s-master02
-10.1.10.102 k8s-master03
-10.1.10.103 k8s-node01
-10.1.10.200 k8s-lb
-</code></pre><p>配置完后可以通过如下命令测试</p>
-<pre><code>for host in k8s-master01 k8s-master02 k8s-master03 k8s-node01 k8s-lb;do ping -c 1 $host;done
-</code></pre><blockquote>
-<p>这里ping k8s-node01不通，是因为我们还没配置VIP</p>
-</blockquote>
-<p>（2）、禁用防火墙</p>
-<pre><code>systemctl stop firewalld
-systemctl disable firewalld
-</code></pre><p>（3）、关闭selinux</p>
-<pre><code>setenforce 0
-sed -i &quot;s/^SELINUX=.*/SELINUX=disabled/g&quot; /etc/sysconfig/selinux
-sed -i &quot;s/^SELINUX=.*/SELINUX=disabled/g&quot; /etc/selinux/config
-</code></pre><p>（4）、关闭swap分区</p>
-<pre><code>swapoff -a &amp;&amp; sysctl -w vm.swappiness=0
-</code></pre><p>（5）、时间同步</p>
-<pre><code>yum install chrony -y
-systemctl enable chronyd
-systemctl start chronyd
-chronyc sources
-</code></pre><p>（6）、配置ulimt</p>
-<pre><code>ulimit -SHn 65535
-</code></pre><p>（7）、配置内核参数</p>
-<pre><code>cat &gt;&gt; /etc/sysctl.d/k8s.conf &lt;&lt; EOF
-net.bridge.bridge-nf-call-ip6tables = 1
-net.bridge.bridge-nf-call-iptables = 1
-net.ipv4.ip_forward = 1
-vm.swappiness=0
-EOF
-</code></pre><p>使之生效</p>
-<pre><code>sysctl -p
-</code></pre><p>（8）、master之间添加互信（按需）</p>
-<pre><code>ssh-keygen
-ssh-copy-id 10.1.10.101
-ssh-copy-id 10.1.10.102
-</code></pre><h3 id="内核升级">内核升级</h3>
-<p>由于centos7.6的系统默认内核版本是3.10，3.10的内核有很多BUG，最常见的一个就是group memory leak。</p>
-<p>（1）、下载所需要的内核版本，我这里采用rpm安装，所以直接下载的rpm包</p>
-<pre><code>wget https://cbs.centos.org/kojifiles/packages/kernel/4.9.220/37.el7/x86_64/kernel-4.9.220-37.el7.x86_64.rpm
-</code></pre><p>（2）、执行rpm升级即可</p>
-<pre><code>rpm -ivh kernel-4.9.220-37.el7.x86_64.rpm
-</code></pre><p>（3）、升级完reboot，然后查看内核是否成功升级</p>
-<pre><code>reboot
-uname -r
-</code></pre><h3 id="组件安装">组件安装</h3>
-<h5 id="安装ipvs">安装ipvs</h5>
-<p>（1）、安装ipvs需要的软件</p>
-<p>由于我准备使用ipvs作为kube-proxy的代理模式，所以需要安装相应的软件包。</p>
-<pre><code>yum install ipvsadm ipset sysstat conntrack libseccomp -y
-</code></pre><p>（2）、加载模块</p>
-<pre><code>cat &gt; /etc/sysconfig/modules/ipvs.modules &lt;&lt;EOF
-#!/bin/bash
-modprobe -- ip_vs
-modprobe -- ip_vs_rr
-modprobe -- ip_vs_wrr
-modprobe -- ip_vs_sh
-modprobe -- nf_conntrack
-modprobe -- ip_tables
-modprobe -- ip_set
-modprobe -- xt_set
-modprobe -- ipt_set
-modprobe -- ipt_rpfilter
-modprobe -- ipt_REJECT
-modprobe -- ipip
-EOF
-</code></pre><blockquote>
-<p>注意：在内核4.19版本nf_conntrack_ipv4已经改为nf_conntrack</p>
-</blockquote>
-<p>配置重启自动加载</p>
-<pre><code>chmod 755 /etc/sysconfig/modules/ipvs.modules &amp;&amp; bash /etc/sysconfig/modules/ipvs.modules &amp;&amp; lsmod | grep -e ip_vs -e nf_conntrack
-</code></pre><h5 id="安装docker-ce">安装docker-ce</h5>
-<pre><code># 安装需要的软件
-yum install -y yum-utils device-mapper-persistent-data lvm2
-# 添加yum源
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-</code></pre><p>查看是否有docker-ce包</p>
-<pre><code># yum list | grep docker-ce
-containerd.io.x86_64                        1.2.13-3.1.el7             docker-ce-stable
-docker-ce.x86_64                            3:19.03.8-3.el7            docker-ce-stable
-docker-ce-cli.x86_64                        1:19.03.8-3.el7            docker-ce-stable
-docker-ce-selinux.noarch                    17.03.3.ce-1.el7           docker-ce-stable
-</code></pre><p>安装docker-ce</p>
-<pre><code>yum install docker-ce-19.03.8-3.el7 -y
-systemctl start docker
-systemctl enable docker
-</code></pre><p>配置镜像加速</p>
-<pre><code>curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io
+<p>涉及的技术：</p>
+<ul>
+<li>Jenkins shareLibrary</li>
+<li>Jenkins pipeline</li>
+<li>Jenkinsfile</li>
+<li>Argocd</li>
+<li>sonarqube api操作</li>
+</ul>
+<h2 id="软件安装">软件安装</h2>
+<p>软件安装我这里不贴具体的安装代码了，所有的代码我都放在了github上，地址：https://github.com/cool-ops/kubernetes-software-yaml.git</p>
+<p>所以这里默认你已经安装好所以软件了。</p>
+<h2 id="在jenkins上安装如下插件">在Jenkins上安装如下插件</h2>
+<ul>
+<li>kubernetes</li>
+<li>AnsiColor</li>
+<li>HTTP Request</li>
+<li>SonarQube Scanner</li>
+<li>Utility Steps</li>
+<li>Email Extension Template</li>
+<li>Gitlab Hook</li>
+<li>Gitlab</li>
+</ul>
+<h2 id="在jenkins上配置kubernetes集群信息">在Jenkins上配置Kubernetes集群信息</h2>
+<p>在系统管理&ndash;&gt;系统配置&ndash;&gt;cloud</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606466961911-3e2a9e68-a300-43bc-9036-e7877f054fca.png" alt="image.png" /></p>
+<h2 id="在jenkins上配置邮箱地址">在Jenkins上配置邮箱地址</h2>
+<p>系统设置&ndash;&gt;系统配置&ndash;&gt;Email</p>
+<p>（1）设置管理员邮箱</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606470372103-fd22892f-adeb-4107-a258-f9d51a4390bd.png" alt="image.png" /></p>
+<p>配置SMTP服务</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606552387376-b9df8743-0c59-4019-b084-543d8cd0b58e.png" alt="image.png" /></p>
+<h2 id="在gitlab上准备一个测试代码">在Gitlab上准备一个测试代码</h2>
+<p>我这里有一个简单的java测试代码，地址如下：https://gitee.com/jokerbai/springboot-helloworld.git</p>
+<p>可以将其导入到自己的gitlab仓库。</p>
+<h2 id="在gitlab上创建一个共享库">在Gitlab上创建一个共享库</h2>
+<p>首先在gitlab上创建一个共享库，我这里取名叫shareLibrary，如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606465836250-b3724c17-1373-4949-8f35-8cc5f8c823c0.png" alt="image.png" /></p>
+<p>然后创建src/org/devops目录，并在该目录下创建一下文件。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606465882256-83453a57-00e3-4118-9a29-4957852dff46.png" alt="image.png" /></p>
+<p>它们的内容分别如下：</p>
+<p>build.groovy</p>
+<pre><code>package org.devops
 
-systemctl restart docker
-</code></pre><h5 id="安装kubernetes组件">安装kubernetes组件</h5>
-<p>添加yum源</p>
-<pre><code>cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo
-[kubernetes]
-name=Kubernetes
-baseurl=http://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64
-enabled=1
-gpgcheck=0
-repo_gpgcheck=0
-gpgkey=http://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg
- http://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
-EOF
-</code></pre><p>安装软件</p>
-<pre><code>yum install -y kubelet-1.18.2-0 kubeadm-1.18.2-0 kubectl-1.18.2-0 --disableexcludes=kubernetes
-</code></pre><p>将kubelet设置为开机自启动</p>
-<pre><code>systemctl enable kubelet.service
-</code></pre><blockquote>
-<p>以上操作在所有节点执行</p>
-</blockquote>
-<h2 id="集群初始化">集群初始化</h2>
-<h3 id="配置vip">配置VIP</h3>
-<p>高可用采用的是HAProxy+Keepalived，HAProxy和KeepAlived以守护进程的方式在所有Master节点部署。</p>
-<h5 id="安装软件">安装软件</h5>
-<pre><code>yum install keepalived haproxy -y
-</code></pre><h5 id="配置haproxy">配置haproxy</h5>
-<p>所有master节点的配置相同，如下：</p>
-<pre><code>#---------------------------------------------------------------------
-# Global settings
-#---------------------------------------------------------------------
-global
-    # to have these messages end up in /var/log/haproxy.log you will
-    # need to:
-    #
-    # 1) configure syslog to accept network log events.  This is done
-    #    by adding the '-r' option to the SYSLOGD_OPTIONS in
-    #    /etc/sysconfig/syslog
-    #
-    # 2) configure local2 events to go to the /var/log/haproxy.log
-    #   file. A line like the following can be added to
-    #   /etc/sysconfig/syslog
-    #
-    #    local2.*                       /var/log/haproxy.log
-    #
-    log         127.0.0.1 local2
-
-    chroot      /var/lib/haproxy
-    pidfile     /var/run/haproxy.pid
-    maxconn     4000
-    user        haproxy
-    group       haproxy
-    daemon
-
-    # turn on stats unix socket
-    stats socket /var/lib/haproxy/stats
-
-#---------------------------------------------------------------------
-# common defaults that all the 'listen' and 'backend' sections will
-# use if not designated in their block
-#---------------------------------------------------------------------
-defaults
-    mode                    http
-    log                     global
-    option                  httplog
-    option                  dontlognull
-    option http-server-close
-    option                  redispatch
-    retries                 3
-    timeout http-request    10s
-    timeout queue           1m
-    timeout connect         10s
-    timeout client          1m
-    timeout server          1m
-    timeout http-keep-alive 10s
-    timeout check           10s
-    maxconn                 3000
-
-#---------------------------------------------------------------------
-# kubernetes apiserver frontend which proxys to the backends
-#---------------------------------------------------------------------
-frontend kubernetes
-    mode                 tcp
-    bind                 *:16443
-    option               tcplog
-    default_backend      kubernetes-apiserver
-
-#---------------------------------------------------------------------
-# round robin balancing between the various backends
-#---------------------------------------------------------------------
-backend kubernetes-apiserver
-    mode        tcp
-    balance     roundrobin
-    server  k8s-master01 10.1.10.100:6443 check
-    server  k8s-master02 10.1.10.101:6443 check
-    server  k8s-master03 10.1.10.102:6443 check
-
-#---------------------------------------------------------------------
-# collection haproxy statistics message
-#---------------------------------------------------------------------
-listen stats
-    bind                 *:9999
-    stats auth           admin:P@ssW0rd
-    stats refresh        5s
-    stats realm          HAProxy\ Statistics
-    stats uri            /admin?stats
-</code></pre><h5 id="配置keepalived">配置keepalived</h5>
-<p>k8s-master01</p>
-<pre><code>! Configuration File for keepalived
-
-global_defs {
-   notification_email {
-     acassen@firewall.loc
-     failover@firewall.loc
-     sysadmin@firewall.loc
-   }
-   notification_email_from Alexandre.Cassen@firewall.loc
-   smtp_server 192.168.200.1
-   smtp_connect_timeout 30
-   router_id LVS_DEVEL
-   vrrp_skip_check_adv_addr
-   vrrp_garp_interval 0
-   vrrp_gna_interval 0
+// docker容器直接build
+def DockerBuild(buildShell){
+    sh &quot;&quot;&quot;
+        ${buildShell}
+    &quot;&quot;&quot;
 }
-# 定义脚本
-vrrp_script check_apiserver {
-    script &quot;/etc/keepalived/check_apiserver.sh&quot; 
-    interval 2                                  
-    weight -5                                  
-    fall 3                                   
-    rise 2                               
+</code></pre><p>sendEmail.groovy</p>
+<pre><code>package org.devops
+
+//定义邮件内容
+def SendEmail(status,emailUser){
+    emailext body: &quot;&quot;&quot;
+            &lt;!DOCTYPE html&gt; 
+            &lt;html&gt; 
+            &lt;head&gt; 
+            &lt;meta charset=&quot;UTF-8&quot;&gt; 
+            &lt;/head&gt; 
+            &lt;body leftmargin=&quot;8&quot; marginwidth=&quot;0&quot; topmargin=&quot;8&quot; marginheight=&quot;4&quot; offset=&quot;0&quot;&gt; 
+                &lt;table width=&quot;95%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;font-size: 11pt; font-family: Tahoma, Arial, Helvetica, sans-serif&quot;&gt;   
+                &lt;tr&gt;
+                    本邮件由系统自动发出，无需回复！&lt;br/&gt;
+                    各位同事，大家好，以下为${JOB_NAME}项目构建信息&lt;/br&gt;
+                    &lt;td&gt;&lt;font color=&quot;#CC0000&quot;&gt;构建结果 - ${status}&lt;/font&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                    &lt;tr&gt; 
+                        &lt;td&gt;&lt;br /&gt; 
+                            &lt;b&gt;&lt;font color=&quot;#0B610B&quot;&gt;构建信息&lt;/font&gt;&lt;/b&gt; 
+                        &lt;/td&gt; 
+                    &lt;/tr&gt; 
+                    &lt;tr&gt; 
+                        &lt;td&gt; 
+                            &lt;ul&gt; 
+                                &lt;li&gt;项目名称：${JOB_NAME}&lt;/li&gt;         
+                                &lt;li&gt;构建编号：${BUILD_ID}&lt;/li&gt; 
+                                &lt;li&gt;构建状态: ${status} &lt;/li&gt;                         
+                                &lt;li&gt;项目地址：&lt;a href=&quot;${BUILD_URL}&quot;&gt;${BUILD_URL}&lt;/a&gt;&lt;/li&gt;    
+                                &lt;li&gt;构建日志：&lt;a href=&quot;${BUILD_URL}console&quot;&gt;${BUILD_URL}console&lt;/a&gt;&lt;/li&gt;   
+                            &lt;/ul&gt; 
+                        &lt;/td&gt; 
+                    &lt;/tr&gt; 
+                    &lt;tr&gt;  
+                &lt;/table&gt; 
+            &lt;/body&gt; 
+            &lt;/html&gt;  &quot;&quot;&quot;,
+            subject: &quot;Jenkins-${JOB_NAME}项目构建信息 &quot;,
+            to: emailUser
+        
+}
+</code></pre><p>sonarAPI.groovy</p>
+<pre><code>package ore.devops
+
+// 封装HTTP请求
+def HttpReq(requestType,requestUrl,requestBody){
+    // 定义sonar api接口
+    def sonarServer = &quot;http://sonar.devops.svc.cluster.local:9000/api&quot;
+    result = httpRequest authentication: 'sonar-admin-user',
+            httpMode: requestType,
+            contentType: &quot;APPLICATION_JSON&quot;,
+            consoleLogResponseBody: true,
+            ignoreSslErrors: true,
+            requestBody: requestBody,
+            url: &quot;${sonarServer}/${requestUrl}&quot;
+    return result
 }
 
-vrrp_instance VI_1 {
-    state MASTER
-    interface eth33
-    virtual_router_id 51
-    priority 100
-    advert_int 1
-    authentication {
-        auth_type PASS
-        auth_pass 1111
-    }
-    virtual_ipaddress {
-            10.1.10.200
-    }
+// 获取soanr项目的状态
+def GetSonarStatus(projectName){
+    def apiUrl = &quot;project_branches/list?project=${projectName}&quot;
+    // 发请求
+    response = HttpReq(&quot;GET&quot;,apiUrl,&quot;&quot;)
+    // 对返回的文本做JSON解析
+    response = readJSON text: &quot;&quot;&quot;${response.content}&quot;&quot;&quot;
+    // 获取状态值
+    result = response[&quot;branches&quot;][0][&quot;status&quot;][&quot;qualityGateStatus&quot;]
+    return result
+}
 
-    # 调用脚本
-    track_script {
-        check_apiserver
+// 获取sonar项目，判断项目是否存在
+def SearchProject(projectName){
+    def apiUrl = &quot;projects/search?projects=${projectName}&quot;
+    // 发请求
+    response = HttpReq(&quot;GET&quot;,apiUrl,&quot;&quot;)
+    println &quot;搜索的结果：${response}&quot;
+    // 对返回的文本做JSON解析
+    response = readJSON text: &quot;&quot;&quot;${response.content}&quot;&quot;&quot;
+    // 获取total字段，该字段如果是0则表示项目不存在,否则表示项目存在
+    result = response[&quot;paging&quot;][&quot;total&quot;]
+    // 对result进行判断
+    if (result.toString() == &quot;0&quot;){
+        return &quot;false&quot;
+    }else{
+        return &quot;true&quot;
     }
 }
-</code></pre><p>k8s-master02</p>
-<pre><code>! Configuration File for keepalived
 
-global_defs {
-   notification_email {
-     acassen@firewall.loc
-     failover@firewall.loc
-     sysadmin@firewall.loc
-   }
-   notification_email_from Alexandre.Cassen@firewall.loc
-   smtp_server 192.168.200.1
-   smtp_connect_timeout 30
-   router_id LVS_DEVEL
-   vrrp_skip_check_adv_addr
-   vrrp_garp_interval 0
-   vrrp_gna_interval 0
-}
-# 定义脚本
-vrrp_script check_apiserver {
-    script &quot;/etc/keepalived/check_apiserver.sh&quot; 
-    interval 2                                  
-    weight -5                                  
-    fall 3                                   
-    rise 2                               
+// 创建sonar项目
+def CreateProject(projectName){
+    def apiUrl = &quot;projects/create?name=${projectName}&amp;project=${projectName}&quot;
+    // 发请求
+    response = HttpReq(&quot;POST&quot;,apiUrl,&quot;&quot;)
+    println(response)
 }
 
-vrrp_instance VI_1 {
-    state MASTER
-    interface eth33
-    virtual_router_id 51
-    priority 99
-    advert_int 1
-    authentication {
-        auth_type PASS
-        auth_pass 1111
+// 配置项目质量规则
+def ConfigQualityProfiles(projectName,lang,qpname){
+    def apiUrl = &quot;qualityprofiles/add_project?language=${lang}&amp;project=${projectName}&amp;qualityProfile=${qpname}&quot;
+    // 发请求
+    response = HttpReq(&quot;POST&quot;,apiUrl,&quot;&quot;)
+    println(response)
+}
+
+// 获取质量阈ID
+def GetQualityGateId(gateName){
+    def apiUrl = &quot;qualitygates/show?name=${gateName}&quot;
+    // 发请求
+    response = HttpReq(&quot;GET&quot;,apiUrl,&quot;&quot;)
+    // 对返回的文本做JSON解析
+    response = readJSON text: &quot;&quot;&quot;${response.content}&quot;&quot;&quot;
+    // 获取total字段，该字段如果是0则表示项目不存在,否则表示项目存在
+    result = response[&quot;id&quot;]
+    return result
+}
+
+// 更新质量阈规则
+def ConfigQualityGate(projectKey,gateName){
+    // 获取质量阈id
+    gateId = GetQualityGateId(gateName)
+    apiUrl = &quot;qualitygates/select?projectKey=${projectKey}&amp;gateId=${gateId}&quot;
+    // 发请求
+    response = HttpReq(&quot;POST&quot;,apiUrl,&quot;&quot;)
+    println(response)
+}
+
+//获取Sonar质量阈状态
+def GetProjectStatus(projectName){
+    apiUrl = &quot;project_branches/list?project=${projectName}&quot;
+    response = HttpReq(&quot;GET&quot;,apiUrl,'')
+    
+    response = readJSON text: &quot;&quot;&quot;${response.content}&quot;&quot;&quot;
+    result = response[&quot;branches&quot;][0][&quot;status&quot;][&quot;qualityGateStatus&quot;]
+    
+    //println(response)
+    
+   return result
+}
+</code></pre><p>sonarqube.groovy</p>
+<pre><code>package ore.devops
+
+def SonarScan(projectName,projectDesc,projectPath){
+    // sonarScanner安装地址
+    def sonarHome = &quot;/opt/sonar-scanner&quot;
+    // sonarqube服务端地址
+    def sonarServer = &quot;http://sonar.devops.svc.cluster.local:9000/&quot;
+    // 以时间戳为版本
+    def scanTime = sh returnStdout: true, script: 'date +%Y%m%d%H%m%S'
+    scanTime = scanTime - &quot;\n&quot;
+    sh &quot;&quot;&quot;
+    ${sonarHome}/bin/sonar-scanner  -Dsonar.host.url=${sonarServer}  \
+    -Dsonar.projectKey=${projectName}  \
+    -Dsonar.projectName=${projectName}  \
+    -Dsonar.projectVersion=${scanTime} \
+    -Dsonar.login=admin \
+    -Dsonar.password=admin \
+    -Dsonar.ws.timeout=30 \
+    -Dsonar.projectDescription=&quot;${projectDesc}&quot;  \
+    -Dsonar.links.homepage=http://www.baidu.com \
+    -Dsonar.sources=${projectPath} \
+    -Dsonar.sourceEncoding=UTF-8 \
+    -Dsonar.java.binaries=target/classes \
+    -Dsonar.java.test.binaries=target/test-classes \
+    -Dsonar.java.surefire.report=target/surefire-reports -X 
+
+    echo &quot;${projectName}  scan success!&quot;
+    &quot;&quot;&quot;
+}
+</code></pre><p>tools.groovy</p>
+<pre><code>package org.devops
+
+//格式化输出
+def PrintMes(value,color){
+    colors = ['red'   : &quot;\033[40;31m &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;${value}&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; \033[0m&quot;,
+              'blue'  : &quot;\033[47;34m ${value} \033[0m&quot;,
+              'green' : &quot;[1;32m&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;${value}&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;[m&quot;,
+              'green1' : &quot;\033[40;32m &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;${value}&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; \033[0m&quot; ]
+    ansiColor('xterm') {
+        println(colors[color])
     }
-    virtual_ipaddress {
-                10.1.10.200
-    }
-
-    # 调用脚本
-    track_script {
-        check_apiserver
-    }
-}
-</code></pre><p>k8s-master03</p>
-<pre><code>! Configuration File for keepalived
-
-global_defs {
-   notification_email {
-     acassen@firewall.loc
-     failover@firewall.loc
-     sysadmin@firewall.loc
-   }
-   notification_email_from Alexandre.Cassen@firewall.loc
-   smtp_server 192.168.200.1
-   smtp_connect_timeout 30
-   router_id LVS_DEVEL
-   vrrp_skip_check_adv_addr
-   vrrp_garp_interval 0
-   vrrp_gna_interval 0
-}
-# 定义脚本
-vrrp_script check_apiserver {
-    script &quot;/etc/keepalived/check_apiserver.sh&quot; 
-    interval 2                                  
-    weight -5                                  
-    fall 3                                   
-    rise 2                               
 }
 
-vrrp_instance VI_1 {
-    state MASTER
-    interface ens33
-    virtual_router_id 51
-    priority 98 
-    advert_int 1
-    authentication {
-        auth_type PASS
-        auth_pass 1111
-    }
-    virtual_ipaddress {
-    10.1.10.200
-    }
 
-    # 调用脚本
-    #track_script {
-    #    check_apiserver
-    #}
-}
-</code></pre><blockquote>
-<p>先把健康检查关闭，等部署好了过后再打开</p>
-</blockquote>
-<p>编写健康检测脚本check-apiserver.sh</p>
-<pre><code>#!/bin/bash
-
-function check_apiserver(){
-    for ((i=0;i&lt;5;i++))
-    do
-        apiserver_job_id=${pgrep kube-apiserver}
-        if [[ ! -z ${apiserver_job_id} ]];then
-            return
-        else
-            sleep 2
-        fi
-    done
-  apiserver_job_id=0
+// 获取镜像版本
+def createVersion() {
+    // 定义一个版本号作为当次构建的版本，输出结果 20191210175842_69
+    return new Date().format('yyyyMMddHHmmss') + &quot;_${env.BUILD_ID}&quot;
 }
 
-# 1-&gt;running    0-&gt;stopped
-check_apiserver
-if [[ $apiserver_job_id -eq 0 ]];then
-    /usr/bin/systemctl stop keepalived
-    exit 1
-else
-    exit 0
-fi
-</code></pre><p>启动haproxy和keepalived</p>
-<pre><code>systemctl enable --now keepalived
-systemctl enable --now haproxy
-</code></pre><h3 id="部署master">部署master</h3>
-<p>（1）、在k8s-master01上，编写kubeadm.yaml配置文件，如下：</p>
-<pre><code>cat &gt;&gt; kubeadm.yaml &lt;&lt;EOF
-apiVersion: kubeadm.k8s.io/v1beta2
-kind: ClusterConfiguration
-kubernetesVersion: v1.18.2
-imageRepository: registry.cn-hangzhou.aliyuncs.com/google_containers
-controlPlaneEndpoint: &quot;k8s-lb:16443&quot;
-networking:
-  dnsDomain: cluster.local
-  podSubnet: 192.168.0.0/16
-  serviceSubnet: 10.96.0.0/12
----
-apiVersion: kubeproxy.config.k8s.io/v1alpha1
-kind: KubeProxyConfiguration
-featureGates:
-  SupportIPVSProxyMode: true
-mode: ipvs
-EOF
-</code></pre><p>提前下载镜像</p>
-<pre><code>kubeadm config images pull --config kubeadm.yaml
-</code></pre><p>进行初始化</p>
-<pre><code>kubeadm init --config kubeadm.yaml --upload-certs
-W0509 22:37:40.702752   65728 configset.go:202] WARNING: kubeadm cannot validate component configs for API groups [kubelet.config.k8s.io kubeproxy.config.k8s.io]
-[init] Using Kubernetes version: v1.18.2
-[preflight] Running pre-flight checks
-    [WARNING IsDockerSystemdCheck]: detected &quot;cgroupfs&quot; as the Docker cgroup driver. The recommended driver is &quot;systemd&quot;. Please follow the guide at https://kubernetes.io/docs/setup/cri/
-[preflight] Pulling images required for setting up a Kubernetes cluster
-[preflight] This might take a minute or two, depending on the speed of your internet connection
-[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
-[kubelet-start] Writing kubelet environment file with flags to file &quot;/var/lib/kubelet/kubeadm-flags.env&quot;
-[kubelet-start] Writing kubelet configuration to file &quot;/var/lib/kubelet/config.yaml&quot;
-[kubelet-start] Starting the kubelet
-[certs] Using certificateDir folder &quot;/etc/kubernetes/pki&quot;
-[certs] Generating &quot;ca&quot; certificate and key
-[certs] Generating &quot;apiserver&quot; certificate and key
-[certs] apiserver serving cert is signed for DNS names [k8s-master01 kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local k8s-lb] and IPs [10.96.0.1 10.1.10.100]
-[certs] Generating &quot;apiserver-kubelet-client&quot; certificate and key
-[certs] Generating &quot;front-proxy-ca&quot; certificate and key
-[certs] Generating &quot;front-proxy-client&quot; certificate and key
-[certs] Generating &quot;etcd/ca&quot; certificate and key
-[certs] Generating &quot;etcd/server&quot; certificate and key
-[certs] etcd/server serving cert is signed for DNS names [k8s-master01 localhost] and IPs [10.1.10.100 127.0.0.1 ::1]
-[certs] Generating &quot;etcd/peer&quot; certificate and key
-[certs] etcd/peer serving cert is signed for DNS names [k8s-master01 localhost] and IPs [10.1.10.100 127.0.0.1 ::1]
-[certs] Generating &quot;etcd/healthcheck-client&quot; certificate and key
-[certs] Generating &quot;apiserver-etcd-client&quot; certificate and key
-[certs] Generating &quot;sa&quot; key and public key
-[kubeconfig] Using kubeconfig folder &quot;/etc/kubernetes&quot;
-[endpoint] WARNING: port specified in controlPlaneEndpoint overrides bindPort in the controlplane address
-[kubeconfig] Writing &quot;admin.conf&quot; kubeconfig file
-[endpoint] WARNING: port specified in controlPlaneEndpoint overrides bindPort in the controlplane address
-[kubeconfig] Writing &quot;kubelet.conf&quot; kubeconfig file
-[endpoint] WARNING: port specified in controlPlaneEndpoint overrides bindPort in the controlplane address
-[kubeconfig] Writing &quot;controller-manager.conf&quot; kubeconfig file
-[endpoint] WARNING: port specified in controlPlaneEndpoint overrides bindPort in the controlplane address
-[kubeconfig] Writing &quot;scheduler.conf&quot; kubeconfig file
-[control-plane] Using manifest folder &quot;/etc/kubernetes/manifests&quot;
-[control-plane] Creating static Pod manifest for &quot;kube-apiserver&quot;
-[control-plane] Creating static Pod manifest for &quot;kube-controller-manager&quot;
-W0509 22:37:47.750722   65728 manifests.go:225] the default kube-apiserver authorization-mode is &quot;Node,RBAC&quot;; using &quot;Node,RBAC&quot;
-[control-plane] Creating static Pod manifest for &quot;kube-scheduler&quot;
-W0509 22:37:47.764989   65728 manifests.go:225] the default kube-apiserver authorization-mode is &quot;Node,RBAC&quot;; using &quot;Node,RBAC&quot;
-[etcd] Creating static Pod manifest for local etcd in &quot;/etc/kubernetes/manifests&quot;
-[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory &quot;/etc/kubernetes/manifests&quot;. This can take up to 4m0s
-[apiclient] All control plane components are healthy after 20.024575 seconds
-[upload-config] Storing the configuration used in ConfigMap &quot;kubeadm-config&quot; in the &quot;kube-system&quot; Namespace
-[kubelet] Creating a ConfigMap &quot;kubelet-config-1.18&quot; in namespace kube-system with the configuration for the kubelets in the cluster
-[upload-certs] Storing the certificates in Secret &quot;kubeadm-certs&quot; in the &quot;kube-system&quot; Namespace
-[upload-certs] Using certificate key:
-f25e738324e4f027703f24b55d47d28f692b4edc21c2876171ff87877dc8f2ef
-[mark-control-plane] Marking the node k8s-master01 as control-plane by adding the label &quot;node-role.kubernetes.io/master=''&quot;
-[mark-control-plane] Marking the node k8s-master01 as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]
-[bootstrap-token] Using token: 3k4vr0.x3y2nc3ksfnei4y1
-[bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
-[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to get nodes
-[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
-[bootstrap-token] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
-[bootstrap-token] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
-[bootstrap-token] Creating the &quot;cluster-info&quot; ConfigMap in the &quot;kube-public&quot; namespace
-[kubelet-finalize] Updating &quot;/etc/kubernetes/kubelet.conf&quot; to point to a rotatable kubelet client certificate and key
-[addons] Applied essential addon: CoreDNS
-[endpoint] WARNING: port specified in controlPlaneEndpoint overrides bindPort in the controlplane address
-[addons] Applied essential addon: kube-proxy
 
-Your Kubernetes control-plane has initialized successfully!
-
-To start using your cluster, you need to run the following as a regular user:
-
-  mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
-You should now deploy a pod network to the cluster.
-Run &quot;kubectl apply -f [podnetwork].yaml&quot; with one of the options listed at:
-  https://kubernetes.io/docs/concepts/cluster-administration/addons/
-
-You can now join any number of the control-plane node running the following command on each as root:
-
-  kubeadm join k8s-lb:16443 --token 3k4vr0.x3y2nc3ksfnei4y1 \
-    --discovery-token-ca-cert-hash sha256:a5f761f332bd45a199d0676875e7f58c323226df6fb9b4f0b977b6f63b252791 \
-    --control-plane --certificate-key f25e738324e4f027703f24b55d47d28f692b4edc21c2876171ff87877dc8f2ef
-
-Please note that the certificate-key gives access to cluster sensitive data, keep it secret!
-As a safeguard, uploaded-certs will be deleted in two hours; If necessary, you can use
-&quot;kubeadm init phase upload-certs --upload-certs&quot; to reload certs afterward.
-
-Then you can join any number of worker nodes by running the following on each as root:
-
-kubeadm join k8s-lb:16443 --token 3k4vr0.x3y2nc3ksfnei4y1 \
-    --discovery-token-ca-cert-hash sha256:a5f761f332bd45a199d0676875e7f58c323226df6fb9b4f0b977b6f63b252791 
-</code></pre><p>配置环境变量</p>
-<pre><code>cat &gt;&gt; /root/.bashrc &lt;&lt;EOF
-export KUBECONFIG=/etc/kubernetes/admin.conf
-EOF
-source /root/.bashrc
-</code></pre><p>查看节点状态</p>
-<pre><code># kubectl get nodes
-NAME           STATUS     ROLES    AGE    VERSION
-k8s-master01   NotReady   master   3m1s   v1.18.2
-</code></pre><p>安装网络插件</p>
-<pre><code>wget https://docs.projectcalico.org/v3.8/manifests/calico.yaml
-</code></pre><p>如果有节点是多网卡，所以需要在资源清单文件中指定内网网卡</p>
-<p>vi calico.yaml</p>
-<pre><code>......
+// 获取时间
+def getTime() {
+    // 定义一个版本号作为当次构建的版本，输出结果 20191210175842
+    return new Date().format('yyyyMMddHHmmss')
+}
+</code></pre><h2 id="在gitlab上创建一个yaml管理仓库">在Gitlab上创建一个YAML管理仓库</h2>
+<p>我这里创建了一个叫devops-cd的共享仓库，如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606467522216-6dc51df9-cfce-4a8f-968c-e238aeb38715.png" alt="image.png" /></p>
+<p>然后以应用名创建一个目录，并在目录下创建以下几个文件。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606467611575-f413d4a8-96ec-4311-8ba5-f086d23e0542.png" alt="image.png" /></p>
+<p>它们的内容分别如下。</p>
+<p>service.yaml</p>
+<pre><code>kind: Service
+apiVersion: v1
+metadata:
+  name: the-service
+  namespace: default
 spec:
- containers:
- - env:
- - name: DATASTORE_TYPE
- value: kubernetes
- - name: IP_AUTODETECTION_METHOD # DaemonSet中添加该环境变量
- value: interface=ens33 # 指定内网网卡
- - name: WAIT_FOR_DATASTORE
- value: &quot;true&quot;
-......
-</code></pre><p>kubectl apply -f calico.yaml # 安装calico网络插件</p>
-<p>当网络插件安装完成后，查看node节点信息如下：</p>
-<pre><code># kubectl get nodes
-NAME           STATUS   ROLES    AGE   VERSION
-k8s-master01   Ready    master   10m   v1.18.2
-</code></pre><p>可以看到状态已经从NotReady变为ready了。</p>
-<p>（2）、将master02加入集群</p>
-<p>提前下载镜像</p>
-<pre><code>kubeadm config images pull --config kubeadm.yaml
-</code></pre><p>加入集群</p>
-<pre><code>  kubeadm join k8s-lb:16443 --token 3k4vr0.x3y2nc3ksfnei4y1 \
-    --discovery-token-ca-cert-hash sha256:a5f761f332bd45a199d0676875e7f58c323226df6fb9b4f0b977b6f63b252791 \
-    --control-plane --certificate-key f25e738324e4f027703f24b55d47d28f692b4edc21c2876171ff87877dc8f2ef
-</code></pre><p>输出如下：</p>
-<pre><code>...
-This node has joined the cluster and a new control plane instance was created:
+  selector:
+    deployment: hello
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+</code></pre><p>ingress.yaml</p>
+<pre><code>apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: the-ingress 
+  namespace: default
+spec:
+  rules:
+    - host: test.coolops.cn 
+      http:
+        paths:
+          - backend:
+              serviceName: the-service 
+              servicePort: 8080 
+            path: /
+</code></pre><p>deploymeny.yaml</p>
+<pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: the-deployment
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      deployment: hello
+  template:
+    metadata:
+      labels:
+        deployment: hello
+    spec:
+      containers:
+        - args:
+            - -jar
+            - /opt/myapp.jar
+            - --server.port=8080
+          command:
+            - java
+          env:
+            - name: HOST_IP
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: status.hostIP
+          image: registry.cn-hangzhou.aliyuncs.com/rookieops/myapp:latest
+          imagePullPolicy: IfNotPresent
+          lifecycle:
+            preStop:
+              exec:
+                command:
+                  - /bin/sh
+                  - -c
+                  - /bin/sleep 30
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /hello
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 60
+            periodSeconds: 15
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: myapp
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /hello
+              port: 8080
+              scheme: HTTP
+            periodSeconds: 15
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: &quot;1&quot;
+              memory: 2Gi
+            requests:
+              cpu: 100m
+              memory: 1Gi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirstWithHostNet
+      imagePullSecrets:
+        - name: gitlab-registry
+</code></pre><p>kustomization.yaml</p>
+<pre><code># Example configuration for the webserver
+# at https://github.com/monopole/hello
+commonLabels:
+  app: hello
 
-* Certificate signing request was sent to apiserver and approval was received.
-* The Kubelet was informed of the new secure connection details.
-* Control plane (master) label and taint were applied to the new node.
-* The Kubernetes control plane instances scaled up.
-* A new etcd member was added to the local/stacked etcd cluster.
+resources:
+- deployment.yaml
+- service.yaml
+- ingress.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: registry.cn-hangzhou.aliyuncs.com/rookieops/myapp
+  newTag: &quot;20201127150733_70&quot;
+namespace: dev
+</code></pre><h2 id="在jenkins上配置共享库">在Jenkins上配置共享库</h2>
+<p>（1）需要在Jenkins上添加凭证</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606466254516-0a9fbbc3-2ac2-4462-980b-86ec326cdb98.png" alt="image.png" /></p>
+<p>（2）在Jenkins的系统配置里面配置共享库（系统管理&ndash;&gt;系统配置）</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606466363639-28bd5a96-654b-4316-9a2c-0a41c185c77b.png" alt="image.png" /></p>
+<p>然后点击应用并保存</p>
+<p>然后我们可以用一个简单的Jenkinsfile测试一下共享库，看配置是否正确。</p>
+<p>在Jenkins上创建一个项目，如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606466569549-37dd8965-c8d9-48c0-9e80-4b705d025baf.png" alt="image.png" /></p>
+<p>然后在最地下的pipeline处贴入以下代码：</p>
+<pre><code>def labels = &quot;slave-${UUID.randomUUID().toString()}&quot;
+// 引用共享库
+@Library(&quot;jenkins_shareLibrary&quot;)
 
-To start administering your cluster from this node, you need to run the following as a regular user:
+// 应用共享库中的方法
+def tools = new org.devops.tools()
 
-    mkdir -p $HOME/.kube
-    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-    sudo chown $(id -u):$(id -g) $HOME/.kube/config
+pipeline {
+    agent {
+    kubernetes {
+        label labels
+      yaml &quot;&quot;&quot;
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    some-label: some-label-value
+spec:
+  volumes:
+  - name: docker-sock
+    hostPath:
+      path: /var/run/docker.sock
+      type: ''
+  containers:
+  - name: jnlp
+    image: registry.cn-hangzhou.aliyuncs.com/rookieops/inbound-agent:4.3-4
+  - name: maven
+    image: registry.cn-hangzhou.aliyuncs.com/rookieops/maven:3.5.0-alpine
+    command:
+    - cat
+    tty: true
+  - name: docker
+    image: registry.cn-hangzhou.aliyuncs.com/rookieops/docker:19.03.11
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: docker-sock
+      mountPath: /var/run/docker.sock
+&quot;&quot;&quot;
+    }
+  }
+    stages {
+        stage('Checkout') {
+            steps {
+                script{
+                    tools.PrintMes(&quot;拉代码&quot;,&quot;green&quot;)
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                container('maven') {
+                    script{
+                        tools.PrintMes(&quot;编译打包&quot;,&quot;green&quot;)
+                    }
+                }
+            }
+        }
+        stage('Make Image') {
+            steps {
+                container('docker') {
+                    script{
+                        tools.PrintMes(&quot;构建镜像&quot;,&quot;green&quot;)
+                    }
+                }
+            }
+        }
+    }
+}
+</code></pre><p>然后点击保存并运行，如果看到输出有颜色，就代表共享库配置成功，如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606466809231-54908379-bc29-4cb0-8680-b3f955fb162a.png" alt="image.png" /></p>
+<p>到此共享库配置完成。</p>
+<h2 id="编写jenkinsfile">编写Jenkinsfile</h2>
+<p>整个java的Jenkinsfile如下：</p>
+<pre><code>def labels = &quot;slave-${UUID.randomUUID().toString()}&quot;
 
-Run 'kubectl get nodes' to see this node join the cluster.
-...
-</code></pre><p>配置环境变量</p>
-<pre><code>cat &gt;&gt; /root/.bashrc &lt;&lt;EOF
-export KUBECONFIG=/etc/kubernetes/admin.conf
-EOF
-source /root/.bashrc
-</code></pre><p>另一台的操作一样。</p>
-<p>查看集群状态</p>
-<pre><code># kubectl get nodes 
-NAME           STATUS   ROLES    AGE   VERSION
-k8s-master01   Ready    master   41m   v1.18.2
-k8s-master02   Ready    master   29m   v1.18.2
-k8s-master03   Ready    master   27m   v1.18.2
-</code></pre><p>查看集群组件状态</p>
-<pre><code># kubectl get pod -n kube-system -o wide
-NAME                                       READY   STATUS     RESTARTS   AGE   IP               NODE           NOMINATED NODE   READINESS GATES
-calico-kube-controllers-77c5fc8d7f-stl57   1/1     Running    0          26m   192.168.32.130   k8s-master01   &lt;none&gt;           &lt;none&gt;
-calico-node-ppsph                          1/1     Running    0          26m   10.1.10.100      k8s-master01   &lt;none&gt;           &lt;none&gt;
-calico-node-tl6sq                          0/1     Init:2/3   0          26m   10.1.10.101      k8s-master02   &lt;none&gt;           &lt;none&gt;
-calico-node-w92qh                          1/1     Running    0          26m   10.1.10.102      k8s-master03   &lt;none&gt;           &lt;none&gt;
-coredns-546565776c-vtlhr                   1/1     Running    0          42m   192.168.32.129   k8s-master01   &lt;none&gt;           &lt;none&gt;
-coredns-546565776c-wz9bk                   1/1     Running    0          42m   192.168.32.131   k8s-master01   &lt;none&gt;           &lt;none&gt;
-etcd-k8s-master01                          1/1     Running    0          42m   10.1.10.100      k8s-master01   &lt;none&gt;           &lt;none&gt;
-etcd-k8s-master02                          1/1     Running    0          30m   10.1.10.101      k8s-master02   &lt;none&gt;           &lt;none&gt;
-etcd-k8s-master03                          1/1     Running    0          28m   10.1.10.102      k8s-master03   &lt;none&gt;           &lt;none&gt;
-kube-apiserver-k8s-master01                1/1     Running    0          42m   10.1.10.100      k8s-master01   &lt;none&gt;           &lt;none&gt;
-kube-apiserver-k8s-master02                1/1     Running    0          30m   10.1.10.101      k8s-master02   &lt;none&gt;           &lt;none&gt;
-kube-apiserver-k8s-master03                1/1     Running    0          28m   10.1.10.102      k8s-master03   &lt;none&gt;           &lt;none&gt;
-kube-controller-manager-k8s-master01       1/1     Running    1          42m   10.1.10.100      k8s-master01   &lt;none&gt;           &lt;none&gt;
-kube-controller-manager-k8s-master02       1/1     Running    1          30m   10.1.10.101      k8s-master02   &lt;none&gt;           &lt;none&gt;
-kube-controller-manager-k8s-master03       1/1     Running    0          28m   10.1.10.102      k8s-master03   &lt;none&gt;           &lt;none&gt;
-kube-proxy-6sbpp                           1/1     Running    0          28m   10.1.10.102      k8s-master03   &lt;none&gt;           &lt;none&gt;
-kube-proxy-dpppr                           1/1     Running    0          42m   10.1.10.100      k8s-master01   &lt;none&gt;           &lt;none&gt;
-kube-proxy-ln7l7                           1/1     Running    0          30m   10.1.10.101      k8s-master02   &lt;none&gt;           &lt;none&gt;
-kube-scheduler-k8s-master01                1/1     Running    1          42m   10.1.10.100      k8s-master01   &lt;none&gt;           &lt;none&gt;
-kube-scheduler-k8s-master02                1/1     Running    1          30m   10.1.10.101      k8s-master02   &lt;none&gt;           &lt;none&gt;
-kube-scheduler-k8s-master03                1/1     Running    0          28m   10.1.10.102      k8s-master03   &lt;none&gt;           &lt;none&gt;
-</code></pre><p>查看CSR</p>
-<pre><code> kubectl get csr
-NAME        AGE   SIGNERNAME                                    REQUESTOR                  CONDITION
-csr-cfl2w   42m   kubernetes.io/kube-apiserver-client-kubelet   system:node:k8s-master01   Approved,Issued
-csr-mm7g7   28m   kubernetes.io/kube-apiserver-client-kubelet   system:bootstrap:3k4vr0    Approved,Issued
-csr-qzn6r   30m   kubernetes.io/kube-apiserver-client-kubelet   system:bootstrap:3k4vr0    Approved,Issued
-</code></pre><h3 id="部署node">部署node</h3>
-<p>node节点只需加入集群即可</p>
-<pre><code>kubeadm join k8s-lb:16443 --token 3k4vr0.x3y2nc3ksfnei4y1 \
-    --discovery-token-ca-cert-hash sha256:a5f761f332bd45a199d0676875e7f58c323226df6fb9b4f0b977b6f63b252791 
-</code></pre><p>输出日志如下：</p>
-<pre><code>W0509 23:24:12.159733   10635 join.go:346] [preflight] WARNING: JoinControlPane.controlPlane settings will be ignored when control-plane flag is not set.
-[preflight] Running pre-flight checks
-    [WARNING IsDockerSystemdCheck]: detected &quot;cgroupfs&quot; as the Docker cgroup driver. The recommended driver is &quot;systemd&quot;. Please follow the guide at https://kubernetes.io/docs/setup/cri/
-[preflight] Reading configuration from the cluster...
-[preflight] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -oyaml'
-[kubelet-start] Downloading configuration for the kubelet from the &quot;kubelet-config-1.18&quot; ConfigMap in the kube-system namespace
-[kubelet-start] Writing kubelet configuration to file &quot;/var/lib/kubelet/config.yaml&quot;
-[kubelet-start] Writing kubelet environment file with flags to file &quot;/var/lib/kubelet/kubeadm-flags.env&quot;
-[kubelet-start] Starting the kubelet
-[kubelet-start] Waiting for the kubelet to perform the TLS Bootstrap...
+// 引用共享库
+@Library(&quot;jenkins_shareLibrary&quot;)
 
-This node has joined the cluster:
-* Certificate signing request was sent to apiserver and a response was received.
-* The Kubelet was informed of the new secure connection details.
+// 应用共享库中的方法
+def tools = new org.devops.tools()
+def sonarapi = new org.devops.sonarAPI()
+def sendEmail = new org.devops.sendEmail()
+def build = new org.devops.build()
+def sonar = new org.devops.sonarqube()
 
-Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
-</code></pre><p>然后查看集群节点信息</p>
-<pre><code># kubectl get nodes 
-NAME           STATUS     ROLES    AGE   VERSION
-k8s-master01   Ready      master   47m   v1.18.2
-k8s-master02   Ready      master   35m   v1.18.2
-k8s-master03   Ready      master   32m   v1.18.2
-k8s-node01     Ready        node01   55s   v1.18.2
-</code></pre><h2 id="测试切换">测试切换</h2>
-<p>关闭一台master主机，看集群是否可用。</p>
-<p>关闭master01主机，然后查看整个集群。</p>
-<pre><code># 模拟关掉keepalived
-systemctl stop keepalived
-# 然后查看集群是否可用
-[root@k8s-master03 ~]# kubectl get nodes
-NAME           STATUS   ROLES    AGE   VERSION
-k8s-master01   Ready    master   64m   v1.18.2
-k8s-master02   Ready    master   52m   v1.18.2
-k8s-master03   Ready    master   50m   v1.18.2
-k8s-node01     Ready    &lt;none&gt;   18m   v1.18.2
-[root@k8s-master03 ~]# kubectl get pod -n kube-system
-NAME                                       READY   STATUS    RESTARTS   AGE
-calico-kube-controllers-77c5fc8d7f-stl57   1/1     Running   0          49m
-calico-node-8t5ft                          1/1     Running   0          19m
-calico-node-ppsph                          1/1     Running   0          49m
-calico-node-tl6sq                          1/1     Running   0          49m
-calico-node-w92qh                          1/1     Running   0          49m
-coredns-546565776c-vtlhr                   1/1     Running   0          65m
-coredns-546565776c-wz9bk                   1/1     Running   0          65m
-etcd-k8s-master01                          1/1     Running   0          65m
-etcd-k8s-master02                          1/1     Running   0          53m
-etcd-k8s-master03                          1/1     Running   0          51m
-kube-apiserver-k8s-master01                1/1     Running   0          65m
-kube-apiserver-k8s-master02                1/1     Running   0          53m
-kube-apiserver-k8s-master03                1/1     Running   0          51m
-kube-controller-manager-k8s-master01       1/1     Running   2          65m
-kube-controller-manager-k8s-master02       1/1     Running   1          53m
-kube-controller-manager-k8s-master03       1/1     Running   0          51m
-kube-proxy-6sbpp                           1/1     Running   0          51m
-kube-proxy-dpppr                           1/1     Running   0          65m
-kube-proxy-ln7l7                           1/1     Running   0          53m
-kube-proxy-r5ltk                           1/1     Running   0          19m
-kube-scheduler-k8s-master01                1/1     Running   2          65m
-kube-scheduler-k8s-master02                1/1     Running   1          53m
-kube-scheduler-k8s-master03                1/1     Running   0          51m
-</code></pre><blockquote>
-<p>到此集群搭建完了，然后可以开启keepalived的检查脚本了。另外一些组件就自己自行安装。</p>
+// 前端传来的变量
+def gitBranch = env.branch
+def gitUrl = env.git_url
+def buildShell = env.build_shell
+def image = env.image
+def dockerRegistryUrl = env.dockerRegistryUrl
+def devops_cd_git = env.devops_cd_git
+
+
+
+pipeline {
+    agent {
+    kubernetes {
+        label labels
+      yaml &quot;&quot;&quot;
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    some-label: some-label-value
+spec:
+  volumes:
+  - name: docker-sock
+    hostPath:
+      path: /var/run/docker.sock
+      type: ''
+  - name: maven-cache
+    persistentVolumeClaim:
+      claimName: maven-cache-pvc
+  containers:
+  - name: jnlp
+    image: registry.cn-hangzhou.aliyuncs.com/rookieops/inbound-agent:4.3-4
+  - name: maven
+    image: registry.cn-hangzhou.aliyuncs.com/rookieops/maven:3.5.0-alpine
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: maven-cache
+      mountPath: /root/.m2
+  - name: docker
+    image: registry.cn-hangzhou.aliyuncs.com/rookieops/docker:19.03.11
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: docker-sock
+      mountPath: /var/run/docker.sock
+  - name: sonar-scanner
+    image: registry.cn-hangzhou.aliyuncs.com/rookieops/sonar-scanner:latest
+    command:
+    - cat
+    tty: true
+  - name: kustomize
+    image: registry.cn-hangzhou.aliyuncs.com/rookieops/kustomize:v3.8.1
+    command:
+    - cat
+    tty: true
+&quot;&quot;&quot;
+    }
+  }
+
+    environment{
+        auth = 'joker'
+    }
+
+    options {
+        timestamps()    // 日志会有时间
+        skipDefaultCheckout()   // 删除隐式checkout scm语句
+        disableConcurrentBuilds()   //禁止并行
+        timeout(time:1,unit:'HOURS') //设置流水线超时时间
+    }
+
+
+    stages {
+        // 拉取代码
+        stage('GetCode') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: &quot;${gitBranch}&quot;]],
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [],
+                    submoduleCfg: [],
+                    userRemoteConfigs: [[credentialsId: '83d2e934-75c9-48fe-9703-b48e2feff4d8', url: &quot;${gitUrl}&quot;]]])
+                }
+            }
+
+        // 单元测试和编译打包
+        stage('Build&amp;Test') {
+            steps {
+                container('maven') {
+                    script{
+                        tools.PrintMes(&quot;编译打包&quot;,&quot;blue&quot;)
+                        build.DockerBuild(&quot;${buildShell}&quot;)
+                    }
+                }
+            }
+        }
+        // 代码扫描
+        stage('CodeScanner') {
+            steps {
+                container('sonar-scanner') {
+                    script {
+                        tools.PrintMes(&quot;代码扫描&quot;,&quot;green&quot;)
+                        tools.PrintMes(&quot;搜索项目&quot;,&quot;green&quot;)
+                        result = sonarapi.SearchProject(&quot;${JOB_NAME}&quot;)
+                        println(result)
+
+                        if (result == &quot;false&quot;){
+                            println(&quot;${JOB_NAME}---项目不存在,准备创建项目---&gt; ${JOB_NAME}！&quot;)
+                            sonarapi.CreateProject(&quot;${JOB_NAME}&quot;)
+                        } else {
+                            println(&quot;${JOB_NAME}---项目已存在！&quot;)
+                        }
+
+                        tools.PrintMes(&quot;代码扫描&quot;,&quot;green&quot;)
+                        sonar.SonarScan(&quot;${JOB_NAME}&quot;,&quot;${JOB_NAME}&quot;,&quot;src&quot;)
+
+                        sleep 10
+                        tools.PrintMes(&quot;获取扫描结果&quot;,&quot;green&quot;)
+                        result = sonarapi.GetProjectStatus(&quot;${JOB_NAME}&quot;)
+
+                        println(result)
+                        if (result.toString() == &quot;ERROR&quot;){
+                            toemail.Email(&quot;代码质量阈错误！请及时修复！&quot;,userEmail)
+                            error &quot; 代码质量阈错误！请及时修复！&quot;
+
+                        } else {
+                            println(result)
+                        }
+                    }
+                }
+            }
+        }
+        // 构建镜像
+        stage('BuildImage') {
+            steps {
+                withCredentials([[$class: 'UsernamePasswordMultiBinding',
+                credentialsId: 'dockerhub',
+                usernameVariable: 'DOCKER_HUB_USER',
+                passwordVariable: 'DOCKER_HUB_PASSWORD']]) {
+                    container('docker') {
+                        script{
+                            tools.PrintMes(&quot;构建镜像&quot;,&quot;green&quot;)
+                            imageTag = tools.createVersion()
+                            sh &quot;&quot;&quot;
+                            docker login ${dockerRegistryUrl} -u ${DOCKER_HUB_USER} -p ${DOCKER_HUB_PASSWORD}
+                            docker build -t ${image}:${imageTag} .
+                            docker push ${image}:${imageTag}
+                            docker rmi ${image}:${imageTag}
+                            &quot;&quot;&quot;
+                        }
+                    }
+                }
+            }
+        }
+        // 部署
+        stage('Deploy') {
+            steps {
+                 withCredentials([[$class: 'UsernamePasswordMultiBinding',
+                credentialsId: 'ci-devops',
+                usernameVariable: 'DEVOPS_USER',
+                passwordVariable: 'DEVOPS_PASSWORD']]){
+                    container('kustomize') {
+                        script{
+                            APP_DIR=&quot;${JOB_NAME}&quot;.split(&quot;_&quot;)[0]
+                            sh &quot;&quot;&quot;
+                            git remote set-url origin http://${DEVOPS_USER}:${DEVOPS_PASSWORD}@${devops_cd_git}
+                            git config --global user.name &quot;Administrator&quot;
+                            git config --global user.email &quot;coolops@163.com&quot;
+                            git clone http://${DEVOPS_USER}:${DEVOPS_PASSWORD}@${devops_cd_git} /opt/devops-cd
+                            cd /opt/devops-cd
+                            git pull
+                            cd /opt/devops-cd/${APP_DIR}
+                            kustomize edit set image ${image}:${imageTag}
+                            git commit -am 'image update'
+                            git push origin master
+                            &quot;&quot;&quot;
+                        }
+                    }
+                }
+            }
+        }
+        // 接口测试
+        stage('InterfaceTest') {
+            steps{
+                sh 'echo &quot;接口测试&quot;'
+            }
+        }
+    }
+    // 构建后的操作
+    post {
+        success {
+            script{
+                println(&quot;success:只有构建成功才会执行&quot;)
+                currentBuild.description += &quot;\n构建成功！&quot;
+                // deploy.AnsibleDeploy(&quot;${deployHosts}&quot;,&quot;-m ping&quot;)
+                sendEmail.SendEmail(&quot;构建成功&quot;,toEmailUser)
+                // dingmes.SendDingTalk(&quot;构建成功 ✅&quot;)
+            }
+        }
+        failure {
+            script{
+                println(&quot;failure:只有构建失败才会执行&quot;)
+                currentBuild.description += &quot;\n构建失败!&quot;
+                sendEmail.SendEmail(&quot;构建失败&quot;,toEmailUser)
+                // dingmes.SendDingTalk(&quot;构建失败 ❌&quot;)
+            }
+        }
+        aborted {
+            script{
+                println(&quot;aborted:只有取消构建才会执行&quot;)
+                currentBuild.description += &quot;\n构建取消!&quot;
+                sendEmail.SendEmail(&quot;取消构建&quot;,toEmailUser)
+                // dingmes.SendDingTalk(&quot;构建失败 ❌&quot;,&quot;暂停或中断&quot;)
+            }
+        }
+    }
+}
+</code></pre><p>需要在Jenkins上创建两个凭证，一个id叫dockerhub，一个叫ci-devops，还有一个叫sonar-admin-user。</p>
+<p>dockerhub是登录镜像仓库的用户名和密码。</p>
+<p>ci-devops是管理YAML仓库的用户名和密码。</p>
+<p>sonar-admin-user是管理sonarqube的用户名和密码。</p>
+<p>然后将这个Jenkinsfile保存到shareLibrary的根目录下，命名为java.Jenkinsfile。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468036383-b4fe660a-0efe-4a8c-82bf-322d7c3a6eda.png" alt="image.png" /></p>
+<h2 id="在jenkins上配置项目">在Jenkins上配置项目</h2>
+<p>在Jenkins上新建一个项目，如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468074802-33f01a65-88ad-44fa-aa84-eeca6ad6efed.png" alt="image.png" /></p>
+<p>然后添加以下参数化构建。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468120272-73e75664-7f6c-49fe-8872-2ccb3d0c1b38.png" alt="image.png" /></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468133854-dacfb96d-7562-46a6-9bc2-d48c36e5cf32.png" alt="image.png" /></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468146172-6bedc15a-0ecc-4e5d-9141-8b6afcb50b62.png" alt="image.png" /></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468157877-cdeb2ab8-9fa8-4153-9db9-e536a6a5d29a.png" alt="image.png" /></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468170420-d83adacc-50e2-49a2-842a-176481a8347e.png" alt="image.png" /></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468572243-d3bdeb33-4b86-4c93-a101-11b10e3b0e70.png" alt="image.png" /></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468965447-92b9a631-593e-4bbe-a75a-5682271ce618.png" alt="image.png" /></p>
+<p>然后在流水线处配置Pipeline from SCM</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468221943-81bd5cb2-a2e2-463d-a0d9-6ffef716c4fc.png" alt="image.png" /></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606468238706-bd32d52c-4b1d-4cdc-8f5d-6d2ebeb3fe44.png" alt="image.png" /></p>
+<p>此处需要注意脚本名。</p>
+<p>然后点击应用保存，并运行。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606469484363-ba7fea24-6a69-486d-8c46-e378c35d2dfa.png" alt="image.png" /></p>
+<p>也可以在sonarqube上看到代码扫描的结果。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606469516322-dfd0f065-e96f-42bc-97be-69609d1d0d0d.png" alt="image.png" /></p>
+<h2 id="在argocd上配置cd流程">在Argocd上配置CD流程</h2>
+<p>在argocd上添加代码仓库，如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606469693573-dacc43fe-dd91-4ee2-80dd-47a6df5d4ebd.png" alt="image.png" /></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606469737299-4cf07f8e-1d66-4d93-812f-876ea5bcff5c.png" alt="image.png" /></p>
+<p>然后创建应用，如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606470021374-baaf2c1a-7e75-4fdf-9cd9-e5f4bd9e2e66.png" alt="image.png" /></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606469962280-29157bd9-1dcd-4267-87e6-78501623cd11.png" alt="image.png" /></p>
+<p>点击创建后，如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606470045008-4aa7fe24-153e-40e9-8755-544d92d7430e.png" alt="image.png" /></p>
+<p>点进去可以看到更多的详细信息。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606470064042-c529dc48-d3e4-428e-9167-462be007b664.png" alt="image.png" /></p>
+<blockquote>
+<p>argocd有一个小bug，它ingress的健康检查必须要loadBalance有值，不然就不通过，但是并不影响使用。</p>
 </blockquote>
-<h2 id="安装自动补全命令">安装自动补全命令</h2>
-<pre><code>yum install -y bash-completion
-source /usr/share/bash-completion/bash_completion
-source &lt;(kubectl completion bash)
-echo &quot;source &lt;(kubectl completion bash)&quot; &gt;&gt; ~/.bashrc
-</code></pre>
+<p>然后可以正常访问应用了。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606470193342-5564e410-dbbe-41c4-ae9f-24492d19ff79.png" alt="image.png" /></p>
+<p>node项目的Jenkinsfile大同小异，由于我没有测试用例，所以并没有测试。</p>
+<h2 id="集成gitlab通过webhook触发jenkins">集成Gitlab，通过Webhook触发Jenkins</h2>
+<p>在Jenkins中选择项目，在项目中配置gitlab触发，如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606553501242-e61c5be9-8670-4bf9-91d5-aab5a3eb3c63.png" alt="image.png" /></p>
+<p>生成token，如下</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606553555436-cb9189a7-0948-4d7a-9747-f25eea5eccc4.png" alt="image.png" /></p>
+<p>在gitlab上配置集成。进入项目&ndash;&gt;项目设置&ndash;&gt;集成</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606553652145-da18c841-2ea2-483d-ad31-7e760e4a02e7.png" alt="image.png" /></p>
+<p>配置Jenkins上生成的回调URL和TOKEN</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606553764118-0e283eac-2aef-4d1b-96c6-2147665b39c2.png" alt="image.png" /></p>
+<p>到此配置完成，然后点击下方test，可以观察是否触发流水线。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1606553878259-a682d61d-fe02-475b-be68-9648fbd82d58.png" alt="image.png" /></p>
+<p>也可以通过修改仓库代码进行测试。</p>
+<h2 id="写在最后">写在最后</h2>
+<p>本片文章是纯操作步骤，大家在测试的时候可能会对Jenkinsfile做细微的调整，不过整体没什么问题。</p>
+
     </article>
     
     
@@ -2657,13 +2737,13 @@ echo &quot;source &lt;(kubectl completion bash)&quot; &gt;&gt; ~/.bashrc
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fqiaokebaba.github.io%2fposts%2fkubeadm-install-kubernetes%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fqiaokebaba.github.io%2fposts%2fdevops-jenkins-argocd%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=Kubeadm%e6%90%ad%e5%bb%ba%e9%ab%98%e5%8f%af%e7%94%a8Kubernetes%e9%9b%86%e7%be%a4&url=http%3a%2f%2fqiaokebaba.github.io%2fposts%2fkubeadm-install-kubernetes%2f&hashtags=kubernetes&via=%e4%b9%94%e5%85%8b%e5%8f%94%e5%8f%94" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=%e5%ae%9e%e7%8e%b0Jenkins%e5%92%8cArgocd%e5%ae%9e%e7%8e%b0CI%2fCD&url=http%3a%2f%2fqiaokebaba.github.io%2fposts%2fdevops-jenkins-argocd%2f&hashtags=DevOps%2cJenkins%2cArgocd%2cCI%2fCD&via=%e4%b9%94%e5%85%8b%e5%8f%94%e5%8f%94" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2782,41 +2862,19 @@ echo &quot;source &lt;(kubectl completion bash)&quot; &gt;&gt; ~/.bashrc
     <section class="related">
     
     
-    <h1 class="related__title">
-      <hr class="hr-dots"/>
-      <div>
-        See Also
-      </div>
-      <hr class="hr-dots"/>
-    </h1>
-    <ul class="related-ul">
-        
-        <li>
-          <a href="/posts/binary-install-kubernetes/" class="related__link">二进制安装Kubernetes集群</a>
-        </li>
-        
-    </ul>
-    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-      <a href="http://qiaokebaba.github.io/posts/handle-etcd-cluster/" class="pagination-single__left">
+      <a href="http://qiaokebaba.github.io/posts/kubeadm-install-kubernetes/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Etcd集群常用操作</div>      
+        <div class="pagination-single__left-title">Kubeadm搭建高可用Kubernetes集群</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="http://qiaokebaba.github.io/posts/devops-jenkins-argocd/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">实现Jenkins和Argocd实现CI/CD</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -3174,32 +3232,19 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#节点规划信息">节点规划信息</a></li>
-    <li><a href="#基础环境配置">基础环境配置</a>
-      <ul>
-        <li><a href="#环境信息">环境信息</a></li>
-        <li><a href="#环境初始化">环境初始化</a></li>
-        <li><a href="#内核升级">内核升级</a></li>
-        <li><a href="#组件安装">组件安装</a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#集群初始化">集群初始化</a>
-      <ul>
-        <li><a href="#配置vip">配置VIP</a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#部署master">部署master</a></li>
-        <li><a href="#部署node">部署node</a></li>
-      </ul>
-    </li>
-    <li><a href="#测试切换">测试切换</a></li>
-    <li><a href="#安装自动补全命令">安装自动补全命令</a></li>
+    <li><a href="#软件安装">软件安装</a></li>
+    <li><a href="#在jenkins上安装如下插件">在Jenkins上安装如下插件</a></li>
+    <li><a href="#在jenkins上配置kubernetes集群信息">在Jenkins上配置Kubernetes集群信息</a></li>
+    <li><a href="#在jenkins上配置邮箱地址">在Jenkins上配置邮箱地址</a></li>
+    <li><a href="#在gitlab上准备一个测试代码">在Gitlab上准备一个测试代码</a></li>
+    <li><a href="#在gitlab上创建一个共享库">在Gitlab上创建一个共享库</a></li>
+    <li><a href="#在gitlab上创建一个yaml管理仓库">在Gitlab上创建一个YAML管理仓库</a></li>
+    <li><a href="#在jenkins上配置共享库">在Jenkins上配置共享库</a></li>
+    <li><a href="#编写jenkinsfile">编写Jenkinsfile</a></li>
+    <li><a href="#在jenkins上配置项目">在Jenkins上配置项目</a></li>
+    <li><a href="#在argocd上配置cd流程">在Argocd上配置CD流程</a></li>
+    <li><a href="#集成gitlab通过webhook触发jenkins">集成Gitlab，通过Webhook触发Jenkins</a></li>
+    <li><a href="#写在最后">写在最后</a></li>
   </ul>
 </nav>
   </div>
@@ -3788,7 +3833,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
           
             
-              <a href="http://qiaokebaba.github.io/posts/kubeadm-install-kubernetes/" data-lang="en" class="dropdown-item is-active">English</a>
+              <a href="http://qiaokebaba.github.io/posts/devops-jenkins-argocd/" data-lang="en" class="dropdown-item is-active">English</a>
             
           
         

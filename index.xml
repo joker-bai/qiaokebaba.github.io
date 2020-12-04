@@ -14,7 +14,7 @@
     <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 04 Dec 2020 14:13:34 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 04 Dec 2020 15:43:30 +0800</lastBuildDate>
     
         <atom:link href="http://qiaokebaba.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,6 +42,50 @@
         
       
 
+      
+      <item>
+        <title>实现Jenkins和Argocd实现CI/CD</title>
+        <link>http://qiaokebaba.github.io/posts/devops-jenkins-argocd/</link>
+        <pubDate>Fri, 04 Dec 2020 15:43:30 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Fri, 04 Dec 2020 15:43:30 +0800</atom:modified>
+        <guid>http://qiaokebaba.github.io/posts/devops-jenkins-argocd/</guid>
+        <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>DevOps</category>
+            
+          
+            
+              <category>Jenkins</category>
+            
+          
+            
+              <category>Argocd</category>
+            
+          
+            
+              <category>CI/CD</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>Kubeadm搭建高可用Kubernetes集群</title>
