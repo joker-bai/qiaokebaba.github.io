@@ -1399,6 +1399,8 @@
 
 
 
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
     
 </head>
 
@@ -1426,7 +1428,7 @@
     
     
       <a href="/" title="Home" rel="home" class="navbar__title-link">
-        <h6 class="navbar__title">运维工作站</h6>
+        <h6 class="navbar__title">云原生工作站</h6>
       </a>
     
   </div>
@@ -1648,7 +1650,7 @@
   window.onload = function() {
     
     
-    var enableBusuanzi = JSON.parse("false");
+    var enableBusuanzi = JSON.parse("true");
     if (enableBusuanzi) {
       var sitePvElem = document.querySelector('#busuanzi_value_site_pv');
       var siteUvElem = document.querySelector('#busuanzi_value_site_uv');
@@ -1782,6 +1784,28 @@
 
     <div class="footer__poweredby">
         
+  <div class="busuanzi">
+    
+    
+      <div class="busuanzi__item">
+        <span class="busuanzi__item--label">
+          Total visitors
+        </span>
+        <span id="busuanzi_value_site_uv" class="busuanzi__item--number">...</span>
+      </div>
+    
+
+    
+      <div class="busuanzi__item">
+        <span class="busuanzi__item--label">
+          Total views
+        </span>
+        <span id="busuanzi_value_site_pv" class="busuanzi__item--number">...</span>
+      </div>
+    
+
+  </div>
+
                 
             <p class="caption">
                 
