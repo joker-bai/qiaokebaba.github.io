@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>docker on 运维实验室-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <link>http://qiaokebaba.github.io/tags/docker/</link>
+    <description>Recent content in docker on 运维实验室-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
+    <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 04 Dec 2020 09:40:07 +0800</lastBuildDate>
+    
+        <atom:link href="http://qiaokebaba.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>二进制安装Kubernetes集群</title>
+        <link>http://qiaokebaba.github.io/posts/binary-install-kubernetes/</link>
+        <pubDate>Fri, 04 Dec 2020 09:40:07 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Fri, 04 Dec 2020 09:40:07 +0800</atom:modified>
+        <guid>http://qiaokebaba.github.io/posts/binary-install-kubernetes/</guid>
+        <description>基础规划 1、IP规划 主机名 IP 配置 软件 master-k8s 10.1.10.128 2C4G etcd,apiserver,controller-manager,scheduler node01-k8s 10.1.10.129 2C4G etcd,docker,kubelet,kube-proxy node02-k8s 10.1.10.130 2C4G etcd,docker,kubelet,kube-proxy 2、软件规划 软件名 版本 etcd 3.3.18 docker-ce 19.03.5-3 cfssl 1.2.0 kubernetes 1.16.4 flannel 0.11.0 cni 0.8.3 3、目录规划 目录名 用途 /var/log/kubernetes/ 存储日志 /root/kubernetes/install</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>docker</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

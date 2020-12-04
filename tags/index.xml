@@ -1,21 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Tags on 乔克叔叔</title>
-    <link>https://qiaokebaba.github.io/tags/</link>
-    <description>Recent content in Tags on 乔克叔叔</description>
+    <title>Tags on 运维实验室-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <link>http://qiaokebaba.github.io/tags/</link>
+    <description>Recent content in Tags on 运维实验室-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 02 Dec 2020 16:43:08 +0800</lastBuildDate><atom:link href="https://qiaokebaba.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>untagged</title>
-      <link>https://qiaokebaba.github.io/tags/untagged/</link>
-      <pubDate>Wed, 02 Dec 2020 16:43:08 +0800</pubDate>
+    <language>en</language>
+    <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
+    <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 04 Dec 2020 09:40:07 +0800</lastBuildDate>
+    
+        <atom:link href="http://qiaokebaba.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
       
-      <guid>https://qiaokebaba.github.io/tags/untagged/</guid>
-      <description></description>
-    </item>
+      <item>
+        <title>docker</title>
+        <link>http://qiaokebaba.github.io/tags/docker/</link>
+        <pubDate>Fri, 04 Dec 2020 09:40:07 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>http://qiaokebaba.github.io/tags/docker/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kubernetes</title>
+        <link>http://qiaokebaba.github.io/tags/kubernetes/</link>
+        <pubDate>Fri, 04 Dec 2020 09:40:07 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>http://qiaokebaba.github.io/tags/kubernetes/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>index</title>
+        <link>http://qiaokebaba.github.io/tags/index/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>http://qiaokebaba.github.io/tags/index/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

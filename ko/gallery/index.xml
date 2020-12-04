@@ -6,15 +6,15 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Galleries on Hugo Zzo Theme</title>
+    <title>Galleries on 运维实验室</title>
     <link>http://qiaokebaba.github.io/ko/gallery/</link>
-    <description>Recent content in Galleries on Hugo Zzo Theme</description>
+    <description>Recent content in Galleries on 运维实验室</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <managingEditor>qiaokebaba@163.com (joker)</managingEditor>
-    <webMaster>qiaokebaba@163.com (joker)</webMaster>
+    <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
+    <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 12 Oct 2018 10:20:16 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
     
         <atom:link href="http://qiaokebaba.github.io/ko/gallery/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,16 +23,16 @@
 
       
       <item>
-        <title>Photo</title>
-        <link>http://qiaokebaba.github.io/ko/gallery/photo/</link>
-        <pubDate>Fri, 12 Oct 2018 10:20:16 +0900</pubDate>
-        <author>qiaokebaba@163.com (joker)</author>
-        <atom:modified>Fri, 12 Oct 2018 10:20:16 +0900</atom:modified>
-        <guid>http://qiaokebaba.github.io/ko/gallery/photo/</guid>
-        <description></description>
+        <title>Cartoon</title>
+        <link>http://qiaokebaba.github.io/ko/gallery/cartoon/</link>
+        <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
+        <guid>http://qiaokebaba.github.io/ko/gallery/cartoon/</guid>
+        <description>Sample images from Pixabay</description>
         
-        <dc:creator>joker</dc:creator>
-        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="http://qiaokebaba.github.ioimages/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -41,16 +41,16 @@
       </item>
       
       <item>
-        <title>Cartoon</title>
-        <link>http://qiaokebaba.github.io/ko/gallery/cartoon/</link>
-        <pubDate>Thu, 11 Oct 2018 10:20:16 +0900</pubDate>
-        <author>qiaokebaba@163.com (joker)</author>
-        <atom:modified>Thu, 11 Oct 2018 10:20:16 +0900</atom:modified>
-        <guid>http://qiaokebaba.github.io/ko/gallery/cartoon/</guid>
-        <description></description>
+        <title>Photo</title>
+        <link>http://qiaokebaba.github.io/ko/gallery/photo/</link>
+        <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
+        <guid>http://qiaokebaba.github.io/ko/gallery/photo/</guid>
+        <description>Sample images from Pixabay</description>
         
-        <dc:creator>joker</dc:creator>
-        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="http://qiaokebaba.github.ioimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

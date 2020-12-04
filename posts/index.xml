@@ -1,419 +1,56 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>文章列表 on 乔克叔叔</title>
-		<link>https://qiaokebaba.github.io/posts/</link>
-		<description>Recent content in 文章列表 on 乔克叔叔</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Wed, 02 Dec 2020 16:43:08 +0800</lastBuildDate>
-		<atom:link href="https://qiaokebaba.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>My First Post</title>
-			<link>https://qiaokebaba.github.io/posts/my-first-post/</link>
-			<pubDate>Wed, 02 Dec 2020 16:43:08 +0800</pubDate>
-			
-			<guid>https://qiaokebaba.github.io/posts/my-first-post/</guid>
-			<description>监控是整个运维以及产品整个生命周期最重要的一环，它旨在事前能够及时预警发现故障，事中能够结合监控数据定位问题，事后能够提供数据用于分析问题。</description>
-			<content type="html"><![CDATA[<p>监控是整个运维以及产品整个生命周期最重要的一环，它旨在事前能够及时预警发现故障，事中能够结合监控数据定位问题，事后能够提供数据用于分析问题。</p>
-<h2 id="一监控的目的">一、监控的目的</h2>
-<p>监控贯穿应用的整个生命周期。即从程序设计、开发、部署、下线。其主要的服务对象有：</p>
-<ul>
-<li>技术</li>
-<li>业务</li>
-</ul>
-<p>技术通过监控系统可以了解技术的环境状态，可以帮助检测、诊断、解决技术环境中的故障和问题。然而监控系统的最终目标是业务，是为了更好的支持业务运行，确保业务的持续开展。</p>
-<p>所以监控的目的可以简单归纳如下：</p>
-<p>1、能够对系统进行7*24小时的实时监控</p>
-<p>2、能够及时反馈系统状态</p>
-<p>3、保证平台的稳定运行</p>
-<p>3、保证服务的安全可靠</p>
-<p>4、保证业务的持续运行</p>
-<h2 id="二监控的模式">二、监控的模式</h2>
-<p>监控由上至下可以分为：</p>
-<ul>
-<li>业务监控</li>
-<li>应用监控</li>
-<li>操作系统</li>
-</ul>
-<p>其中业务监控主要是研发提供一些业务指标、业务数据，对其增长率、错误率等进行告警或者展示，需要提前定义规范甚至埋点。应用程序的监控主要有探针和内省。其中探针主要是从外部探测应用程序的特征，比如监听端口是否有响应。内省主要是查看应用程序内部的内容，应用程序通过检测并返回其内部的状态，内部的组件，事务和性能等度量，它可以直接将事件、日志和指标直接发送给监控工具。操作系统主要是监控主要组件的使用率、饱和度以及错误，比如CPU的使用率、CPU的负载等。</p>
-<h2 id="三监控的方式">三、监控的方式</h2>
-<p>监控的主要方式有:</p>
-<ul>
-<li>健康检查。健康检查是对应用本身健康状况的监控，检查服务是否还正常存活。</li>
-<li>日志。日志是排查问题的主要方式，日志可以提供丰富的信息用于定位和解决问题。</li>
-<li>调用链监控。调用链监控可以完整的呈现出一次请求的全部信息，包括服务调用链路、所耗时间等。</li>
-<li>指标监控。指标是一些基于时间序列的离散数据点，通过聚合和计算后能反映出一些重要指标的趋势。</li>
-</ul>
-<p>在上述4中监控方式中，健康检查是云平台等基础设施提供的能力，日志则一般有单独的日志中心进行日志的采集、存储、计算和查询，调用链监控一般也有独立的解决方案进行服务调用的埋点、采集、计算和查询，指标监控则是通过一些exporter抓取目标暴露的指标，然后对这些指标数据进行清理、聚合，我们通过聚合出来的数据进行展示、告警等。</p>
-<blockquote>
-<p>说明：该方案主要是针对指标监控</p>
-</blockquote>
-<h2 id="四监控选型">四、监控选型</h2>
-<h3 id="41健康检查">4.1、健康检查</h3>
-<p>云平台提供健康检查能力，直接在云平台中配置。</p>
-<h3 id="42日志">4.2、日志</h3>
-<p>成熟的开源日志解决方案是ELK。</p>
-<h3 id="43调用链监控">4.3、调用链监控</h3>
-<p>调用链健康使用第三方的健康软件，常用的有skywalking、zikpin、pinpoint、elastic APM、Cat。</p>
-<p>其中zikpin和cat对代码有一定的侵入性，而skywalking、pinpoint、elastic APM是基于字节码注入技术，对代码没有侵入性，而且改动最小。</p>
-<p>pinpoint的agent仅支持java和php，而skywalking和elastic APM都支持多种语言，比如java/nodejs/go等。</p>
-<p>在云原生环境下，skywalking和elastic APM更适合。</p>
-<p>elastic APM直接使用es作为存储，可以在kibana上直接看应用信息，但是其关系图是需要产生一定的费用。skywalking是国人开源的一款产品，已经毕业于Apache 基金会，社区非常活跃，版本迭代很快，专为微服务、云原生架构和基于容器（Docker、K8s、Mesos）架构而设计。</p>
-<p>pinpoint和skywalking的对比可参考：http://skywalking.apache.org/zh/blog/2019-02-24-skywalking-pk-pinpoint.html</p>
-<h3 id="44指标监控">4.4、指标监控</h3>
-<p>在云原生环境、传统的监控方式并不适合，在传统环境，zabbix无疑是首选，但是在云原生环境，Prometheus却成为了热门，其主要原因有：</p>
-<ul>
-<li>成熟的社区支撑。Prometheus是CNCF的毕业项目，有许多大厂做背书，社区庞大，是首推的云原生监控解决方案。</li>
-<li>易于部署和运维。Prometheus核心只有一个二进制文件，没有其他的第三方依赖，部署运维均十分方便。</li>
-<li>采用Pull模型，通过HTTP的Pull方式从各个监控目标拉取监控数据。Push模型一般通过Agent方式去采集信息并推送到收集器中，每个服务的Agent都需要配置监控数据项与监控服务端的信息，在大量服务时会加大运维难度；另外，采用Push模型，在流量高峰期间监控服务端会同时接收到大量请求和数据，会给监控服务端造成很大压力，严重时甚至服务不可用。</li>
-<li>强大的数据模型。Prometheus采集到的监控数据均以指标的形式存在于内置的时序数据库中，除了基本的指标名称外，还支持自定义的标签。通过标签可以定义出丰富的维度，方便进行监控数据的聚合和计算。</li>
-<li>强大的查询语言PromQL。通过PromQL可以实现对监控数据的查询、聚合、可视化、告警。</li>
-<li>完善的生态。常见的操作系统、数据库、中间件、类库、编程语言，Prometheus都提供了接入方案，并且提供了Java/Golang/Ruby/Python等语言的客户端SDK，能够快速实现自定义的监控逻辑。</li>
-<li>高性能。Prometheus单一实例即可处理数以百计的监控指标，每秒处理数十万的数据，在数据采集和查询方面有着优异的性能表现。</li>
-</ul>
-<blockquote>
-<p>注意：由于采集的数据有可能丢失，Prometheus并不适合对采集数据要求100%准确的场景。</p>
-</blockquote>
-<h2 id="五prometheus监控系统概述">五、Prometheus监控系统概述</h2>
-<p>监控系统的整体框架如下：</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1598256309381-89073671-0aae-4b2c-b025-9b191840294e.png" alt="image"></p>
-<ul>
-<li>Prometheus Server：用于抓取指标、存储时间序列数据</li>
-<li>exporter：暴露指标让任务来抓</li>
-<li>pushgateway：push 的方式将指标数据推送到该网关</li>
-<li>alertmanager：处理报警的报警组件</li>
-<li>adhoc：用于数据查询</li>
-</ul>
-<p>其流程很简单，Prometheus server端可以直接接收或者通过pushgateway获取到数据，存储到TSDB中，然后对数据进行规则整理，通过Altermanager进行报警或者通过Grafana等工具进行展示。</p>
-<h2 id="六指标监控的对象">六、指标监控的对象</h2>
-<p>监控系统一般采用分层的方式划分监控对象。在我们的监控系统中，主要关注以下几种类型的监控对象：</p>
-<ul>
-<li>主机监控，主要指主机节点软、硬件资源的一些监控数据。</li>
-<li>容器环境监控，主要指服务所处运行环境的一些监控数据。</li>
-<li>应用服务监控，主要指服务本身的基础数据指标，提现服务自身的运行状况。</li>
-<li>第三方接口监控，主要指调用其他外部服务接口的情况。</li>
-</ul>
-<p>对于应用服务和第三方接口监控，我们常用的指标包括：响应时间、请求量QPS、成功率。</p>
-<h3 id="61主机监控">6.1、主机监控</h3>
-<h4 id="611为什么需要主机监控">6.1.1、为什么需要主机监控</h4>
-<p>主机是系统的载体，一切系统应用都运行在主机之上，如果某台或者几台主机宕机，会导致上面运行的所以应用都没办法正常提供服务，严重者导致生产事故。所以对主机的监控与预警是非常有必要的，我们可以在其出故障之前对其进行处理，避免严重的事故发生。</p>
-<h4 id="612如何判断资源情况">6.1.2、如何判断资源情况</h4>
-<p>主机的监控主要从一下三个方面来综合考虑其状态：</p>
-<ul>
-<li>使用率：资源忙于工作的平均时间，通常是随时间变化的百分比</li>
-<li>饱和度：资源队列的长度</li>
-<li>错误：资源错误事件的计数</li>
-</ul>
-<h4 id="613哪些资源需要监控">6.1.3、哪些资源需要监控</h4>
-<p>主机的主要资源对象有：</p>
-<ul>
-<li>CPU</li>
-<li>内存</li>
-<li>磁盘</li>
-<li>可用性</li>
-<li>服务状态</li>
-<li>网络</li>
-</ul>
-<h4 id="614如何进行监控">6.1.4、如何进行监控</h4>
-<p>在Prometheus监控方案中，主机的资源指标是通过node-exporter来进行采集，然后存储在Prometheus时序数据库里，然后可以通过PromQL来查询各个指标的具体情况。</p>
-<h5 id="1cpu">1、CPU</h5>
-<p>CPU主要从使用率和饱和度来进行监控。</p>
-<p>（1）、使用率，指标<code>node_cpu_seconds_total</code></p>
-<p>通常会根据CPU使用率超过多少来进行告警，比如当CPU使用率大于80%，则进行告警，当然CPU是一个Gauge类型的，它的数据是会上下增减的，所以我们在判断CPU使用率的时候通常是一段时间内CPU持续高达多少的时候才进行告警，比如下面的表达式就是统计5分钟内CPU使用率大于60%的主机：</p>
-<pre><code>100-(avg(irate(node_cpu_seconds_total{mode=&quot;idle&quot;}[5m])) by(instance)* 100) &gt; 60
-</code></pre><p>CPU指标还有用户态、内核态的指标数据，这个根据情况来进行监控。</p>
-<p>（2）、饱和度，指标<code>node_load</code></p>
-<p>CPU的饱和度通常指的是CPU的负载情况。正常情况下CPU的整体负载不超过CPU的总数，比如2颗CPU，则负载不超过2。我们收集到的指标有1分钟、5分钟、15分钟的负载数据，在配置监控的时候选择好统计时间，一般情况下会选择5分钟的负载作为统计，如下表示5分钟的负载大于CPU的总数的2倍：</p>
-<pre><code>node_load5 &gt; on (instance) 2 * count by(instance)(node_cpu_seconds_total{mode=&quot;idle&quot;})
-</code></pre><h5 id="2内存">2、内存</h5>
-<p>内存主要从使用率和饱和度来进行监控。</p>
-<p>（1）、使用率</p>
-<p>内存的使用率可以直观的看到整体CPU的使用情况，其计算方式使用（free + buffer + cache）/ total。</p>
-<p>指标主要有：</p>
-<ul>
-<li>node_memory_MemTotal_bytes：主机上的总内存</li>
-<li>node_memory_MemFree_bytes：主机上的可用内存</li>
-<li>node_memory_Buffers_bytes：缓冲缓存中的内存</li>
-<li>node_memory_Cached_bytes：页面缓存中的内存</li>
-</ul>
-<p>比如下面的表达式是用于统计内存使用率大于80%：</p>
-<pre><code>100 - sum(node_memory_MemFree_bytes{job=&quot;node-exporter&quot;} + node_memory_Buffers_bytes{job=&quot;node-exporter&quot;} + node_memory_Cached_bytes{job=&quot;node-exporter&quot;})by (instance) / sum(node_memory_MemTotal_bytes{job=&quot;node-exporter&quot;})by(instance)*100 &gt; 80
-</code></pre><p>（2）、饱和度</p>
-<p>内存的饱和度是指内存和磁盘的读写情况来监控。</p>
-<p>指标有：</p>
-<ul>
-<li>node_vmstat_pswpin：系统每秒从磁盘读到内存的字节数，单位KB</li>
-<li>node_vmstat_pswpout：系统每秒从内存写到磁盘的字节数，单位KB</li>
-</ul>
-<h5 id="3磁盘">3、磁盘</h5>
-<p>磁盘的监控有点特殊，我们不按着USE的方法去测量。如果单考虑其使用率并没有多大的效果，因为10G剩余20%和1T剩余20%对我们的影响是不一样的，所以我们可以监控其增长趋势以及方向。</p>
-<p>比如：根据前面1h的磁盘增长情况来预测在4h内是否会把磁盘用完。</p>
-<pre><code>predict_linear(node_filesystem_free_bytes{job=&quot;node-exporter&quot;,mountpoint!=&quot;&quot;}[1h], 4*3600) 
-</code></pre><p>当然，如果仅仅这样预测也会产生很多垃圾告警，因为在某一小时的增长速度可能很快，这样算下来预测会在接下来的4小时内使用完，但是我们登上主机一看，才用了40%，这时候就算有告警我们也不会处理。所以我们还可以再加一个条件，比如磁盘使用率大于80%并且在接下来的4小时内会使用完。如下：</p>
-<pre><code>(100 - (node_filesystem_avail_bytes{fstype!=&quot;&quot;,job=&quot;node-exporter&quot;} / node_filesystem_size_bytes{fstype!=&quot;&quot;,job=&quot;node-exporter&quot;} * 100)&gt;80) and (predict_linear(node_filesystem_free_bytes{job=&quot;node-exporter&quot;,mountpoint!=&quot;&quot;,device!=&quot;rootfs&quot;}[1h],4 * 3600) &lt; 0)
-</code></pre><p>除此之外，我们还需要监控磁盘的IO，不论是云主机磁盘还是物理磁盘，每块盘都有其对应的IOPS，如果某个主机的IO很高，也会导致其他的问题，比如系统繁忙、负载很高等情况。</p>
-<p>node-exporter中定义了其指标，仅需要对其进行聚合，然后对聚合后的数据进行页面展示或者告警处理。</p>
-<p>其聚合公式如下：</p>
-<pre><code>100-(avg(irate(node_disk_io_time_seconds_total[1m])) by(instance)* 100)
-</code></pre><h5 id="4可用性">4、可用性</h5>
-<p>可用性是指的主机可用性，我们可以通过<code>up</code>指标来判断主机是否可用，如果其值等于0表示宕机，等于1表示存活。</p>
-<p>比如下面即可表示主机不可用：</p>
-<pre><code>up{job=&quot;node-exporter&quot;}==0
-</code></pre><h5 id="5服务状态">5、服务状态</h5>
-<p>服务状态旨在监控关键服务，比如docker.service,ssh.service,kubelet.service等。</p>
-<p>指标为：</p>
-<ul>
-<li>node_systemd_unit_state</li>
-</ul>
-<p>比如监听docker.service的服务状态为存活：</p>
-<pre><code>node_systemd_unit_state{name=&quot;docker.service&quot;,state=&quot;active&quot;} == 1
-</code></pre><p>监控主要服务，以便于我们能在服务出问题的第一时间收到消息进行处理。</p>
-<h5 id="6网络">6、网络</h5>
-<p>网络主要是监控其在每台主机上的出入流量，还有TCP连接状态。</p>
-<p>prometheus的node-exporter会抓取每台主机的网卡以及其出入网卡的流量，还有每台主机的TCP状态，我们可以将需要的指标进行聚合，根据聚合后的指标数据再进行页面展示或者告警处理。</p>
-<p>比如统计流入的流量：</p>
-<pre><code>((sum(rate (node_network_receive_bytes_total{device!~'tap.*|veth.*|br.*|docker.*|virbr*|lo*'}[5m])) by (instance)) / 100)
-</code></pre><p>统计流出的流量:</p>
-<pre><code>((sum(rate (node_network_transmit_bytes_total{device!~'tap.*|veth.*|br.*|docker.*|virbr*|lo*'}[5m])) by (instance)) / 100) 
-</code></pre><p>以及统计TCP状态为ESTABLISHED的数量：</p>
-<pre><code>node_netstat_Tcp_CurrEstab
-</code></pre><p>我们可以根据每个指标做对应的监控以及告警。</p>
-<h3 id="62容器监控">6.2、容器监控</h3>
-<h4 id="621为什么需要容器监控">6.2.1、为什么需要容器监控</h4>
-<p>在云原生时代，容器是我们应用的载体，它相当于应用的基础设施，所以对其的监控是很有必要的。</p>
-<p>我们在创建一个容器的时候往往会给其cpu和内存一个限制值，特别是内存，如果其使用达到了限制值，就会导致OOM，这时候我们就会做升级配置或查找原因处理。</p>
-<h4 id="622监控的指标对象主要有哪些">6.2.2、监控的指标对象主要有哪些</h4>
-<p>监控对象主要有一下：</p>
-<ul>
-<li>cpu</li>
-<li>memory</li>
-<li>事件</li>
-</ul>
-<h4 id="623如何进行监控">6.2.3、如何进行监控</h4>
-<p>我们使用cAdvisor来获取容器指标（kubelet已经集成了这个服务）。</p>
-<h5 id="1cpu-1">1、CPU</h5>
-<p>在容器中，就简单通过其使用率来监控其状态，我们通过其（使用量/limit）来得到其使用率。如下：</p>
-<pre><code>sum(
-          node_namespace_pod_container:container_cpu_usage_seconds_total:sum_rate
-        * on(namespace,pod)
-          group_left(workload, workload_type) mixin_pod_workload
-        ) by (workload, workload_type,namespace,pod)
-        /sum(
-          kube_pod_container_resource_limits_cpu_cores
-        * on(namespace,pod)
-          group_left(workload, workload_type) mixin_pod_workload
-        ) by (workload, workload_type,namespace,pod) * 100 &gt; 80
-</code></pre><p>如果CPU的使用率持续大于我们设定的阈值，则考虑增加CPU的Limit值。</p>
-<h5 id="2memory">2、memory</h5>
-<p>和CPU一样，通过其使用率来观察容器的内存是否充足。如下：</p>
-<pre><code>sum(
-            container_memory_working_set_bytes
-          * on(namespace,pod)
-            group_left(workload, workload_type) mixin_pod_workload
-        ) by (namespace,pod) / sum(
-            kube_pod_container_resource_limits_memory_bytes
-          * on(namespace,pod)
-            group_left(workload, workload_type) mixin_pod_workload
-        ) by (namespace,pod) * 100 / 2 &gt; 80
-</code></pre><p>如果内存的使用率大于我们设定的阈值，则考虑是否需要增加Pod的内存了。</p>
-<h5 id="3事件">3、事件</h5>
-<p>这里的事件针对的是kubernetes的pod事件。在Kubernetes中，事件分为两种，一种是Warning事件，表示产生这个事件的状态转换是在非预期的状态之间产生的；另外一种是Normal事件，表示期望到达的状态，和目前达到的状态是一致的。我们用一个Pod的生命周期进行举例，当创建一个Pod的时候，首先Pod会进入Pending的状态，等待镜像的拉取，当镜像录取完毕并通过健康检查的时候，Pod的状态就变为Running。此时会生成Normal的事件。而如果在运行中，由于OOM或者其他原因造成Pod宕掉，进入Failed的状态，而这种状态是非预期的，那么此时会在Kubernetes中产生Warning的事件。那么针对这种场景而言，如果我们能够通过监控事件的产生就可以非常及时的查看到一些容易被资源监控忽略的问题。</p>
-<p>在kubernetes中通过<code>kube-eventer</code>来进行事件监控，然后针对不同的事件来进行告警通知。</p>
-<h3 id="63应用服务监控">6.3、应用服务监控</h3>
-<h4 id="631为什么需要应用服务监控">6.3.1、为什么需要应用服务监控</h4>
-<p>应用是业务的载体，也是用户最直观的体验，应用的状态与否直接关系到业务的优良以及用户的体验。如果没有对其做好一定的监控措施，可能会出现以下问题：</p>
-<ul>
-<li>无法识别或诊断故障</li>
-<li>无法衡量应用程序的运行性能</li>
-<li>无法衡量应用程序或组件的业务指标以及成功与否，例如跟踪销售数据或交易价值</li>
-</ul>
-<h4 id="632有哪些监控指标">6.3.2、有哪些监控指标</h4>
-<ul>
-<li>
-<p>应用程序监控</p>
-</li>
-<li>
-<ul>
-<li>HTTP接口：URL存活、请求量、耗时、异常量</li>
-<li>JVM ：GC次数、GC耗时、各个内存区域的大小、当前线程数、死锁线程数</li>
-<li>线程池：活跃线程数、任务队列大小、任务执行耗时、拒绝任务数</li>
-<li>连接池：总连接数、活跃连接数</li>
-</ul>
-</li>
-<li>
-<p>业务指标：视业务来定，比如PV、订单量等</p>
-</li>
-</ul>
-<h4 id="633如何进行监控">6.3.3、如何进行监控</h4>
-<h5 id="1应用程序监控">1、应用程序监控</h5>
-<p>应用程序指标可以衡量应用程序的性能和状态，包括应用程序最终用户的体验，如延迟和响应时间。在这背后，我们测量了应用程序的吞吐量：请求、请求量、事务和事务时间。</p>
-<p><strong>（1）、HTTP接口监控</strong></p>
-<p>可以使用prometheus的blackbox_exporter来进行接口存活的监控，可以用于对http,https,tcp,dns以及ICMP协议进行探测，从而抓取数据进行监控。</p>
-<p><strong>（2）、JVM监控</strong></p>
-<p>通过在应用中埋点来暴露JVM数据，使用Prometheus监控采集JVM数据，借助Prometheus Grafana大盘来展示JVM数据，并创建报警，即可实现利用Prometheus监控JVM的目的。</p>
-<p>（1）、在pom.xml文件中添加Maven依赖。</p>
-<pre><code>&lt;dependency&gt;
-    &lt;groupId&gt;io.prometheus&lt;/groupId&gt;
-    &lt;artifactId&gt;simpleclient_hotspot&lt;/artifactId&gt;
-    &lt;version&gt;0.6.0&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre><p>（2）、在可以执行初始化的位置添加初始化JVM Exporter的方法。</p>
-<pre><code>@PostConstruct
-    public void initJvmExporter() {
-        io.prometheus.client.hotspot.DefaultExports.initialize();
-    }
-</code></pre><p>（3）、在/src/main/resources/application.properties文件中配置用于Prometheus监控的端口（Port）和路径（Path）</p>
-<pre><code>management.port: 8081
-endpoints.prometheus.path: prometheus-metrics
-</code></pre><p>（4）、在/src/main/java/com/monitise/prometheus_demo/PrometheusDemoApplication.java文件中打开HTTP端口</p>
-<pre><code>@SpringBootApplication
-// sets up the prometheus endpoint /prometheus-metrics
-@EnablePrometheusEndpoint
-// exports the data at /metrics at a prometheus endpoint
-@EnableSpringBootMetricsCollector
-public class PrometheusDemoApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(PrometheusDemoApplication.class, args);
-    }
-}
-</code></pre><p>然后在部署应用的时候暴露接口和数据就可以进行采集了。</p>
-<p>由于应用比较多就可以通过自动发现的方式来做。我们在service中加上下面的annotations，就可以自动发现了。</p>
-<pre><code>prometheus.io/scrape: 'true'
-prometheus.io/path: '/prometheus-metrics'
-prometheus.io/port: '8081'
-</code></pre><h5 id="2业务指标监控">2、业务指标监控</h5>
-<p>业务指标是应用程序指标的更进一层，它们通常与应用程序指标同义。如果你考虑将对特定服务的请求数量作为应用程序指标进行测量，那么业务指标通常会对请求的内容执行某些操作。一个应用程序指标的示例可能是测量支付交易的延迟，相应的业务指标可能是每个支付交易的价值。业务指标可能包括新用户/客户的数量、销售数量、按价值或位置划分的销售额，或者其他任何有助于衡量业务状况的指标。</p>
-<h3 id="64第三方接口监控">6.4、第三方接口监控</h3>
-<h4 id="641为什么需要第三方接口监控">6.4.1、为什么需要第三方接口监控</h4>
-<p>第三方接口的优良直接影响自身业务，所以对第三方接口的异常情况监控是非常重要的。主要是其的响应时间、存活性以及成功率。</p>
-<h4 id="642有哪些监控指标">6.4.2、有哪些监控指标</h4>
-<ul>
-<li>响应时间</li>
-<li>存活性</li>
-<li>成功率</li>
-</ul>
-<h4 id="643如何进行监控">6.4.3、如何进行监控</h4>
-<p>可以使用prometheus的blackbox_exporter来进行接口的监控。通过第三方接口监控的维度，我们可以方便地将自身服务与所使用到的第三方服务关联起来，以统一的视图展示服务用到了哪些第三方服务接口、这些第三方服务接口的响应时间和成功率是多少。当服务出现异常时，对于定位问题有很大帮助；同时，一些内部的服务可能监控报警并不全面，第三方监控也能帮助他们提升服务质量。</p>
-<h2 id="七告警通知">七、告警通知</h2>
-<p>达到什么阈值需要告警？对应的故障等级是多少？不需要处理的告警不是好告警，可见定义合理的阈值有多重要，否则只会降低运维效率或者让监控系统失去它的作用。</p>
-<p>Prometheus允许基于PromQL定义报警的触发条件，Prometheus周期性的对PromQL进行计算，当满足条件时就会向Alertmanager发送报警信息。</p>
-<p>在配置告警规则的时候，我们将按组进行分类，这样就可以对相同组下的告警进行聚合，方便配置以及查看。Alertmanager在接收到报警后，可以对报警进行分组、抑制、静默等额外处理，然后路由到不同的接收器。Alertmanager支持多种报警通知方式，除常用的邮件通知外，还支持钉钉、企业微信等方式，也支持通过webhook自定义通知方式。我们可以按轻重缓急定义不同的通知方式，这样就可以根据不同通知方式采取不同的措施。</p>
-<h2 id="八故障处理流程">八、故障处理流程</h2>
-<p>收到故障告警后，一定要有相应的处理流程和oncall机制，让故障及时被跟进处理。</p>
-<h3 id="81故障等级划分">8.1、故障等级划分</h3>
-<p>在处理故障之前，需要先清晰的认识是什么样的故障，然后再采取什么样的措施。所以我们就需要对故障等级做一个划分。</p>
-<p>例如将系统故障等级按照《信息系统安全等级保护基本要求》具体划分为四个等级，一级和二级故障为重大故障；三级和四级故障为一般性故障。</p>
-<h4 id="811一级故障">8.1.1、一级故障</h4>
-<p>系统发生故障，预计将已经严重影响公司生产业务系统，导致相关生产业务系统中断1小时以上，并预计24小时以内无法恢复的，具备以下一个或几个特征，既定义为一级故障。</p>
-<ol>
-<li>公司机房网络与阿里云VPC网络出现故障，导致工作人员和用户无法访问相关业务系统；</li>
-<li>WEB网站和APP系统等关键服务器宕机或有其他原因导致拒绝提供服务的；</li>
-<li>利用技术手段造成业务数据被修改、假冒、泄漏、窃取的信息系统安全事件；</li>
-<li>由病毒造成关键业务系统不能正常提供服务。</li>
-</ol>
-<h4 id="812二级故障">8.1.2、二级故障</h4>
-<p>信息系统发生故障，预计将或已经严重影响公司生产业务系统，导致相关生产业务系统中断1小时以上，并预计24小时以内可以恢复的，具备以下一个或几个特征，即定义为二级故障。</p>
-<ol>
-<li>公司机房网络与阿里云VPC出现线路和设备故障；</li>
-<li>WEB网站和APP系统等关键服务器宕机或有其他原因导致拒绝提供服务的；</li>
-<li>12小时以内无法解决的三级故障。</li>
-</ol>
-<h4 id="813三级故障">8.1.3、三级故障</h4>
-<p>满足以下条件之一，即定义为三级故障。</p>
-<ol>
-<li>故障发生后，影响到信息系统的运行效率，速度变慢，但不影响业务系统访问；</li>
-<li>故障发生后预计在12小时以内恢复；</li>
-<li>24小时以内无法解决的四级故障</li>
-</ol>
-<h4 id="814四级故障">8.1.4、四级故障</h4>
-<p>满足以下条件之一，即定义为四级故障。</p>
-<ol>
-<li>故障发生后，可随时应急处理，不会影响系统的全面运行；</li>
-<li>生产业务系统设备因病毒攻击等原因，造成网络数据出现偶尔掉包，但不影响系统的正常访问和运行。</li>
-</ol>
-<h3 id="82故障处理程序">8.2、故障处理程序</h3>
-<h4 id="821故障发现">8.2.1、故障发现</h4>
-<p>工作人员在发现故障或接收到故障报告后，首先要记录故障发生时间和发现时间，及发现部门，发现人及联系电话，对故障的等级进行初步判定，并报告相关人员进行处理。</p>
-<h4 id="822故障处理">8.2.2、故障处理</h4>
-<ol>
-<li>发生故障的系统通知到运维人员，运维人员应先询问了解设备和配置近期的变更情况，查清故障的影响范围，从而确定故障的等级和发生故障的可能位置；</li>
-<li>对于一般性故障按照规定的故障升级上报要求进行上报，并在处理过程中及时向主管领导通报故障处理情况；</li>
-<li>对于重大故障按照规定的故障升级上报要求进行上报，并在处理过程中及时向主管领导通报故障处理情况。</li>
-</ol>
-<h4 id="823故障上报">8.2.3、故障上报</h4>
-<p>根据故障等级和发生的时限，要对故障的情况进行及时的上报，并对报告人，告知人际时间内容进行记录。重大故障由故障处理组领导负责上报，一般性故障由故障处理人员负责上报。故障升级上报时限如下表所示：</p>
-<table>
-<thead>
-<tr>
-<th>上报时限</th>
-<th>一级故障</th>
-<th>二级故障</th>
-<th>三级故障</th>
-<th>四级故障</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>立即</td>
-<td>运维主管</td>
-<td>运维人员</td>
-<td>运维人员</td>
-<td>运维人员</td>
-</tr>
-<tr>
-<td>半小时</td>
-<td>技术总监</td>
-<td>运维主管</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>1小时</td>
-<td></td>
-<td>技术总监</td>
-<td>运维主管</td>
-<td></td>
-</tr>
-<tr>
-<td>4小时</td>
-<td></td>
-<td></td>
-<td>技术总监</td>
-<td></td>
-</tr>
-<tr>
-<td>12小时</td>
-<td></td>
-<td></td>
-<td></td>
-<td>运维主管</td>
-</tr>
-<tr>
-<td>24小时</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="83故障处理流程图">8.3、故障处理流程图</h3>
-<p><img src="https://cdn.nlark.com/yuque/0/2020/png/255717/1603958480204-1f571c12-1492-4e84-a778-89337dd13ec7.png" alt="img"></p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>关于乔克</title>
-			<link>https://qiaokebaba.github.io/posts/about/</link>
-			<pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://qiaokebaba.github.io/posts/about/</guid>
-			<description>这是乔克叔叔的个人页面。</description>
-			<content type="html"><![CDATA[<p>这是乔克叔叔的个人页面。</p>
-]]></content>
-		</item>
-		
-	</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Posts on 运维实验室-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <link>http://qiaokebaba.github.io/posts/</link>
+    <description>Recent content in Posts on 运维实验室-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
+    <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 04 Dec 2020 09:40:07 +0800</lastBuildDate>
+    
+        <atom:link href="http://qiaokebaba.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>二进制安装Kubernetes集群</title>
+        <link>http://qiaokebaba.github.io/posts/binary-install-kubernetes/</link>
+        <pubDate>Fri, 04 Dec 2020 09:40:07 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Fri, 04 Dec 2020 09:40:07 +0800</atom:modified>
+        <guid>http://qiaokebaba.github.io/posts/binary-install-kubernetes/</guid>
+        <description>基础规划 1、IP规划 主机名 IP 配置 软件 master-k8s 10.1.10.128 2C4G etcd,apiserver,controller-manager,scheduler node01-k8s 10.1.10.129 2C4G etcd,docker,kubelet,kube-proxy node02-k8s 10.1.10.130 2C4G etcd,docker,kubelet,kube-proxy 2、软件规划 软件名 版本 etcd 3.3.18 docker-ce 19.03.5-3 cfssl 1.2.0 kubernetes 1.16.4 flannel 0.11.0 cni 0.8.3 3、目录规划 目录名 用途 /var/log/kubernetes/ 存储日志 /root/kubernetes/install</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>docker</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
 </rss>

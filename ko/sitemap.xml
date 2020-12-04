@@ -3,12 +3,102 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://qiaokebaba.github.io/ko/</loc>
-    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <loc>http://qiaokebaba.github.io/ko/showcase/hugo/hugo-theme-zzo/</loc>
+    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://qiaokebaba.github.io/en/"
+                href="http://qiaokebaba.github.io/showcase/hugo/hugo-theme-zzo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/showcase/hugo/hugo-theme-zzo/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/showcase/hugo/hugo-theme-zdoc/</loc>
+    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/showcase/hugo/hugo-theme-zdoc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/showcase/hugo/hugo-theme-zdoc/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/publication/article/</loc>
+    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/publication/article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/publication/article/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/publication/book/</loc>
+    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/publication/book/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/publication/book/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/publication/misc/</loc>
+    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/publication/misc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/publication/misc/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/publication/</loc>
+    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/publication/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/</loc>
+    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -18,42 +108,57 @@
   </url>
   
   <url>
-    <loc>http://qiaokebaba.github.io/ko/archive/</loc>
-    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <loc>http://qiaokebaba.github.io/ko/showcase/hugo/</loc>
+    <lastmod>2020-01-19T21:04:11+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://qiaokebaba.github.io/en/archive/"
+                href="http://qiaokebaba.github.io/showcase/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://qiaokebaba.github.io/ko/archive/"
+                href="http://qiaokebaba.github.io/ko/showcase/hugo/"
                 />
   </url>
   
   <url>
-    <loc>http://qiaokebaba.github.io/ko/about/</loc>
-    <lastmod>2019-10-09T11:44:14+09:00</lastmod>
+    <loc>http://qiaokebaba.github.io/ko/showcase/</loc>
+    <lastmod>2020-01-19T15:43:38+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://qiaokebaba.github.io/en/about/"
+                href="http://qiaokebaba.github.io/showcase/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://qiaokebaba.github.io/ko/about/"
+                href="http://qiaokebaba.github.io/ko/showcase/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/gallery/cartoon/</loc>
+    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/gallery/cartoon/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/gallery/cartoon/"
                 />
   </url>
   
   <url>
     <loc>http://qiaokebaba.github.io/ko/gallery/</loc>
-    <lastmod>2018-10-12T10:20:16+09:00</lastmod>
+    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://qiaokebaba.github.io/en/gallery/"
+                href="http://qiaokebaba.github.io/gallery/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -64,11 +169,11 @@
   
   <url>
     <loc>http://qiaokebaba.github.io/ko/gallery/photo/</loc>
-    <lastmod>2018-10-12T10:20:16+09:00</lastmod>
+    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://qiaokebaba.github.io/en/gallery/photo/"
+                href="http://qiaokebaba.github.io/gallery/photo/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -78,18 +183,127 @@
   </url>
   
   <url>
-    <loc>http://qiaokebaba.github.io/ko/gallery/cartoon/</loc>
-    <lastmod>2018-10-11T10:20:16+09:00</lastmod>
+    <loc>http://qiaokebaba.github.io/ko/presentation/dir/fourth/</loc>
+    <lastmod>2019-10-30T20:48:10+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://qiaokebaba.github.io/en/gallery/cartoon/"
+                href="http://qiaokebaba.github.io/presentation/dir/fourth/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://qiaokebaba.github.io/ko/gallery/cartoon/"
+                href="http://qiaokebaba.github.io/ko/presentation/dir/fourth/"
                 />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/presentation/</loc>
+    <lastmod>2019-10-30T20:48:10+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/presentation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/presentation/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/presentation/third/</loc>
+    <lastmod>2019-10-30T20:46:30+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/presentation/third/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/presentation/third/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/presentation/second/</loc>
+    <lastmod>2019-10-30T20:45:24+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/presentation/second/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/presentation/second/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/presentation/first/</loc>
+    <lastmod>2019-10-30T19:45:20+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/presentation/first/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/presentation/first/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/publication/article/article_any_folder_name_1/</loc>
+    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/publication/article/article_any_folder_name_1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/publication/article/article_any_folder_name_1/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/publication/book/book_any_folder_name_1/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/publication/book/book_any_folder_name_1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/publication/book/book_any_folder_name_1/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/publication/misc/misc_any_folder_name_1/</loc>
+    <lastmod>2016-11-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://qiaokebaba.github.io/publication/misc/misc_any_folder_name_1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://qiaokebaba.github.io/ko/publication/misc/misc_any_folder_name_1/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://qiaokebaba.github.io/ko/en/</loc>
   </url>
   
   <url>
@@ -97,7 +311,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://qiaokebaba.github.io/en/categories/"
+                href="http://qiaokebaba.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -107,39 +321,11 @@
   </url>
   
   <url>
-    <loc>http://qiaokebaba.github.io/ko/tags/index/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://qiaokebaba.github.io/en/tags/index/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://qiaokebaba.github.io/ko/tags/index/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://qiaokebaba.github.io/ko/posts/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://qiaokebaba.github.io/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="http://qiaokebaba.github.io/ko/posts/"
-                />
-  </url>
-  
-  <url>
     <loc>http://qiaokebaba.github.io/ko/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://qiaokebaba.github.io/en/series/"
+                href="http://qiaokebaba.github.io/series/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -153,7 +339,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://qiaokebaba.github.io/en/tags/"
+                href="http://qiaokebaba.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
