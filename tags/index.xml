@@ -14,13 +14,31 @@
     <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 04 Dec 2020 09:40:07 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 04 Dec 2020 11:10:44 +0800</lastBuildDate>
     
         <atom:link href="http://qiaokebaba.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>etcd</title>
+        <link>http://qiaokebaba.github.io/tags/etcd/</link>
+        <pubDate>Fri, 04 Dec 2020 11:10:44 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>http://qiaokebaba.github.io/tags/etcd/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>docker</title>
