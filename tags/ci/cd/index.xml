@@ -22,11 +22,11 @@
 
       
       <item>
-        <title>使用Jenkins和Argocd实现CI/CD</title>
+        <title>使用Jenkins和Argocd实现企业级CI/CD</title>
         <link>http://qiaokebaba.github.io/posts/devops-jenkins-argocd/</link>
-        <pubDate>Fri, 04 Dec 2020 15:52:58 +0800</pubDate>
+        <pubDate>Fri, 04 Dec 2020 16:02:38 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Fri, 04 Dec 2020 15:52:58 +0800</atom:modified>
+        <atom:modified>Fri, 04 Dec 2020 16:02:38 +0800</atom:modified>
         <guid>http://qiaokebaba.github.io/posts/devops-jenkins-argocd/</guid>
         <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下</description>
         
@@ -37,7 +37,7 @@
         
           
             
-              <category>Devops</category>
+              <category>DevOps</category>
             
           
             
