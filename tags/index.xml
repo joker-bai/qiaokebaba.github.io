@@ -6,29 +6,29 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Tags on 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
-    <link>http://qiaokebaba.github.io/tags/</link>
-    <description>Recent content in Tags on 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
+    <title>Tags on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <link>https://www.coolops.cn/tags/</link>
+    <description>Recent content in Tags on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 04 Dec 2020 16:02:38 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Dec 2020 16:21:37 +0800</lastBuildDate>
     
-        <atom:link href="http://qiaokebaba.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.coolops.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
       
       <item>
-        <title>Argocd</title>
-        <link>http://qiaokebaba.github.io/tags/argocd/</link>
-        <pubDate>Fri, 04 Dec 2020 16:02:38 +0800</pubDate>
+        <title>grafana loki</title>
+        <link>https://www.coolops.cn/tags/grafana-loki/</link>
+        <pubDate>Thu, 17 Dec 2020 16:21:37 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         
-        <guid>http://qiaokebaba.github.io/tags/argocd/</guid>
+        <guid>https://www.coolops.cn/tags/grafana-loki/</guid>
         <description></description>
         
         <dc:creator>乔克叔叔</dc:creator>
@@ -41,30 +41,12 @@
       </item>
       
       <item>
-        <title>DevOps</title>
-        <link>http://qiaokebaba.github.io/tags/devops/</link>
-        <pubDate>Fri, 04 Dec 2020 16:02:38 +0800</pubDate>
+        <title>helm</title>
+        <link>https://www.coolops.cn/tags/helm/</link>
+        <pubDate>Thu, 17 Dec 2020 16:21:37 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         
-        <guid>http://qiaokebaba.github.io/tags/devops/</guid>
-        <description></description>
-        
-        <dc:creator>乔克叔叔</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Jenkins</title>
-        <link>http://qiaokebaba.github.io/tags/jenkins/</link>
-        <pubDate>Fri, 04 Dec 2020 16:02:38 +0800</pubDate>
-        <author>qiaokebaba@163.com (乔克叔叔)</author>
-        
-        <guid>http://qiaokebaba.github.io/tags/jenkins/</guid>
+        <guid>https://www.coolops.cn/tags/helm/</guid>
         <description></description>
         
         <dc:creator>乔克叔叔</dc:creator>
@@ -78,11 +60,11 @@
       
       <item>
         <title>kubernetes</title>
-        <link>http://qiaokebaba.github.io/tags/kubernetes/</link>
-        <pubDate>Fri, 04 Dec 2020 14:13:34 +0800</pubDate>
+        <link>https://www.coolops.cn/tags/kubernetes/</link>
+        <pubDate>Thu, 17 Dec 2020 16:21:37 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         
-        <guid>http://qiaokebaba.github.io/tags/kubernetes/</guid>
+        <guid>https://www.coolops.cn/tags/kubernetes/</guid>
         <description></description>
         
         <dc:creator>乔克叔叔</dc:creator>
@@ -95,12 +77,282 @@
       </item>
       
       <item>
-        <title>etcd</title>
-        <link>http://qiaokebaba.github.io/tags/etcd/</link>
-        <pubDate>Fri, 04 Dec 2020 11:10:44 +0800</pubDate>
+        <title>loki</title>
+        <link>https://www.coolops.cn/tags/loki/</link>
+        <pubDate>Thu, 17 Dec 2020 16:21:37 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         
-        <guid>http://qiaokebaba.github.io/tags/etcd/</guid>
+        <guid>https://www.coolops.cn/tags/loki/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>nginx-ingress</title>
+        <link>https://www.coolops.cn/tags/nginx-ingress/</link>
+        <pubDate>Thu, 17 Dec 2020 16:21:37 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/nginx-ingress/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>argo-rollouts</title>
+        <link>https://www.coolops.cn/tags/argo-rollouts/</link>
+        <pubDate>Wed, 16 Dec 2020 15:15:16 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/argo-rollouts/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>argocd</title>
+        <link>https://www.coolops.cn/tags/argocd/</link>
+        <pubDate>Wed, 16 Dec 2020 15:15:16 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/argocd/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>DevOps</title>
+        <link>https://www.coolops.cn/tags/devops/</link>
+        <pubDate>Wed, 16 Dec 2020 15:15:16 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/devops/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Jenkins</title>
+        <link>https://www.coolops.cn/tags/jenkins/</link>
+        <pubDate>Thu, 10 Dec 2020 08:25:12 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/jenkins/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>gitops</title>
+        <link>https://www.coolops.cn/tags/gitops/</link>
+        <pubDate>Tue, 08 Dec 2020 16:24:51 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/gitops/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>pod</title>
+        <link>https://www.coolops.cn/tags/pod/</link>
+        <pubDate>Mon, 07 Dec 2020 14:22:42 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/pod/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kubectl</title>
+        <link>https://www.coolops.cn/tags/kubectl/</link>
+        <pubDate>Sat, 05 Dec 2020 14:36:24 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/kubectl/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kustomize</title>
+        <link>https://www.coolops.cn/tags/kustomize/</link>
+        <pubDate>Sat, 05 Dec 2020 14:33:14 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/kustomize/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kubedog</title>
+        <link>https://www.coolops.cn/tags/kubedog/</link>
+        <pubDate>Sat, 05 Dec 2020 14:28:59 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/kubedog/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kubectl-debug</title>
+        <link>https://www.coolops.cn/tags/kubectl-debug/</link>
+        <pubDate>Sat, 05 Dec 2020 14:25:50 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/kubectl-debug/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>ingress-nginx</title>
+        <link>https://www.coolops.cn/tags/ingress-nginx/</link>
+        <pubDate>Sat, 05 Dec 2020 14:21:49 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/ingress-nginx/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>kubeadm</title>
+        <link>https://www.coolops.cn/tags/kubeadm/</link>
+        <pubDate>Sat, 05 Dec 2020 14:19:24 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/kubeadm/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>nginx</title>
+        <link>https://www.coolops.cn/tags/nginx/</link>
+        <pubDate>Sat, 05 Dec 2020 14:13:02 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/nginx/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Cloud Native</title>
+        <link>https://www.coolops.cn/tags/cloud-native/</link>
+        <pubDate>Sat, 05 Dec 2020 10:51:24 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/cloud-native/</guid>
         <description></description>
         
         <dc:creator>乔克叔叔</dc:creator>
@@ -114,11 +366,65 @@
       
       <item>
         <title>docker</title>
-        <link>http://qiaokebaba.github.io/tags/docker/</link>
-        <pubDate>Fri, 04 Dec 2020 09:40:07 +0800</pubDate>
+        <link>https://www.coolops.cn/tags/docker/</link>
+        <pubDate>Sat, 05 Dec 2020 10:51:24 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         
-        <guid>http://qiaokebaba.github.io/tags/docker/</guid>
+        <guid>https://www.coolops.cn/tags/docker/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>docker-compose</title>
+        <link>https://www.coolops.cn/tags/docker-compose/</link>
+        <pubDate>Sat, 05 Dec 2020 10:51:24 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/docker-compose/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Harbor</title>
+        <link>https://www.coolops.cn/tags/harbor/</link>
+        <pubDate>Sat, 05 Dec 2020 10:51:24 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/harbor/</guid>
+        <description></description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>etcd</title>
+        <link>https://www.coolops.cn/tags/etcd/</link>
+        <pubDate>Fri, 04 Dec 2020 11:10:44 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        
+        <guid>https://www.coolops.cn/tags/etcd/</guid>
         <description></description>
         
         <dc:creator>乔克叔叔</dc:creator>
@@ -132,11 +438,11 @@
       
       <item>
         <title>CI/CD</title>
-        <link>http://qiaokebaba.github.io/tags/ci/cd/</link>
+        <link>https://www.coolops.cn/tags/ci/cd/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         
-        <guid>http://qiaokebaba.github.io/tags/ci/cd/</guid>
+        <guid>https://www.coolops.cn/tags/ci/cd/</guid>
         <description></description>
         
         <dc:creator>乔克叔叔</dc:creator>
@@ -150,11 +456,11 @@
       
       <item>
         <title>index</title>
-        <link>http://qiaokebaba.github.io/tags/index/</link>
+        <link>https://www.coolops.cn/tags/index/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         
-        <guid>http://qiaokebaba.github.io/tags/index/</guid>
+        <guid>https://www.coolops.cn/tags/index/</guid>
         <description></description>
         
         <dc:creator>乔克叔叔</dc:creator>

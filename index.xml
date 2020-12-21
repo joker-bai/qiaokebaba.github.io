@@ -6,17 +6,17 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
-    <link>http://qiaokebaba.github.io/</link>
-    <description>Recent content on 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
+    <title>十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <link>https://www.coolops.cn/</link>
+    <description>Recent content on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 04 Dec 2020 16:02:38 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Dec 2020 16:21:37 +0800</lastBuildDate>
     
-        <atom:link href="http://qiaokebaba.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.coolops.cn/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -44,30 +44,180 @@
 
       
       <item>
-        <title>使用Jenkins和Argocd实现企业级CI/CD</title>
-        <link>http://qiaokebaba.github.io/posts/devops-jenkins-argocd/</link>
-        <pubDate>Fri, 04 Dec 2020 16:02:38 +0800</pubDate>
+        <title>友链</title>
+        <link>https://www.coolops.cn/friends/</link>
+        <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Fri, 04 Dec 2020 16:02:38 +0800</atom:modified>
-        <guid>http://qiaokebaba.github.io/posts/devops-jenkins-argocd/</guid>
-        <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下</description>
+        <atom:modified>Fri, 02 Nov 2018 00:00:00 +0000</atom:modified>
+        <guid>https://www.coolops.cn/friends/</guid>
+        <description>爱生活，爱运维 分享 DevOps、自动化运维等实践经验</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        <media:content url="http://qiaokebaba.github.ioimages/devops/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>使用loki和grafana展示ingress-nginx的日志</title>
+        <link>https://www.coolops.cn/posts/grafana-loki-nginx-ingress/</link>
+        <pubDate>Thu, 17 Dec 2020 16:21:37 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Thu, 17 Dec 2020 16:21:37 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/grafana-loki-nginx-ingress/</guid>
+        <description>在kubernetes中,对于日志的收集，对于日志的收集，使用最多的是FEK， 不过有时候，FEK在架构上会略显重， ES的查询及全文检索功能其实使用的不是很多。LoKi做为日志架构的</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/loki.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
           
             
-              <category>DevOps</category>
+              <category>nginx-ingress</category>
             
           
             
-              <category>Jenkins</category>
+              <category>kubernetes</category>
             
           
             
-              <category>Argocd</category>
+              <category>helm</category>
+            
+          
+            
+              <category>grafana loki</category>
+            
+          
+            
+              <category>loki</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>基于Jenkins&#43;Argocd&#43;Argo Rollouts的CI/CD实现并用金丝雀发布</title>
+        <link>https://www.coolops.cn/posts/jenkins-argocd-argo-rollouts/</link>
+        <pubDate>Wed, 16 Dec 2020 15:15:16 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Wed, 16 Dec 2020 15:15:16 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/jenkins-argocd-argo-rollouts/</guid>
+        <description>本文主要介绍使用Jenkins配合argocd以及argo rollouts实现CI/CD。其中jenkins配合argocd做CI/CD前面已经介绍过了，这里不再赘述，不懂的地方可</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>devops</category>
+            
+          
+            
+              <category>CI/CD</category>
+            
+          
+            
+              <category>argocd</category>
+            
+          
+            
+              <category>argo-rollouts</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>使用Argo Rollouts实现金丝雀发布</title>
+        <link>https://www.coolops.cn/posts/argo-rollouts/</link>
+        <pubDate>Fri, 11 Dec 2020 09:29:23 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Fri, 11 Dec 2020 09:29:23 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/argo-rollouts/</guid>
+        <description>什么是argo rollouts Argo-Rollout是一个Kubernetes Controller和对应一系列的CRD，提供更强大的Deployment能力。包括灰度发布、蓝绿部署、更新测试(</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/argocd.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>argo-rollouts</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>在kubernetes中部署Jenkins并配置动态生成slave</title>
+        <link>https://www.coolops.cn/posts/kubernetes-jenkins-install/</link>
+        <pubDate>Thu, 10 Dec 2020 08:25:12 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Thu, 10 Dec 2020 08:25:12 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-jenkins-install/</guid>
+        <description>一、动态生成Slave 1.1、简介 之前我们都是在物理机或者虚拟机上部署jenkins，但是这种部署方式会有一些难点，如下： 主 Master 发生单点故障时，整个流程都不可用了 每个 Slave 的配置环境不一</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/jenkins.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>jenkins</category>
+            
+          
+            
+              <category>devops</category>
             
           
             
@@ -88,16 +238,632 @@
       </item>
       
       <item>
+        <title>Argocd是什么？</title>
+        <link>https://www.coolops.cn/posts/argocd/</link>
+        <pubDate>Tue, 08 Dec 2020 16:24:51 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Tue, 08 Dec 2020 16:24:51 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/argocd/</guid>
+        <description>什么是ArgoCD Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. Argo CD是一个基于Kubernetes的声明式的GitOps工具。 在说Argo CD之前，我们先来了解一下什么是GitOps。 什么是GitOps</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/argocd.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>argocd</category>
+            
+          
+            
+              <category>gitops</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes中Pod的一些常见错误</title>
+        <link>https://www.coolops.cn/posts/kubernetes-pod-common-error/</link>
+        <pubDate>Mon, 07 Dec 2020 14:22:42 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Mon, 07 Dec 2020 14:22:42 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-pod-common-error/</guid>
+        <description>本章介绍 Pod 运行异常的排错方法。 一般来说，无论 Pod 处于什么异常状态，都可以执行以下命令来查看 Pod 的状态 kubectl get pod &amp;lt;pod-name&amp;gt; -o yaml 查看 Pod 的配置是否正确 kubectl describe pod &amp;lt;pod-name&amp;gt; 查看 Pod 的事件 kubectl logs &amp;lt;pod-name&amp;gt; [-c &amp;lt;container-name&amp;gt;] 查看容器日志 这些事件和</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes-single.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>pod</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes自定义管理集群的用户</title>
+        <link>https://www.coolops.cn/posts/kubernetes-costom-user/</link>
+        <pubDate>Mon, 07 Dec 2020 14:20:42 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Mon, 07 Dec 2020 14:20:42 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-costom-user/</guid>
+        <description>我们通过如下命令可以看到当前Kubernetes集群的管理用户是什么： [root@master ssl]# kubectl config view apiVersion: v1 clusters: - cluster: certificate-authority-data: DATA+OMITTED server: https://172.16.1.128:6443 name: cluster1 contexts: - context: cluster: cluster1 user: admin name: context-cluster1-admin - context: cluster: kubernetes namespace: kube-system user: joker name: joker-context current-context: context-cluster1-admin kind: Config preferences: {} users: - name: admin user: client-certificate-data: REDACTED client-key-data: REDACTED - name: joker user: client-certificate:</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes-single.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>如何使用Kubernetes</title>
+        <link>https://www.coolops.cn/posts/kubernetes-why-we-used/</link>
+        <pubDate>Mon, 07 Dec 2020 14:05:53 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Mon, 07 Dec 2020 14:05:53 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-why-we-used/</guid>
+        <description>你是不是和我有同样的感觉，那就是有些知识你明明知道，但是却没办法将其表述出来，确切的说是不怎么从何说起，如何去说。可能在你的脑袋里对每一个组件，每一个模块都有概念，但是却没办法将其</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes-single.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes中强制删除Pod、namespace</title>
+        <link>https://www.coolops.cn/posts/kubernetes-delete-namespace/</link>
+        <pubDate>Sat, 05 Dec 2020 14:40:53 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 14:40:53 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-delete-namespace/</guid>
+        <description>解决方法 可使用kubectl中的强制删除命令 # 删除POD kubectl delete pod PODNAME --force --grace-period=0 # 删除NAMESPACE kubectl delete namespace NAMESPACENAME --force --grace-period=0 若以上方法无法删除，可使用第二种方法，直接从ETCD中删除源数据 # 删除def</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes-single.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes 中优雅停机和零宕机部署</title>
+        <link>https://www.coolops.cn/posts/kubernetes-pod-grace-deploy/</link>
+        <pubDate>Sat, 05 Dec 2020 14:39:17 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 14:39:17 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-pod-grace-deploy/</guid>
+        <description>设置一个preStop hook，在hook中指定怎么优雅停止容器在K8S中，创建pod、删除pod是最频繁的操作，不论是新增还是升级都会触发。对于新增或者重建我们最关心的是什么时候</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes-single.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>kubectl的奇巧淫技</title>
+        <link>https://www.coolops.cn/posts/kubernetes-kubectl-other-use/</link>
+        <pubDate>Sat, 05 Dec 2020 14:36:24 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 14:36:24 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-kubectl-other-use/</guid>
+        <description>以下文章来源于崔秀龙的博客，文章地址：https://blog.fleeto.us/post/tips-for-kubectl/ 原文：Ready-to-use commands and tips for kubectl 作者：Fla</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes-single.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubectl</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>使用Kustomize管理K8S的yaml清单</title>
+        <link>https://www.coolops.cn/posts/kubernetes-kustomize/</link>
+        <pubDate>Sat, 05 Dec 2020 14:33:14 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 14:33:14 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-kustomize/</guid>
+        <description>将应用部署到Kubernetes中的方式有很多，目前主流是就是使用kubectl和Helm，不过其先决条件都需要YAML清单文件。 不同由于部署环境的多样化，比如有开发环境、测试环境</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kustomize.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kustomize</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>kubedog：解决K8S中资源跟踪问题</title>
+        <link>https://www.coolops.cn/posts/kubernetes-kubedog/</link>
+        <pubDate>Sat, 05 Dec 2020 14:28:59 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 14:28:59 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-kubedog/</guid>
+        <description>Kubedog 是一个开源的 Golang 项目，使用 watch 方式对 Kubernetes 资源进行跟踪，能够方便的用于日常运维和 CI/CD 过程之中，项目中除了一个 CLI 小工具之外，还提供了一组 SDK，用户可以将其中的 Watch 功能集成到自己的系统之中。安</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubedog.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubedog</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>使用kubectl-debug诊断kubernetes集群</title>
+        <link>https://www.coolops.cn/posts/kubernetes-kubectl-debug/</link>
+        <pubDate>Sat, 05 Dec 2020 14:25:50 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 14:25:50 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-kubectl-debug/</guid>
+        <description>kubectl-debug是K8S中Pod的诊断工具，它通过启动一个排错工具容器，并将其加入到目标业务容器的pid, network, user 以及 ipc namespace 中，这时我们就可以在新容器中直接用 netstat, tcpdump 这些熟悉的工具</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/debug.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubectl-debug</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>如何给nginx-ingress进行日志落盘</title>
+        <link>https://www.coolops.cn/posts/kubernetes-update-nginx-ingress-log/</link>
+        <pubDate>Sat, 05 Dec 2020 14:21:49 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 14:21:49 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-update-nginx-ingress-log/</guid>
+        <description>nginx-ingress-controller的日志 nginx-ingress-controller的日志包括三个部分： controller日志： 输出到stdout，通过启动参数</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/ingress.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>ingress-nginx</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>修改kubeadm搭建集群的证书时间</title>
+        <link>https://www.coolops.cn/posts/kubernetes-update-tls-time/</link>
+        <pubDate>Sat, 05 Dec 2020 14:19:24 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 14:19:24 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-update-tls-time/</guid>
+        <description>（1）、查看当前的证书时间 # kubeadm alpha certs check-expiration [check-expiration] Reading configuration from the cluster... [check-expiration] FYI: You can look at this config file with &#39;kubectl -n kube-system get cm kubeadm-config -oyaml&#39; CERTIFICATE EXPIRES RESIDUAL TIME CERTIFICATE AUTHORITY EXTERNALLY MANAGED admin.conf Jun 20, 2021 11:21 UTC 364d no apiserver Jun 20, 2021 11:21 UTC 364d ca no apiserver-etcd-client Jun 20, 2021 11:21 UTC 364d etcd-ca no apiserver-kubelet-client Jun 20, 2021 11:21 UTC 364d ca no controller-manager.conf Jun 20, 2021 11:21 UTC</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubeadm.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubeadm</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>修改kubernetes集群中Node的名字</title>
+        <link>https://www.coolops.cn/posts/kubernetes-update-node-name/</link>
+        <pubDate>Sat, 05 Dec 2020 14:16:14 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 14:16:14 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-update-node-name/</guid>
+        <description>kubeadm搭建的集群 修改之前节点信息如下： # kubectl get node NAME STATUS ROLES AGE VERSION k8s-master Ready master 95d v1.17.2 k8s-node01 Ready node01 95d v1.17.2 k8s-node02 Ready node02 95d v1.17.2 （1）、修改主机名 hostnamectl set-hostname k8s-node03 （2）、删除node节点 kubectl delete nodes k8s-node02 （3）、在删除的Node节点上</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes-single.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>在Kubernetes中让nginx容器热加载配置文件</title>
+        <link>https://www.coolops.cn/posts/kubernetes-nginx-hot-update/</link>
+        <pubDate>Sat, 05 Dec 2020 14:13:02 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 14:13:02 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-nginx-hot-update/</guid>
+        <description>Nginx作为WEB服务器被广泛使用。其自身支持热更新，在修改配置文件后，使用nginx -s reload命令可以不停服务重新加载配置。然而对于Dockerize的Nginx来说，如果</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/nginx.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>nginx</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>使用Jenkins和Argocd实现企业级CI/CD</title>
+        <link>https://www.coolops.cn/posts/devops-jenkins-argocd/</link>
+        <pubDate>Sat, 05 Dec 2020 11:59:51 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 11:59:51 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/devops-jenkins-argocd/</guid>
+        <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下： 涉及的软件以及版本信息如下： 软件 版本 kubernetes</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/devops/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>DevOps</category>
+            
+          
+            
+              <category>Argocd</category>
+            
+          
+            
+              <category>Jenkins</category>
+            
+          
+            
+              <category>CI/CD</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Harbor：在云原生中使用，附安装</title>
+        <link>https://www.coolops.cn/posts/harbor/</link>
+        <pubDate>Sat, 05 Dec 2020 10:51:24 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 10:51:24 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/harbor/</guid>
+        <description>内容主要源自邹佳在云原生社区的分享。 Harbor 是一个用于存储和分发Docker 镜像的企业级Registry 服务器，由vmware开源，是一个可信的云原生制品仓库，用来存储、签名、管理相关的</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/harbor.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Cloud Native</category>
+            
+          
+            
+              <category>Harbor</category>
+            
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>docker-compose</category>
+            
+          
+            
+              <category>docker</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Kubeadm搭建单master节点的Kubernetes集群</title>
+        <link>https://www.coolops.cn/posts/kubeadm-install-single-master-kubernetes/</link>
+        <pubDate>Sat, 05 Dec 2020 10:38:08 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 10:38:08 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubeadm-install-single-master-kubernetes/</guid>
+        <description>环境准备 3个节点，都是 Centos 7.6 系统，内核版本：3.10.0-957.12.2.el7.x86_64，在每个节点上添加 hosts 信息： $ cat /etc/hosts 172.16.1.128 k8s-master 172.16.1.129 k8s-node01 172.16.1.130 k8s-node02 禁用防火墙： $ systemctl stop firewalld $ systemctl disable firewalld 禁用SELIN</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubeadm.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubeadm</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
         <title>Kubeadm搭建高可用Kubernetes集群</title>
-        <link>http://qiaokebaba.github.io/posts/kubeadm-install-kubernetes/</link>
+        <link>https://www.coolops.cn/posts/kubeadm-install-multi-master-kubernetes/</link>
         <pubDate>Fri, 04 Dec 2020 14:13:34 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         <atom:modified>Fri, 04 Dec 2020 14:13:34 +0800</atom:modified>
-        <guid>http://qiaokebaba.github.io/posts/kubeadm-install-kubernetes/</guid>
-        <description>PS: 最近经常有朋友问我有没有用kubeadm搭建高可用集群的文档，说实在的我确实没有，我自己测试的话就用kubeadm单master版，公司用</description>
+        <guid>https://www.coolops.cn/posts/kubeadm-install-multi-master-kubernetes/</guid>
+        <description>PS: 最近经常有朋友问我有没有用kubeadm搭建高可用集群的文档，说实在的我确实没有，我自己测试的话就用kubeadm单master版，公司用的话就用二进制搭建的。所以就找了个下班时</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        <media:content url="http://qiaokebaba.github.ioimages/kubernetes/kubeadm.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubeadm.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -121,15 +887,15 @@
       
       <item>
         <title>Etcd集群常用操作</title>
-        <link>http://qiaokebaba.github.io/posts/handle-etcd-cluster/</link>
+        <link>https://www.coolops.cn/posts/handle-etcd-cluster/</link>
         <pubDate>Fri, 04 Dec 2020 11:10:44 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         <atom:modified>Fri, 04 Dec 2020 11:10:44 +0800</atom:modified>
-        <guid>http://qiaokebaba.github.io/posts/handle-etcd-cluster/</guid>
-        <description>备份 备份策略： 每两个小时用命令对etcd进行备份 备份数据保留2天 ETCDCTL_API=3 /opt/etcd/bin/etcdctl snapshot save /root/backup/etcd_$(date &amp;quot;+%Y%m%d%H%M%S&amp;quot;).db 恢复 （1）、停止kube-apiserver，确保不会再写入数据</description>
+        <guid>https://www.coolops.cn/posts/handle-etcd-cluster/</guid>
+        <description>备份 备份策略： 每两个小时用命令对etcd进行备份 备份数据保留2天 ETCDCTL_API=3 /opt/etcd/bin/etcdctl snapshot save /root/backup/etcd_$(date &amp;quot;+%Y%m%d%H%M%S&amp;quot;).db 恢复 （1）、停止kube-apiserver，确保不会再写入数据 systemctl stop kube-apiserver （2）、停止所有节点etcd systemctl stop etcd</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        <media:content url="http://qiaokebaba.github.ioimages/kubernetes/etcd.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://www.coolops.cnimages/kubernetes/etcd.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -145,15 +911,15 @@
       
       <item>
         <title>二进制安装Kubernetes集群</title>
-        <link>http://qiaokebaba.github.io/posts/binary-install-kubernetes/</link>
+        <link>https://www.coolops.cn/posts/binary-install-kubernetes/</link>
         <pubDate>Fri, 04 Dec 2020 09:40:07 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         <atom:modified>Fri, 04 Dec 2020 09:40:07 +0800</atom:modified>
-        <guid>http://qiaokebaba.github.io/posts/binary-install-kubernetes/</guid>
-        <description>基础规划 1、IP规划 主机名 IP 配置 软件 master-k8s 10.1.10.128 2C4G etcd,apiserver,controller-manager,scheduler node01-k8s 10.1.10.129 2C4G etcd,docker,kubelet,kube-proxy node02-k8s 10.1.10.130 2C4G etcd,docker,kubelet,kube-proxy 2、软件规划 软件名 版本 etcd 3.3.18 docker-ce 19.03.5-3 cfssl 1.2.0 kubernetes 1.16.4 flannel 0.11.0 cni 0.8.3 3、目录规划 目录名 用途 /var/log/kubernetes/ 存储日志 /root/kubernetes/install</description>
+        <guid>https://www.coolops.cn/posts/binary-install-kubernetes/</guid>
+        <description>基础规划 1、IP规划 主机名 IP 配置 软件 master-k8s 10.1.10.128 2C4G etcd,apiserver,controller-manager,scheduler node01-k8s 10.1.10.129 2C4G etcd,docker,kubelet,kube-proxy node02-k8s 10.1.10.130 2C4G etcd,docker,kubelet,kube-proxy 2、软件规划 软件名 版本 etcd 3.3.18 docker-ce 19.03.5-3 cfssl 1.2.0 kubernetes 1.16.4 flannel 0.11.0 cni 0.8.3 3、目录规划 目录名 用途 /var/log/kubernetes/ 存储日志 /root/kubernetes/install 安装软件目录 /opt/kubernetes K8S项目部署目录，其中s</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        <media:content url="http://qiaokebaba.github.ioimages/kubernetes/kubernetes.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -166,24 +932,6 @@
               <category>docker</category>
             
           
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Friends</title>
-        <link>http://qiaokebaba.github.io/friends/</link>
-        <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-        <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Thu, 28 Feb 2019 00:00:00 +0000</atom:modified>
-        <guid>http://qiaokebaba.github.io/friends/</guid>
-        <description>友情链接 我的朋友们！</description>
-        
-        <dc:creator>乔克叔叔</dc:creator>
-        
-        
-        
         
         
         

@@ -6,33 +6,81 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>docker on 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
-    <link>http://qiaokebaba.github.io/tags/docker/</link>
-    <description>Recent content in docker on 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
+    <title>docker on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <link>https://www.coolops.cn/tags/docker/</link>
+    <description>Recent content in docker on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 04 Dec 2020 09:40:07 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Dec 2020 10:51:24 +0800</lastBuildDate>
     
-        <atom:link href="http://qiaokebaba.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.coolops.cn/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
       
       <item>
+        <title>Harbor：在云原生中使用，附安装</title>
+        <link>https://www.coolops.cn/posts/harbor/</link>
+        <pubDate>Sat, 05 Dec 2020 10:51:24 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 10:51:24 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/harbor/</guid>
+        <description>内容主要源自邹佳在云原生社区的分享。 Harbor 是一个用于存储和分发Docker 镜像的企业级Registry 服务器，由vmware开源，是一个可信的云原生制品仓库，用来存储、签名、管理相关的</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/harbor.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Cloud Native</category>
+            
+          
+            
+              <category>Harbor</category>
+            
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>docker-compose</category>
+            
+          
+            
+              <category>docker</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
         <title>二进制安装Kubernetes集群</title>
-        <link>http://qiaokebaba.github.io/posts/binary-install-kubernetes/</link>
+        <link>https://www.coolops.cn/posts/binary-install-kubernetes/</link>
         <pubDate>Fri, 04 Dec 2020 09:40:07 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
         <atom:modified>Fri, 04 Dec 2020 09:40:07 +0800</atom:modified>
-        <guid>http://qiaokebaba.github.io/posts/binary-install-kubernetes/</guid>
-        <description>基础规划 1、IP规划 主机名 IP 配置 软件 master-k8s 10.1.10.128 2C4G etcd,apiserver,controller-manager,scheduler node01-k8s 10.1.10.129 2C4G etcd,docker,kubelet,kube-proxy node02-k8s 10.1.10.130 2C4G etcd,docker,kubelet,kube-proxy 2、软件规划 软件名 版本 etcd 3.3.18 docker-ce 19.03.5-3 cfssl 1.2.0 kubernetes 1.16.4 flannel 0.11.0 cni 0.8.3 3、目录规划 目录名 用途 /var/log/kubernetes/ 存储日志 /root/kubernetes/install</description>
+        <guid>https://www.coolops.cn/posts/binary-install-kubernetes/</guid>
+        <description>基础规划 1、IP规划 主机名 IP 配置 软件 master-k8s 10.1.10.128 2C4G etcd,apiserver,controller-manager,scheduler node01-k8s 10.1.10.129 2C4G etcd,docker,kubelet,kube-proxy node02-k8s 10.1.10.130 2C4G etcd,docker,kubelet,kube-proxy 2、软件规划 软件名 版本 etcd 3.3.18 docker-ce 19.03.5-3 cfssl 1.2.0 kubernetes 1.16.4 flannel 0.11.0 cni 0.8.3 3、目录规划 目录名 用途 /var/log/kubernetes/ 存储日志 /root/kubernetes/install 安装软件目录 /opt/kubernetes K8S项目部署目录，其中s</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        <media:content url="http://qiaokebaba.github.ioimages/kubernetes/kubernetes.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

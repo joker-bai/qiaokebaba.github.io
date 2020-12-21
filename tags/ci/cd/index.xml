@@ -6,32 +6,124 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>CI/CD on 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
-    <link>http://qiaokebaba.github.io/tags/ci/cd/</link>
-    <description>Recent content in CI/CD on 运维工作站-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
+    <title>CI/CD on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <link>https://www.coolops.cn/tags/ci/cd/</link>
+    <description>Recent content in CI/CD on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     
-        <atom:link href="http://qiaokebaba.github.io/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.coolops.cn/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
       
       <item>
-        <title>使用Jenkins和Argocd实现企业级CI/CD</title>
-        <link>http://qiaokebaba.github.io/posts/devops-jenkins-argocd/</link>
-        <pubDate>Fri, 04 Dec 2020 16:02:38 +0800</pubDate>
+        <title>基于Jenkins&#43;Argocd&#43;Argo Rollouts的CI/CD实现并用金丝雀发布</title>
+        <link>https://www.coolops.cn/posts/jenkins-argocd-argo-rollouts/</link>
+        <pubDate>Wed, 16 Dec 2020 15:15:16 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Fri, 04 Dec 2020 16:02:38 +0800</atom:modified>
-        <guid>http://qiaokebaba.github.io/posts/devops-jenkins-argocd/</guid>
-        <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下</description>
+        <atom:modified>Wed, 16 Dec 2020 15:15:16 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/jenkins-argocd-argo-rollouts/</guid>
+        <description>本文主要介绍使用Jenkins配合argocd以及argo rollouts实现CI/CD。其中jenkins配合argocd做CI/CD前面已经介绍过了，这里不再赘述，不懂的地方可</description>
         
         <dc:creator>乔克叔叔</dc:creator>
-        <media:content url="http://qiaokebaba.github.ioimages/devops/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://www.coolops.cnimages/kubernetes/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>devops</category>
+            
+          
+            
+              <category>CI/CD</category>
+            
+          
+            
+              <category>argocd</category>
+            
+          
+            
+              <category>argo-rollouts</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>在kubernetes中部署Jenkins并配置动态生成slave</title>
+        <link>https://www.coolops.cn/posts/kubernetes-jenkins-install/</link>
+        <pubDate>Thu, 10 Dec 2020 08:25:12 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Thu, 10 Dec 2020 08:25:12 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-jenkins-install/</guid>
+        <description>一、动态生成Slave 1.1、简介 之前我们都是在物理机或者虚拟机上部署jenkins，但是这种部署方式会有一些难点，如下： 主 Master 发生单点故障时，整个流程都不可用了 每个 Slave 的配置环境不一</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/jenkins.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>jenkins</category>
+            
+          
+            
+              <category>devops</category>
+            
+          
+            
+              <category>CI/CD</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>使用Jenkins和Argocd实现企业级CI/CD</title>
+        <link>https://www.coolops.cn/posts/devops-jenkins-argocd/</link>
+        <pubDate>Sat, 05 Dec 2020 11:59:51 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Sat, 05 Dec 2020 11:59:51 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/devops-jenkins-argocd/</guid>
+        <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下： 涉及的软件以及版本信息如下： 软件 版本 kubernetes</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/devops/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -41,11 +133,11 @@
             
           
             
-              <category>Jenkins</category>
+              <category>Argocd</category>
             
           
             
-              <category>Argocd</category>
+              <category>Jenkins</category>
             
           
             
