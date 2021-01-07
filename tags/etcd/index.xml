@@ -15,6 +15,7 @@
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 04 Dec 2020 11:10:44 +0800</lastBuildDate>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
     
         <atom:link href="https://www.coolops.cn/tags/etcd/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,9 +28,18 @@
         <link>https://www.coolops.cn/posts/handle-etcd-cluster/</link>
         <pubDate>Fri, 04 Dec 2020 11:10:44 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Fri, 04 Dec 2020 11:10:44 +0800</atom:modified>
+        <atom:modified>Thu, 10 Dec 2020 08:31:22 +0800</atom:modified>
         <guid>https://www.coolops.cn/posts/handle-etcd-cluster/</guid>
-        <description>备份 备份策略： 每两个小时用命令对etcd进行备份 备份数据保留2天 ETCDCTL_API=3 /opt/etcd/bin/etcdctl snapshot save /root/backup/etcd_$(date &amp;quot;+%Y%m%d%H%M%S&amp;quot;).db 恢复 （1）、停止kube-apiserver，确保不会再写入数据 systemctl stop kube-apiserver （2）、停止所有节点etcd systemctl stop etcd</description>
+        <description>备份 备份策略：
+ 每两个小时用命令对etcd进行备份 备份数据保留2天  ETCDCTL_API=3 /opt/etcd/bin/etcdctl snapshot save /root/backup/etcd_$(date &amp;quot;+%Y%m%d%H%M%S&amp;quot;).db 恢复 （1）、停止kube-apiserver，确保不会再写入数据
+systemctl stop kube-apiserver （2）、停止所有节点etcd
+systemctl stop etcd （3）、将etcd节点上原有的数据目录备份（具体的目录可以在etcd的配置文件中查看）
+mv /var/lib/etcd/default.etcd{,.bak} （4）、将备份的数据拷贝到所有etcd节点
+scp etcd_20200106152240.db 10.1.10.129:/root/backup/ scp etcd_20200106152240.db 10.1.10.130:/root/backup/ （5）、使用命令进行恢复
+# 在etcd-1上 ETCDCTL_API=3 /opt/etcd/bin/etcdctl snapshot --endpoints=&amp;quot;https://10.1.10.128:2379,https://10.1.10.129:2379,https://10.1.10.130:2379&amp;quot; --cacert=/opt/etcd/ssl/etcd-ca.pem --cert=/opt/etcd/ssl/etcd-server.pem --key=/opt/etcd/ssl/etcd-server-key.pem restore ~/backup/etcd_20200106152240.db --name=etcd-1 --data-dir=/var/lib/etcd/default.etcd --initial-cluster=&amp;quot;etcd-1=https://10.1.10.128:2380,etcd-2=https://10.1.10.129:2380,etcd-3=https://10.1.10.130:2380&amp;quot; --initial-cluster-token=&amp;quot;etcd-cluster&amp;quot; --initial-advertise-peer-urls=https://10.1.10.128:2380 # 在etcd-2上 ETCDCTL_API=3 /opt/etcd/bin/etcdctl snapshot --endpoints=&amp;quot;https://10.1.10.128:2379,https://10.1.10.129:2379,https://10.1.10.130:2379&amp;quot; --cacert=/opt/etcd/ssl/etcd-ca.pem --cert=/opt/etcd/ssl/etcd-server.pem --key=/opt/etcd/ssl/etcd-server-key.pem restore ~/backup/etcd_20200106152240.db --name=etcd-2 --data-dir=/var/lib/etcd/default.etcd --initial-cluster=&amp;quot;etcd-1=https://10.1.10.128:2380,etcd-2=https://10.1.10.129:2380,etcd-3=https://10.1.10.130:2380&amp;quot; --initial-cluster-token=&amp;quot;etcd-cluster&amp;quot; --initial-advertise-peer-urls=https://10.1.10.129:2380 # 在etcd-3上 ETCDCTL_API=3 /opt/etcd/bin/etcdctl snapshot --endpoints=&amp;quot;https://10.1.10.128:2379,https://10.1.10.129:2379,https://10.1.10.130:2379&amp;quot; --cacert=/opt/etcd/ssl/etcd-ca.pem --cert=/opt/etcd/ssl/etcd-server.pem --key=/opt/etcd/ssl/etcd-server-key.pem restore ~/backup/etcd_20200106152240.db --name=etcd-3 --data-dir=/var/lib/etcd/default.etcd --initial-cluster=&amp;quot;etcd-1=https://10.1.10.128:2380,etcd-2=https://10.1.10.129:2380,etcd-3=https://10.1.10.130:2380&amp;quot; --initial-cluster-token=&amp;quot;etcd-cluster&amp;quot; --initial-advertise-peer-urls=https://10.1.10.130:2380 （6）、启动etcd服务
+systemctl start etcd （7）、启动kube-apiserver
+systemctl start kube-apiserver （8）、查看集群状态
+# /opt/etcd/bin/etcdctl \ &amp;gt; --ca-file=/opt/etcd/ssl/etcd-ca.</description>
         
         <dc:creator>乔克叔叔</dc:creator>
         <media:content url="https://www.coolops.cnimages/kubernetes/etcd.png" medium="image"><media:title type="html">featured image</media:title></media:content>

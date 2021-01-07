@@ -14,6 +14,7 @@
     <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
     
         <atom:link href="https://www.coolops.cn/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,9 +25,9 @@
       <item>
         <title>Posts</title>
         <link>https://www.coolops.cn/posts/</link>
-        <pubDate>Thu, 17 Dec 2020 16:21:37 +0800</pubDate>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        
+        <atom:modified>Fri, 04 Dec 2020 14:19:02 +0800</atom:modified>
         <guid>https://www.coolops.cn/posts/</guid>
         <description></description>
         

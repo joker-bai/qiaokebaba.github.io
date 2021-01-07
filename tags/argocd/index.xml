@@ -15,6 +15,7 @@
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 16 Dec 2020 15:15:16 +0800</lastBuildDate>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
     
         <atom:link href="https://www.coolops.cn/tags/argocd/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,9 +28,20 @@
         <link>https://www.coolops.cn/posts/jenkins-argocd-argo-rollouts/</link>
         <pubDate>Wed, 16 Dec 2020 15:15:16 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Wed, 16 Dec 2020 15:15:16 +0800</atom:modified>
+        <atom:modified>Mon, 21 Dec 2020 17:34:20 +0800</atom:modified>
         <guid>https://www.coolops.cn/posts/jenkins-argocd-argo-rollouts/</guid>
-        <description>本文主要介绍使用Jenkins配合argocd以及argo rollouts实现CI/CD。其中jenkins配合argocd做CI/CD前面已经介绍过了，这里不再赘述，不懂的地方可</description>
+        <description>本文主要介绍使用Jenkins配合argocd以及argo rollouts实现CI/CD。其中jenkins配合argocd做CI/CD前面已经介绍过了，这里不再赘述，不懂的地方可以移步《使用Jenkins和Argocd实现CI/CD》。
+本篇文章新增了如下几个功能：
+ 优化argocd的触发CD的速度 使用argo rollouts进行金丝雀发布 给代码仓库打tag  优化Argocd触发CD的速度 Argo CD每三分钟轮询一次Git存储库，以检测清单的变化。为了消除轮询带来的延迟，可以将API服务器配置为接收Webhook事件。Argo CD支持来自GitHub，GitLab，Bitbucket，Bitbucket Server和Gogs的Git Webhook通知，更多点击官网。
+我这里使用Gitlab作为仓库地址。
+（1）在argocd中配置webhook token
+使用kubectl edit secret argocd-secret -n argocd命令进行配置：
+apiVersion: v1kind: Secretmetadata:name: argocd-secretnamespace: argocdtype: Opaquedata:...stringData:# gitlab webhook secretwebhook.gitlab.secret: coolops配置完点击保存会自动生成一个secret，如下：
+# kubectl describe secret argocd-secret -n argocdName: argocd-secretNamespace: argocdLabels: app.kubernetes.io/name=argocd-secretapp.kubernetes.io/part-of=argocdAnnotations: Type: OpaqueData====admin.passwordMtime: 20 bytesserver.secretkey: 44 bytestls.crt: 1237 bytestls.key: 1679 byteswebhook.gitlab.secret: 7 bytesadmin.password: 60 bytes（2）在gitlab的代码仓库配置webhook，如下：
+由于集群内部证书是无效证书，所有要把Enabled SSL去掉，如下：
+然后点击保存，点击测试，看是否链接成功。如果有如下提示则表示webhook配置没问题了。
+现在可以进行修改gitlab仓库，观察是否一提交，argocd那边就可以响应了。
+使用argo rollouts进行金丝雀发布 关于argo rollouts的更多介绍可以查看之前的文章《使用argo-rollouts实现金丝雀发布》。</description>
         
         <dc:creator>乔克叔叔</dc:creator>
         <media:content url="https://www.coolops.cnimages/kubernetes/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -75,9 +87,28 @@
         <link>https://www.coolops.cn/posts/argocd/</link>
         <pubDate>Tue, 08 Dec 2020 16:24:51 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Tue, 08 Dec 2020 16:24:51 +0800</atom:modified>
+        <atom:modified>Thu, 10 Dec 2020 08:31:22 +0800</atom:modified>
         <guid>https://www.coolops.cn/posts/argocd/</guid>
-        <description>什么是ArgoCD Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. Argo CD是一个基于Kubernetes的声明式的GitOps工具。 在说Argo CD之前，我们先来了解一下什么是GitOps。 什么是GitOps</description>
+        <description>什么是ArgoCD  Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.
+ Argo CD是一个基于Kubernetes的声明式的GitOps工具。
+在说Argo CD之前，我们先来了解一下什么是GitOps。
+什么是GitOps GitOps是以Git为基础，使用CI/CD来更新运行在云原生环境的应用，它秉承了DevOps的核心理念&amp;ndash;“构建它并交付它(you built it you ship it)”。
+概念说起来有点虚，我画了张图，看了你就明白了。
+ 当开发人员将开发完成的代码推送到git仓库会触发CI制作镜像并推送到镜像仓库 CI处理完成后，可以手动或者自动修改应用配置，再将其推送到git仓库 GitOps会同时对比目标状态和当前状态，如果两者不一致会触发CD将新的配置部署到集群中  其中，目标状态是Git中的状态，现有状态是集群的里的应用状态。
+不用GitOps可以么？
+当然可以，我们可以使用kubectl、helm等工具直接发布配置，但这会存在一个很严重的安全问题，那就是密钥共享。
+为了让CI系统能够自动的部署应用，我们需要将集群的访问密钥共享给它，这会带来潜在的安全问题。
+ArgoCD Argo CD遵循GitOps模式，使用Git存储库存储所需应用程序的配置。
+Kubernetes清单可以通过以下几种方式指定:
+ kustomize应用程序 helm图表 ksonnet应用程序 jsonnet文件 基于YAML/json配置 配置管理插件配置的任何自定义配置管理工具  Argo CD实现为kubernetes控制器，它持续监视运行中的应用程序，并将当前的活动状态与期望的目标状态进行比较(如Git repo中指定的那样)。如果已部署的应用程序的活动状态偏离了目标状态，则认为是OutOfSync。Argo CD报告和可视化这些差异，同时提供了方法，可以自动或手动将活动状态同步回所需的目标状态。在Git repo中对所需目标状态所做的任何修改都可以自动应用并反映到指定的目标环境中。
+Argo CD就处在如下位置：
+它的优势总结如下：
+ 应用定义、配置和环境信息是声明式的，并且可以进行版本控制； 应用部署和生命周期管理是全自动化的，是可审计的，清晰易懂； Argo CD是一个独立的部署工具，支持对多个环境、多个Kubernetes集群上的应用进行统一部署和管理  实践  前提：有一个可用的Kubernetes集群。
+ 实验环境：
+ kubernetes：1.17.2 argo cd：latest  安装Argo CD 安装很简单，不过在实际使用中需要对数据进行持久化。
+我这里直接使用官方文档的安装命令：
+kubectl create namespace argocdkubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml执行成功后会在argocd的namespace下创建如下资源。
+# kubectl get all -n argocd NAME READY STATUS RESTARTS AGEpod/argocd-application-controller-0 1/1 Running 0 16hpod/argocd-dex-server-74d9998fdb-mvpmh 1/1 Running 0 16hpod/argocd-redis-59dbdbb8f9-msxrp 1/1 Running 0 16hpod/argocd-repo-server-599bdc7cf5-ccv8l 1/1 Running 0 16hpod/argocd-server-576b4c7ff4-cnp9d 1/1 Running 0 16hNAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGEservice/argocd-dex-server ClusterIP 10.</description>
         
         <dc:creator>乔克叔叔</dc:creator>
         <media:content url="https://www.coolops.cnimages/kubernetes/argocd.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -115,9 +146,24 @@
         <link>https://www.coolops.cn/posts/devops-jenkins-argocd/</link>
         <pubDate>Sat, 05 Dec 2020 11:59:51 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Sat, 05 Dec 2020 11:59:51 +0800</atom:modified>
+        <atom:modified>Thu, 10 Dec 2020 08:31:22 +0800</atom:modified>
         <guid>https://www.coolops.cn/posts/devops-jenkins-argocd/</guid>
-        <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。 整体架构如下： 涉及的软件以及版本信息如下： 软件 版本 kubernetes</description>
+        <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。
+整体架构如下：
+涉及的软件以及版本信息如下：
+   软件 版本     kubernetes 1.17.9   docker 19.03.13   jenkins 2.249.3   argocd 1.8.0   gitlab 社区版11.8.1   sonarqube 社区版8.5.1   traefik 2.3.3   代码仓库 阿里云仓库    涉及的技术：
+ Jenkins shareLibrary Jenkins pipeline Jenkinsfile Argocd sonarqube api操作  软件安装 软件安装我这里不贴具体的安装代码了，所有的代码我都放在了github上，地址：https://github.com/cool-ops/kubernetes-software-yaml.git
+所以这里默认你已经安装好所以软件了。
+在Jenkins上安装如下插件  kubernetes AnsiColor HTTP Request SonarQube Scanner Utility Steps Email Extension Template Gitlab Hook Gitlab  在Jenkins上配置Kubernetes集群信息 在系统管理&amp;ndash;&amp;gt;系统配置&amp;ndash;&amp;gt;cloud
+在Jenkins上配置邮箱地址 系统设置&amp;ndash;&amp;gt;系统配置&amp;ndash;&amp;gt;Email
+（1）设置管理员邮箱
+配置SMTP服务
+在Gitlab上准备一个测试代码 我这里有一个简单的java测试代码，地址如下：https://gitee.com/jokerbai/springboot-helloworld.git
+可以将其导入到自己的gitlab仓库。
+在Gitlab上创建一个共享库 首先在gitlab上创建一个共享库，我这里取名叫shareLibrary，如下：
+然后创建src/org/devops目录，并在该目录下创建一下文件。
+它们的内容分别如下：
+build.groovy</description>
         
         <dc:creator>乔克叔叔</dc:creator>
         <media:content url="https://www.coolops.cnimages/devops/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>

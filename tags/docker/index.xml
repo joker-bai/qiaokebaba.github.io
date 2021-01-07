@@ -15,6 +15,7 @@
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 05 Dec 2020 10:51:24 +0800</lastBuildDate>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
     
         <atom:link href="https://www.coolops.cn/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,9 +28,30 @@
         <link>https://www.coolops.cn/posts/harbor/</link>
         <pubDate>Sat, 05 Dec 2020 10:51:24 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Sat, 05 Dec 2020 10:51:24 +0800</atom:modified>
+        <atom:modified>Thu, 10 Dec 2020 08:31:22 +0800</atom:modified>
         <guid>https://www.coolops.cn/posts/harbor/</guid>
-        <description>内容主要源自邹佳在云原生社区的分享。 Harbor 是一个用于存储和分发Docker 镜像的企业级Registry 服务器，由vmware开源，是一个可信的云原生制品仓库，用来存储、签名、管理相关的</description>
+        <description>内容主要源自邹佳在云原生社区的分享。
+ Harbor 是一个用于存储和分发Docker 镜像的企业级Registry 服务器，由vmware开源，是一个可信的云原生制品仓库，用来存储、签名、管理相关的内容。
+Harbor的一切设计都是围绕了云原生展开的，并且会在这个方向一直坚持下去。
+在云原生下，镜像就是命脉，一切应用都是围绕着镜像，可以说镜像技术加速了云原生的发展。
+那么Harbor在镜像方面做了哪些呢？
+让镜像分发更高效 （1）基于策略的内容复制机制 Harbor支持多种过滤器（镜像库、标签等）与多种触发模式（手动、定时等）来实现镜像的推送和拉取。
+ 初始的时候进行全量拉取 然后再通过增量拉取  在大集群，多机房的情况下，可以使用主从模式（中心-边缘模式）来进行镜像的分发。
+（2）提供项目级别的缓存能力 最近开源圈热论的话题就是DockerHub限速问题s，不过“上有政策，下有对策”，Harbor就可以有效解决这个问题。
+通过Harbor缓存下来的制品与“本地”制品无异，而且Harbor方面相关的管理策略也可以应用到缓存的镜像上，比如配额、扫描等。目前仅支持上游的DockerHub和其他的Harbor。
+在配置缓存时要注意几点：
+ 要使用缓存功能，则必须在新建项目的时候选择启用，切该项目不可推送 已创建的普通项目无法直接转为缓存项目 Pull镜像的路径有专门的格式。docker pull &amp;lt;harbor-host&amp;gt;/[cache-project-name]/&amp;lt;repository&amp;gt;_path，比如docker pull goharbor.io/my_cache_pro/library/nginx:latest  （3）可以使用P2P进行镜像预热  PS：这里的P2P不是网贷机构，不会暴雷的。
+ 那什么是P2P技术呢？
+在C/S模式中，数据的分发采用专门的服务器，多个客户端都从此服务器获取数据。这种模式的优点是：数据的一致性容易控制，系统也容易管理。但是此种模式的缺点是：因为服务器的个数只有一个(即便有多个也非常有限)，系统容易出现单一失效点；单一服务器面对众多的客户端，由于CPU能力、内存大小、网络带宽的限制，可同时服务的客户端非常有限，可扩展性差。
+P2P技术正是为了解决这些问题而提出来的一种对等网络结构。在P2P网络中，每个节点既可以从其他节点得到服务，也可以向其他节点提供服务。这样，庞大的终端资源被利用起来，一举解决了C/S模式中的两个弊端。
+Harbor也充分利用了这种技术，将所选镜像提前分发到P2P网络中，以便客户端拉取的时候直接从P2P网络中拉取。
+  基于策略实现自动化
+   Repository过滤器 Tag过滤器 标签（Label）过滤器 漏洞状态条件 签名状态条件    基于事件触发或定时触发
+  Harbor目前仅支持：
+ Dragonfly。是阿里自研并捐献给 CNCF 的 P2P 文件分发系统。 Kraken。是 Uber 开源的点对点（P2P）Docker 容器仓库。  让镜像分发更安全 容器实际上是不透明的，被封装成一个个繁琐的镜像。当越来越多的镜像被创建时，没有人能确定镜像里到底封装了什么，所以日常使用的镜像都面临着严重的安全问题。
+Harbor在安全方面做了严格的把关。
+（1）对镜像进行签名  基于开源的Notary实现镜像的签名   基于GPG实现对Helm Chart的签名支持  （2）对镜像进行漏洞扫描  通过插件化接入扫描器，对镜像进行漏洞扫描   可以生成相应的扫描报告，以便与管理相关漏洞信息和了解安全威胁程度  （3）通过策略限制不安全镜像分发 可以在项目里设置相关的安全策略，以阻止不合安全规范的镜像分发。
+ 基于内容信任，仅允许通过认证的镜像分发 基于危害级别，可以设置危害级别限制镜像分发  （4）通过规则来限制Tag不被覆盖或删除 默认情况下Harbor里的镜像是可以被覆盖和删除的，不过可以添加一些规则来保护一些Tag不被删除，比如latest的tag。</description>
         
         <dc:creator>乔克叔叔</dc:creator>
         <media:content url="https://www.coolops.cnimages/kubernetes/harbor.png" medium="image"><media:title type="html">featured image</media:title></media:content>
@@ -75,9 +97,12 @@
         <link>https://www.coolops.cn/posts/binary-install-kubernetes/</link>
         <pubDate>Fri, 04 Dec 2020 09:40:07 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Fri, 04 Dec 2020 09:40:07 +0800</atom:modified>
+        <atom:modified>Thu, 10 Dec 2020 08:31:22 +0800</atom:modified>
         <guid>https://www.coolops.cn/posts/binary-install-kubernetes/</guid>
-        <description>基础规划 1、IP规划 主机名 IP 配置 软件 master-k8s 10.1.10.128 2C4G etcd,apiserver,controller-manager,scheduler node01-k8s 10.1.10.129 2C4G etcd,docker,kubelet,kube-proxy node02-k8s 10.1.10.130 2C4G etcd,docker,kubelet,kube-proxy 2、软件规划 软件名 版本 etcd 3.3.18 docker-ce 19.03.5-3 cfssl 1.2.0 kubernetes 1.16.4 flannel 0.11.0 cni 0.8.3 3、目录规划 目录名 用途 /var/log/kubernetes/ 存储日志 /root/kubernetes/install 安装软件目录 /opt/kubernetes K8S项目部署目录，其中s</description>
+        <description>基础规划 1、IP规划
+   主机名 IP 配置 软件     master-k8s 10.1.10.128 2C4G etcd,apiserver,controller-manager,scheduler   node01-k8s 10.1.10.129 2C4G etcd,docker,kubelet,kube-proxy   node02-k8s 10.1.10.130 2C4G etcd,docker,kubelet,kube-proxy    2、软件规划
+   软件名 版本     etcd 3.3.18   docker-ce 19.03.5-3   cfssl 1.2.0   kubernetes 1.16.4   flannel 0.11.0   cni 0.8.3    3、目录规划
+   目录名 用途     /var/log/kubernetes/ 存储日志   /root/kubernetes/install 安装软件目录   /opt/kubernetes K8S项目部署目录，其中ssl是证书目录，bin是二进制目录，config是配置文件目录   /opt/etcd Etcd项目部署目录，子目录功能如上   /opt/cni cni二进制文件保存目录   /opt/kubernetes/ssl 证书生成目录   /opt/kubernetes/kubeconfig kubeconfig统一生成目录   /opt/kubernetes/system 系统组件YAML文件存储目录    mkdir /var/log/kubernetes /root/kubernetes/{ssl,install,kubeconfig} /root/kubernetes/ssl /opt/etcd/{bin,config,ssl} /opt/kubernetes/{bin,config,ssl} /opt/cni/bin -p 主机初始化配置 2、设置hostname</description>
         
         <dc:creator>乔克叔叔</dc:creator>
         <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes.png" medium="image"><media:title type="html">featured image</media:title></media:content>
