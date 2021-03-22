@@ -6,15 +6,15 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Jenkins on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <title>jenkins on 十点运维吧-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生|SRE</title>
     <link>https://www.coolops.cn/tags/jenkins/</link>
-    <description>Recent content in Jenkins on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
+    <description>Recent content in jenkins on 十点运维吧-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生|SRE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 10 Dec 2020 08:25:12 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2021 09:10:37 +0800</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     
         <atom:link href="https://www.coolops.cn/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
@@ -22,6 +22,61 @@
     
     
 
+      
+      <item>
+        <title>使用Jenkins和Argocd实现CI/CD</title>
+        <link>https://www.coolops.cn/posts/devops-jenkins-argocd/</link>
+        <pubDate>Thu, 28 Jan 2021 09:10:37 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Thu, 10 Dec 2020 08:31:22 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/devops-jenkins-argocd/</guid>
+        <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。
+整体架构如下：
+涉及的软件以及版本信息如下：
+   软件 版本     kubernetes 1.17.9   docker 19.03.13   jenkins 2.249.3   argocd 1.8.0   gitlab 社区版11.8.1   sonarqube 社区版8.5.1   traefik 2.3.3   代码仓库 阿里云仓库    涉及的技术：
+ Jenkins shareLibrary Jenkins pipeline Jenkinsfile Argocd sonarqube api操作  软件安装 软件安装我这里不贴具体的安装代码了，所有的代码我都放在了github上，地址：https://github.com/cool-ops/kubernetes-software-yaml.git
+所以这里默认你已经安装好所以软件了。
+在Jenkins上安装如下插件  kubernetes AnsiColor HTTP Request SonarQube Scanner Utility Steps Email Extension Template Gitlab Hook Gitlab  在Jenkins上配置Kubernetes集群信息 在系统管理&amp;ndash;&amp;gt;系统配置&amp;ndash;&amp;gt;cloud
+在Jenkins上配置邮箱地址 系统设置&amp;ndash;&amp;gt;系统配置&amp;ndash;&amp;gt;Email
+（1）设置管理员邮箱
+配置SMTP服务
+在Gitlab上准备一个测试代码 我这里有一个简单的java测试代码，地址如下：https://gitee.com/jokerbai/springboot-helloworld.git
+可以将其导入到自己的gitlab仓库。
+在Gitlab上创建一个共享库 首先在gitlab上创建一个共享库，我这里取名叫shareLibrary，如下：
+然后创建src/org/devops目录，并在该目录下创建一下文件。
+它们的内容分别如下：
+build.groovy</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>devops</category>
+            
+          
+            
+              <category>jenkins</category>
+            
+          
+            
+              <category>argocd</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>在kubernetes中部署Jenkins并配置动态生成slave</title>
@@ -53,65 +108,6 @@
           
             
               <category>devops</category>
-            
-          
-            
-              <category>CI/CD</category>
-            
-          
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>使用Jenkins和Argocd实现企业级CI/CD</title>
-        <link>https://www.coolops.cn/posts/devops-jenkins-argocd/</link>
-        <pubDate>Sat, 05 Dec 2020 11:59:51 +0800</pubDate>
-        <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Thu, 10 Dec 2020 08:31:22 +0800</atom:modified>
-        <guid>https://www.coolops.cn/posts/devops-jenkins-argocd/</guid>
-        <description>CI/CD并不是陌生的东西，大部分企业都有自己的CI/CD，不过今天我要介绍的是使用Jenkins和GitOps实现CI/CD。
-整体架构如下：
-涉及的软件以及版本信息如下：
-   软件 版本     kubernetes 1.17.9   docker 19.03.13   jenkins 2.249.3   argocd 1.8.0   gitlab 社区版11.8.1   sonarqube 社区版8.5.1   traefik 2.3.3   代码仓库 阿里云仓库    涉及的技术：
- Jenkins shareLibrary Jenkins pipeline Jenkinsfile Argocd sonarqube api操作  软件安装 软件安装我这里不贴具体的安装代码了，所有的代码我都放在了github上，地址：https://github.com/cool-ops/kubernetes-software-yaml.git
-所以这里默认你已经安装好所以软件了。
-在Jenkins上安装如下插件  kubernetes AnsiColor HTTP Request SonarQube Scanner Utility Steps Email Extension Template Gitlab Hook Gitlab  在Jenkins上配置Kubernetes集群信息 在系统管理&amp;ndash;&amp;gt;系统配置&amp;ndash;&amp;gt;cloud
-在Jenkins上配置邮箱地址 系统设置&amp;ndash;&amp;gt;系统配置&amp;ndash;&amp;gt;Email
-（1）设置管理员邮箱
-配置SMTP服务
-在Gitlab上准备一个测试代码 我这里有一个简单的java测试代码，地址如下：https://gitee.com/jokerbai/springboot-helloworld.git
-可以将其导入到自己的gitlab仓库。
-在Gitlab上创建一个共享库 首先在gitlab上创建一个共享库，我这里取名叫shareLibrary，如下：
-然后创建src/org/devops目录，并在该目录下创建一下文件。
-它们的内容分别如下：
-build.groovy</description>
-        
-        <dc:creator>乔克叔叔</dc:creator>
-        <media:content url="https://www.coolops.cnimages/devops/devops.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>DevOps</category>
-            
-          
-            
-              <category>Argocd</category>
-            
-          
-            
-              <category>Jenkins</category>
             
           
             

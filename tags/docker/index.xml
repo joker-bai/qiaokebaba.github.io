@@ -6,15 +6,15 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>docker on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <title>docker on 十点运维吧-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生|SRE</title>
     <link>https://www.coolops.cn/tags/docker/</link>
-    <description>Recent content in docker on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
+    <description>Recent content in docker on 十点运维吧-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生|SRE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 05 Dec 2020 10:51:24 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 11:03:08 +0800</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     
         <atom:link href="https://www.coolops.cn/tags/docker/index.xml" rel="self" type="application/rss+xml" />
@@ -22,6 +22,45 @@
     
     
 
+      
+      <item>
+        <title>如何保证Docker镜像安全?</title>
+        <link>https://www.coolops.cn/posts/docker-image-secrut/</link>
+        <pubDate>Wed, 20 Jan 2021 11:03:08 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Wed, 20 Jan 2021 11:03:08 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/docker-image-secrut/</guid>
+        <description>容器为我们提供应用运行环境，所以在制作镜像的时候应该重点关注镜像安全问题，而不是随意制作。
+这里总结以下几点：
+ 以非root用户运行 保持镜像最小化 对镜像进行安全扫描  以非root用户运行镜像 在制作镜像的时候，默认都是以root用户在容器中运行，虽然此root用户和服务器上的root用户有区别，但是黑客可以利用这个用户来获取API密钥，令牌，密码等私密信息，或者通过提权等干扰服务器主机。
+所以我们在制作镜像的时候要使用非root用户，比如下面一个java服务：
+FROM openjdk:8-jdk-oraclelinux7RUN useradd -m -d /home/joker -u 1000 -U joker &amp;amp;&amp;amp; \yum install -y procpsUSER jokerADD --chown=joker springboot-helloworld.jar /home/joker/app.jarEXPOSE 8080WORKDIR /home/jokerCMD exec java -Djava.security.egd=file:/dev/./urandom -jar app.jar运行容器后，即可看到是以joker用户起的应用。保持镜像最小化 镜像并非越大越好，也并非越小越好，适合当前需求的镜像才是最好。不过在制作镜像的时候要坚持最小化原则，只安装需要的软件和包。
+可以通过docker images 查看镜像大小，如下：
+ubuntu latest f643c72bc252 7 weeks ago 72.9MB对镜像进行安全扫描 把容器类比于主机，那么容器的安全和主机的安全同等重要，所以要镜像对每一个镜像进行安全扫描，发现高危漏洞及时打补丁，这样才能随时保持一个相对安全的运行环境。
+目前Harbor 2.0以上已经可以自定义镜像扫描规则，也可以定义拦截规则，可以有效的发现镜像漏洞，其他公有仓库也有类似的功能。当然我们还可以在做CI的阶段对制品镜像进行扫描，通过的才交付。具体怎么做根据不同的需求而定。</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/docker.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>docker</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>Harbor：在云原生中使用，附安装</title>

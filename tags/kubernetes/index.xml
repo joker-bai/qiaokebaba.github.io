@@ -6,15 +6,15 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>kubernetes on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</title>
+    <title>kubernetes on 十点运维吧-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生|SRE</title>
     <link>https://www.coolops.cn/tags/kubernetes/</link>
-    <description>Recent content in kubernetes on 十点运维-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生</description>
+    <description>Recent content in kubernetes on 十点运维吧-Linux|Kubernetes|Docker|Prometheus|Python|Golang|云原生|SRE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>qiaokebaba@163.com (乔克叔叔)</managingEditor>
     <webMaster>qiaokebaba@163.com (乔克叔叔)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 06 Jan 2021 15:33:34 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 22 Mar 2021 10:10:48 +0800</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     
         <atom:link href="https://www.coolops.cn/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
@@ -24,11 +24,242 @@
 
       
       <item>
+        <title>kubeadm部署K8S集群并使用containerd做容器运行时</title>
+        <link>https://www.coolops.cn/posts/kubeadm-containerd-k8s/</link>
+        <pubDate>Mon, 22 Mar 2021 10:10:48 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Mon, 22 Mar 2021 10:10:48 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubeadm-containerd-k8s/</guid>
+        <description>前言 去年12月份，当Kubernetes社区宣布1.20版本之后会逐步弃用dockershim，当时也有很多自媒体在宣传Kubernetes弃用Docker。其实，我觉得这是一种误导，也许仅仅是为了蹭热度。
+dockershim是Kubernetes的一个组件，其作用是为了操作Docker。Docker是在2013年面世的，而Kubernetes是在2016年，所以Docker刚开始并没有想到编排，也不会知道会出现Kubernetes这个庞然大物（它要是知道，也不会败的那么快&amp;hellip;）。但是Kubernetes在创建的时候就是以Docker作为容器运行时，很多操作逻辑都是针对的Docker，随着社区越来越健壮，为了兼容更多的容器运行时，才将Docker的相关逻辑独立出来组成了dockershim。
+正因为这样，只要Kubernetes的任何变动或者Docker的任何变动，都必须维护dockershim，这样才能保证足够的支持，但是通过dockershim操作Docker，其本质还是操作Docker的底层运行时Containerd，而且Containerd自身也是支持CRI（Container Runtime Interface），那为什么还要绕一层Docker呢？是不是可以直接通过CRI和Containerd进行交互？这也是社区希望启动dockershim的原因之一吧。
+再来看看启动dockershim究竟对用户、对维护者有多少影响。
+对上层用户来说，其实并没有影响，因为上层已经屏蔽调了这些细节，只管用就可以了。更多的影响只是针对我们这些YAML工程师，因为我们主要是考虑用哪个容器运行时，如果继续用Docker，以后版本升级有没有影响？如果不用Docker，维护的成本、复杂度、学习成本会不会增加？其实我们是想多了，事情也远没那么复杂，喜欢用docker的依旧可以用docker，想用containerd的就用containerd，改动也不大，后面也有相关的部署文档。而且也只是kubernetes社区不再维护dockershim而已，Mirantis 和 Docker 已经决定之后共同合作维护 dockershim 组件，也就是说dockershim依然可以作为连接docker的桥梁，只是从kubernetes内置携带改成独立的而已。
+那什么是containerd呢？
+Containerd是从Docker中分离的一个项目，旨在为Kubernetes提供容器运行时，负责管理镜像和容器的生命周期。不过Containerd是可以抛开Docker独立工作的。它的特性如下：
+ 支持OCI镜像规范，也就是runc 支持OCI运行时规范 支持镜像的pull 支持容器网络管理 存储支持多租户 支持容器运行时和容器的生命周期管理 支持管理网络名称空间  Containerd和Docker在命令使用上的一些区别主要如下：
+   功能 Docker Containerd     显示本地镜像列表 docker images crictl images   下载镜像 docker pull crictl pull   上传镜像 docker push 无   删除本地镜像 docker rmi crictl rmi   查看镜像详情 docker inspect IMAGE-ID crictl inspecti IMAGE-ID   显示容器列表 docker ps crictl ps   创建容器 docker create crictl create   启动容器 docker start crictl start   停止容器 docker stop crictl stop   删除容器 docker rm crictl rm   查看容器详情 docker inspect crictl inspect   attach docker attach crictl attach   exec docker exec crictl exec   logs docker logs crictl logs   stats docker stats crictl stats    可以看到使用方式大同小异。</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubeadm.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>kubeadm</category>
+            
+          
+            
+              <category>containerd</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes中的调度均衡器Descheduler</title>
+        <link>https://www.coolops.cn/posts/kubernetes-descheduler/</link>
+        <pubDate>Mon, 08 Feb 2021 16:56:28 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Mon, 08 Feb 2021 16:56:28 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-descheduler/</guid>
+        <description>马上春节了，在这祝大家春节快乐。前阵子在使用K8S集群的时候，经常遇到Pod调度不均衡的问题，排查了许久也没找到所以然，最后认为的归结到Scheduler调度不够智能上（机智如我）。这不，为了使集群能够更均衡，充分利用节点，特地研究了一下Descheduler，下面内容主要来自官方文档，喜欢看官方文档的可以划到结尾处，喜欢看中文的，可以收藏慢慢看，对长期从事K8S集群管理的YAML工程师来说，还是有点用。
+ 在Kubernetes中，kube-scheduler负责将Pod调度到合适的Node上，但是Kubernetes是一个非常动态的，高度弹性的环境，有时候会造成某一个或多个节点pod数分配不均，比如：
+ 一些节点利用率低下或过度使用 添加删除标签或添加删除污点，pod或Node亲和性改变等造成原调度不再满足 一些节点故障，其上运行的Pod调度到其他节点 新节点加入集群  由于以上种种原因，可能导致多个Pod运行到不太理想的节点，而整个K8S集群也会处于一段时间不均衡的状态，这时候就需要重新平衡集群。Descheduler就是这样一个项目。
+Descheduler Descheduler可以根据一些规则配置来重新平衡集群状态，目前支持的策略有：
+ RemoveDuplicates LowNodeUtilization RemovePodsViolatingInterPodAntiAffinity RemovePodsViolatingNodeAffinity RemovePodsViolatingNodeTaints RemovePodsViolatingTopologySpreadConstraint RemovePodsHavingTooManyRestarts PodLifeTime  这些策略可以启用，也可以关闭，默认情况下，所有策略都是启动的。
+另外，还有一些通用配置，如下：
+ nodeSelector：限制要处理的节点 evictLocalStoragePods: 驱除使用LocalStorage的Pods ignorePvcPods: 是否忽略配置PVC的Pods，默认是False maxNoOfPodsToEvictPerNode：节点允许的最大驱逐Pods数  比如：
+apiVersion: &amp;quot;descheduler/v1alpha1&amp;quot;kind: &amp;quot;DeschedulerPolicy&amp;quot;nodeSelector: prod=devevictLocalStoragePods: truemaxNoOfPodsToEvictPerNode: 40ignorePvcPods: falsestrategies:...RemoveDuplicates 该策略确保只有一个Pod与在同一节点上运行的副本集（RS），Replication Controller（RC），Deployment或Job相关联。 如果有更多的Pod，则将这些重复的Pod逐出，以更好地在群集中扩展。 如果某些节点由于任何原因而崩溃，并且它们上的Pod移至其他节点，导致多个与RS或RC关联的Pod（例如，在同一节点上运行），则可能发生此问题。 一旦发生故障的节点再次准备就绪，便可以启用此策略以驱逐这些重复的Pod。
+参数列表有：
+   参数名 类型     excludeOwnerKinds list(string)   namespaces list(string)   thresholdPriority int   thresholdPriorityClassName string    其中excludeOwnerKinds用于排除类型，这些类型下的Pod则不会被驱逐，比如：
+apiVersion: &amp;quot;descheduler/v1alpha1&amp;quot;kind: &amp;quot;DeschedulerPolicy&amp;quot;strategies:&amp;quot;RemoveDuplicates&amp;quot;:enabled: trueparams:removeDuplicates:excludeOwnerKinds:- &amp;quot;ReplicaSet&amp;quot;LowNodeUtilization 该策略主要是找到那些未充分利用的节点，将驱逐的Pod在这些节点上创建，该策略配置在nodeResourceUtilizationThresholds下。</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/kubernetes-single.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>descheduler</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>kubernetes和vault进行集成，管理Secret</title>
+        <link>https://www.coolops.cn/posts/kubernetes-vault-secret/</link>
+        <pubDate>Wed, 27 Jan 2021 08:59:48 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Wed, 27 Jan 2021 08:59:48 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-vault-secret/</guid>
+        <description>Vault 是用于处理和加密整个基础架构秘钥的中心管理服务。Vault 通过 secret 引擎管理所有的秘钥，Vault 有一套 secret 引擎可以使用。
+其主要有以下功能：
+ 安全密钥存储：任意的key/value Secret都可以存储到Vault中，Vault会对这些Secret进行加密并持久化存储。后端存储支持本地磁盘、cosul等； 动态密钥：Vault可以动态生成Secret，在租约到期后会自动撤销它们； 数据加密：Vault可以加密和解密数据，安全团队可以自定义加密参数； 租赁和续订：Vault 中的所有机密都有与其关联的租约。在租约结束时，Vault 将自动撤销该机密。客户端可以通过内置续订 API 续订租约； 吊销：Vault具有对秘密吊销的内置支持。Vault 可以撤消单个机密，还可以撤销一个机密树，例如由特定用户读取的所有机密或特定类型的所有机密。在发生入侵时，吊销有助于关键滚动和锁定系统；  安装 在Linux主机上安装 在Linux主机上安装比较简单，只需要下面三步：
+# 安装包管理工具$ sudo yum install -y yum-utils# 添加源$ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo# 安装vault$ sudo yum -y install vault在K8S中安装 vault提供了helm包，可以使用helm进行安装。
+ 版本说明：
+ Helm 3.0+ Kubernetes 1.9+   # 添加repo仓库$ helm repo add hashicorp https://helm.releases.hashicorp.com# 更新本地仓库$ helm repo update# 安装vault$ helm install vault hashicorp/vault起服务端  这里仅针对主机上安装的vault，在K8S集群中使用helm安装的vault默认已经起了服务端了。
+ 这里已经在主机上安装了vault。
+$ vault versionVault v1.6.1 (6d2db3f033e02e70202bef9ec896360062b88b03)然后以开发默认运行一个Vault服务端，正式环境不用开发模式。</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/vault.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>vault</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>在K8S中，如何安全管理Secrets?</title>
+        <link>https://www.coolops.cn/posts/kubernetes-secret-manager/</link>
+        <pubDate>Tue, 26 Jan 2021 10:20:15 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Tue, 26 Jan 2021 10:20:15 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/kubernetes-secret-manager/</guid>
+        <description>为何要加密？ 在Kubernetes中，Secret是用来帮我们存储敏感信息的，比如密码、证书等，但是在默认的情况下，Secret只是做了简单的base64编码，任何人都可以非常容易的对其进行解密获取到原始数据。
+比如通过以下方法生成一个secret对象：
+$ echo -n &amp;quot;coolops&amp;quot; | kubectl create secret generic mysecret --dry-run --from-file=secret=/dev/stdin -o yaml &amp;gt; secret.yaml$ cat secret.yaml apiVersion: v1data:secret: Y29vbG9wcw==kind: Secretmetadata:creationTimestamp: nullname: mysecret其他人只要拿到secret的值，就可以对其进行解密获取到真实数据，如下：
+$ echo &amp;quot;Y29vbG9wcw==&amp;quot; | base64 -dcoolops这样就非常的不安全，有点&amp;quot;掩耳盗铃&amp;quot;的意思。
+在Kubernetes集群中，Etcd是集群数据库，存储着集群所以的资源数据，其中也包括Secrets，所以拿下了这个数据库就等于拿下了整个集群，所以在生产环境中对其进行加密是非常有必要的。
+如何进行加密？ 静态加密 kubernetes 1.13版本之后，提供静态加密方式，其主要是通过kube-apiserver来控制Secrets的加解密，而在Etcd中存储的是加密后的信息，所以攻击者拿下了etcd，也无法轻易的拿到Secrets保存的敏感数据。
+ 当前集群是使用kubeadm安装，版本1.18.9
+ （1）创建加密配置文件，保存到master节点/etc/kubernetes/pki/static-secret-encryption.yaml中
+apiVersion: apiserver.config.k8s.io/v1kind: EncryptionConfigurationresources:- resources:- secretsproviders:- aescbc:keys:- name: mysecretsecret: DJqYaMMpY2DNlHz+HYrFYOUSh5SXKWiVOwLf6nQX9ss=- identity: {}其中secret是加密密钥，使用如下命令生成：
+$ head -c 32 /dev/urandom | base64（2）修改kube-apiserver启动参数，位置/etc/kubernetes/manifests/kube-apiserver.yaml
+......spec:containers:- command:- kube-apiserver- --encryption-provider-config=/etc/kubernetes/pki/static-secret-encryption.</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/secret.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>kubernetes</category>
+            
+          
+            
+              <category>secret</category>
+            
+          
+            
+              <category>KMS</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>使用ssl_exporter监控K8S集群证书有效期</title>
+        <link>https://www.coolops.cn/posts/prometheus-ssl-exporter/</link>
+        <pubDate>Thu, 14 Jan 2021 14:18:32 +0800</pubDate>
+        <author>qiaokebaba@163.com (乔克叔叔)</author>
+        <atom:modified>Thu, 14 Jan 2021 14:18:32 +0800</atom:modified>
+        <guid>https://www.coolops.cn/posts/prometheus-ssl-exporter/</guid>
+        <description>使用kubeadm搭建的集群默认证书有效期是1年，续费证书其实是一件很快的事情。但是就怕出事了才发现，毕竟作为专业搬砖工程师，每天都很忙的。
+鉴于此，监控集群证书有效期是一件不得不做的事情。Prometheus作为云原生领域的王者，如果能用它来监控证书有效期并能及时告警，那就再好不过了。
+ssl_exporter就是来做这个事情的。ssh_exporter是一个Prometheus Exporter能提供多种针对 SSL 的检测手段，包括：https 证书生效/失效时间、文件证书生效/失效时间，OCSP 等相关指标。
+下面就来监听集群证书的有效期。
+安装 apiVersion: v1kind: Servicemetadata:labels:name: ssl-exportername: ssl-exporterspec:ports:- name: ssl-exporterprotocol: TCPport: 9219targetPort: 9219selector:app: ssl-exporter---apiVersion: apps/v1kind: Deploymentmetadata:name: ssl-exporterspec:replicas: 1selector:matchLabels:app: ssl-exportertemplate:metadata:name: ssl-exporterlabels:app: ssl-exporterspec:initContainers:# Install kube ca cert as a root CA- name: caimage: alpinecommand:- sh- -c- |set -eapk add --update ca-certificatescp /var/run/secrets/kubernetes.io/serviceaccount/ca.crt /usr/local/share/ca-certificates/kube-ca.crtupdate-ca-certificatescp /etc/ssl/certs/* /ssl-certsvolumeMounts:- name: ssl-certsmountPath: /ssl-certscontainers:- name: ssl-exporterimage: ribbybibby/ssl-exporter:v0.</description>
+        
+        <dc:creator>乔克叔叔</dc:creator>
+        <media:content url="https://www.coolops.cnimages/kubernetes/prometheus.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Prometheus Exporter</category>
+            
+          
+            
+              <category>ssl_exporter</category>
+            
+          
+            
+              <category>kubernetes</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
         <title>Kubeadm搭建的K8S集群升级</title>
         <link>https://www.coolops.cn/posts/kubeadm-upgrade-k8s/</link>
         <pubDate>Wed, 06 Jan 2021 15:33:34 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Wed, 06 Jan 2021 15:33:34 +0800</atom:modified>
+        <atom:modified>Thu, 07 Jan 2021 17:34:11 +0800</atom:modified>
         <guid>https://www.coolops.cn/posts/kubeadm-upgrade-k8s/</guid>
         <description>升级说明  可用的K8S集群，使用kubeadm搭建 可以小版本升级，也可以跨一个大版本升级，不建议跨两个大版本升级 对集群资源做好备份  升级目标 将kubernetes 1.17.9版本升级到1.18.9版本
 现有集群版本已经节点如下：
@@ -74,7 +305,7 @@ cd /data/k8s-backup-restore./bin/k8s_restore.sh会输出如下信息。
         <link>https://www.coolops.cn/posts/skywalking-in-kubernetes/</link>
         <pubDate>Mon, 04 Jan 2021 11:13:14 +0800</pubDate>
         <author>qiaokebaba@163.com (乔克叔叔)</author>
-        <atom:modified>Mon, 04 Jan 2021 11:13:14 +0800</atom:modified>
+        <atom:modified>Thu, 07 Jan 2021 17:34:11 +0800</atom:modified>
         <guid>https://www.coolops.cn/posts/skywalking-in-kubernetes/</guid>
         <description>skywalking是什么？为什么要给你的应用加上skywalking?
 在介绍skywalking之前，我们先来了解一个东西，那就是APM（Application Performance Management）系统。
@@ -95,7 +326,6 @@ Skywalking的具有以下几个特点：
 三、搭建并使用 搭建其实很简单，官方有提供搭建案例。
 上文提到skywalking的后端数据存储的介质可以是Elasticsearch、MySQL数据库、H2数据库等，我这里使用Elasticsearch作为数据存储，而且为了便与扩展和收集其他应用日志，我将单独搭建Elasticsearch。
 3.1、搭建elasticsearch 为了增加es的扩展性，按角色功能分为master节点、data数据节点、client客户端节点。其整体架构如下：
-![image](http://image.coolops.cn/img/1601349715218-4bcc2157-c382-4994-9720-ee82f76f8bf5.png#align=left&amp;amp;display=inline&amp;amp;height=329&amp;amp;margin=[object Object]&amp;amp;name=image.png&amp;amp;originHeight=657&amp;amp;originWidth=1082&amp;amp;size=93774&amp;amp;status=done&amp;amp;style=none&amp;amp;width=541)
 其中：
  Elasticsearch数据节点Pods被部署为一个有状态集（StatefulSet） Elasticsearch master节点Pods被部署为一个Deployment Elasticsearch客户端节点Pods是以Deployment的形式部署的，其内部服务将允许访问R/W请求的数据节点 Kibana部署为Deployment，其服务可在Kubernetes集群外部访问  （1）先创建estatic的命名空间（es-ns.yaml）：
 apiVersion: v1kind: Namespacemetadata:name: elastic执行kubectl apply -f es-ns.yaml
